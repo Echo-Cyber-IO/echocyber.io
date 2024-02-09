@@ -10,23 +10,22 @@
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="/"
                     class="{{ $page->isActive('/') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-300 hover:text-gray-500">Home</a>
+                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Home</a>
                 <a href="/about"
                     class="{{ $page->isActive('/about/') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-300 hover:text-gray-500">About</a>
+                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">About</a>
                 {{-- <a href="/services"
                     class="{{ $page->isActive('/services') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-300 hover:text-gray-500">Services</a> --}}
+                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Services</a> --}}
                 <a href="/contact"
                     class="{{ $page->isActive('/contact') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-300 hover:text-gray-500">Contact</a>
+                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Contact</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <div>
                     <a href="/schedule"
-                        class="bg-crimson text-white px-4 py-2 rounded-lg shadow-lg font-semibold hover:bg-crimson-700 hover:text-white transform transition hover:-translate-y-1">Schedule
-                        a Strategy
-                        Session</a>
+                        class="bg-crimson text-white px-4 py-2 rounded-lg shadow-lg font-semibold hover:bg-crimson-700 hover:text-white transform transition hover:-translate-y-1">
+                        Schedule a Strategy Session</a>
                 </div>
             </div>
         </nav>
