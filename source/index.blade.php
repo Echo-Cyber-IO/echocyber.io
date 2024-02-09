@@ -62,8 +62,8 @@ description: Home page
                 </p>
                 <div class="mt-10 flex items-center gap-x-6">
                     <a href="/schedule"
-                        class="rounded-md bg-crimson-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-crimson-700 hover:text-white transition transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-400">Schedule
-                        Strategy Session <span aria-hidden="true">→</span></a>
+                        class="rounded-md bg-crimson-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-crimson-700 hover:text-white transition transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-400">
+                        Schedule Strategy Session <span aria-hidden="true">→</span></a>
                 </div>
             </div>
             <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
