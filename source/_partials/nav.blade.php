@@ -8,6 +8,8 @@
                         <span class="text-3xl font-bold text-white px-6">Echo
                             Cyber</span>
                     </div>
+                    <span class="sr-only">Echo Cyber LLC</span>
+                    <img src="/assets/img/logo-small.png" alt="Echo Cyber" class="h-10 w-auto">
                 </a>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
