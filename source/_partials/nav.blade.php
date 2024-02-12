@@ -15,7 +15,7 @@
                     class="{{ $page->isActive('/about/') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
                     hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">About</a>
                 <div x-data=" { open: true }">
-                    <a href="/services" @click.prevent = "open = ! open"
+                    <a href="#" @click.prevent = "open = ! open"
                         class="{{ $page->isActive('/services') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
                         hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Services
                         <i class="fa-solid fa-chevron-down"></i></a>
@@ -23,29 +23,25 @@
                     <div class="absolute left-1/2 z-10 mt-3 flex w-screen max-w-max -translate-x-10 px-4" x-cloak x-show="open" @click.outside = "open = false">
                         <div class="w-screen max-w-xs flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-100/5">
                             <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                <a href="" class="font-semibold text-gray-900">
+                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
                                     <i class="fa-solid fa-magnifying-glass"></i><span class="ml-2">Cybersecurity Risk Assessments</span>
-                                    <span class="absolute inset-0"></span>
+                                    <p class="mt-1 text-gray-600">Uncover your exposures with our deep-dive analysis identifying vulnerabilities across your systems.</p>
                                 </a>
-                                <p class="mt-1 text-gray-600">Uncover your exposures with our deep-dive analysis identifying vulnerabilities across your systems.</p>
 
-                                <a href="" class="font-semibold text-gray-900">
+                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
                                     <i class="fa-solid fa-user-shield"></i><span class="ml-2">Managed Security Services</span>
-                                    <span class="absolute inset-0"></span>
+                                    <p class="mt-1 text-gray-600">Stay vigilant against threats with our team providing 24/7 monitoring, detection, and response.</p>
                                 </a>
-                                <p class="mt-1 text-gray-600">Stay vigilant against threats with our team providing 24/7 monitoring, detection, and response.</p>
 
-                                <a href="" class="font-semibold text-gray-900">
+                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
                                     <i class="fa-regular fa-lightbulb"></i><span class="ml-2">Virtual CISO</span>
-                                    <span class="absolute inset-0"></span>
+                                    <p class="mt-1 text-gray-600">Get on-demand security leadership with our seasoned CISO advising on strategy and compliance.</p>
                                 </a>
-                                <p class="mt-1 text-gray-600">Get on-demand security leadership with our seasoned CISO advising on strategy and compliance.</p>
 
-                                <a href="" class="font-semibold text-gray-900">
+                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
                                     <i class="fa-solid fa-building-shield"></i><span class="ml-2">Custom Security Projects</span>
-                                    <span class="absolute inset-0"></span>
+                                    <p class="mt-1 text-gray-600">Tighten up your defenses with bespoke solutions tailored to your unique environment and risks.</p>
                                 </a>
-                                <p class="mt-1 text-gray-600">Tighten up your defenses with bespoke solutions tailored to your unique environment and risks.</p>
                             </div>
                         </div>
                     </div>
