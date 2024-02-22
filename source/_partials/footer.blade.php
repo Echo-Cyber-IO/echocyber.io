@@ -3,7 +3,7 @@
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="mx-auto max-w-7xl px-6 pb-8 pt-4 lg:px-8 bg-gray-900">
             <div class="border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-                <div class="flex space-x-6 md:order-2">
+                {{-- <div class="flex space-x-6 md:order-2">
                     <a href="#" class="text-gray-500 hover:text-gray-400">
                         <span class="sr-only">Facebook</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -43,7 +43,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
-                </div>
+                </div> --}}
                 <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; {{ date('Y') }} Echo
                     Cyber LLC. All
                     rights reserved.</p>
