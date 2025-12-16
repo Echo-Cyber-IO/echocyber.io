@@ -30,8 +30,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
+    {{-- Vite refresh for development hot reload --}}
+    @viteRefresh()
+
     {{-- Compiled styles --}}
-    <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+    <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
 </head>
 
 <body class="bg-echo-950 text-echo-200 min-h-screen flex flex-col">
@@ -67,7 +70,7 @@
     </div>
 
     {{-- Compiled scripts --}}
-    <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+    <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
 
     @stack('scripts')
 </body>

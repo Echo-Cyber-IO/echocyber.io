@@ -4,3 +4,7 @@
 /vendor/
 .DS_Store
 .vscode/settings.json
+.env
+/composer
+/source/hot
+hot

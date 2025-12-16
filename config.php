@@ -5,16 +5,17 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Echo Cyber Solutions',
-    'siteDescription' => 'Echo Cyber - Decoding cyber risks, delivering security.',
+    'siteName' => 'Echo Cyber',
+    'siteDescription' => 'Fractional CTO & CISO services for growing businesses.',
     'siteAuthor' => 'Michael Faas',
 
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'Author Name', // Default author, if not provided in a post
+            'author' => 'Michael Faas',
             'sort' => '-date',
             'path' => 'blog/{filename}',
+            'type' => 'article', // For Open Graph meta tags
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
