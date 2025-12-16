@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -22,43 +22,54 @@
         <!-- Insert analytics code here -->
     @endif
 
+    {{-- Alpine.js for interactions --}}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://kit.fontawesome.com/d293236d3e.js" crossorigin="anonymous"></script>
+
+    {{-- Google Fonts: Syne (display), Outfit (body), JetBrains Mono (code) --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
+    {{-- Compiled styles --}}
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
 
-<body>
-    {{-- <div class="bg-white"> --}}
-    <div class="bg-gray-900">
-        <main>
-            @include('_partials/nav')
+<body class="bg-echo-950 text-echo-200 min-h-screen flex flex-col">
+    {{-- Navigation --}}
+    @include('_partials.nav')
 
-            @yield('body')
+    {{-- Main content --}}
+    <main class="flex-grow">
+        @yield('body')
+    </main>
 
-            @include('_partials.footer')
+    {{-- Footer --}}
+    @include('_partials.footer')
 
-            <div x-data="{ show: false }" x-on:scroll.window="show = window.pageYOffset >= 50"
-                class="fixed bottom-8 right-8">
-                <button x-show="show" x-transition x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
-                    class="shadow-lg bg-crimson-800 p-2 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="m11 7.825l-4.9 4.9q-.3.3-.7.288t-.7-.313q-.275-.3-.288-.7t.288-.7l6.6-6.6q.15-.15.325-.212T12 4.425q.2 0 .375.063t.325.212l6.6 6.6q.275.275.275.688t-.275.712q-.3.3-.713.3t-.712-.3L13 7.825V19q0 .425-.288.713T12 20q-.425 0-.713-.288T11 19V7.825Z" />
-                    </svg>
-                </button>
-            </div>
-
-
-            <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
-
-            @stack('scripts')
-        </main>
+    {{-- Back to top button --}}
+    <div x-data="{ show: false }"
+         x-on:scroll.window="show = window.pageYOffset >= 300"
+         class="fixed bottom-8 right-8 z-50">
+        <button x-show="show"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-4"
+                x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
+                class="bg-crimson-700 hover:bg-crimson-600 text-white p-3 rounded-full shadow-glow transition-all duration-300 hover:shadow-glow-lg"
+                aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
     </div>
+
+    {{-- Compiled scripts --}}
+    <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+
+    @stack('scripts')
 </body>
+
+</html>

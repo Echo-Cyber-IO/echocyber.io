@@ -1,65 +1,118 @@
-<div class="bg-gray-900">
-    <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8 mx-auto max-w-7xl" aria-label="Global">
-            <div class="flex flex-1">
-                <a href="/" class="-m-1 5 p1">
-                    <div class="flex content-center">
-                        <img class="h-10" src="../assets/img/logo-small.png" alt="Your Company">
-                        <span class="text-3xl font-bold text-white px-6">Echo
-                            Cyber</span>
-                    </div>
-                    <span class="sr-only">Echo Cyber LLC</span>
+{{-- Navigation --}}
+<header x-data="{ mobileMenuOpen: false, scrolled: false }"
+        x-init="window.addEventListener('scroll', () => { scrolled = window.pageYOffset > 20 })"
+        :class="{ 'bg-echo-950/95 backdrop-blur-md shadow-lg': scrolled, 'bg-transparent': !scrolled }"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+
+    <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Main navigation">
+        <div class="flex h-20 items-center justify-between">
+
+            {{-- Logo --}}
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center gap-3 group">
                     <img src="/assets/img/logo-small.png" alt="Echo Cyber" class="h-10 w-auto">
+                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-400 transition-colors">
+                        Echo Cyber
+                    </span>
                 </a>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
+
+            {{-- Desktop Navigation --}}
+            <div class="hidden lg:flex lg:items-center lg:gap-x-10">
                 <a href="/about"
-                    class="{{ $page->isActive('/about/') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">About</a>
-                <div x-data=" { open: true }">
-                    <a href="#" @click.prevent = "open = ! open"
-                        class="{{ $page->isActive('/services') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                        hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Services
-                        <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <div class="absolute left-1/2 z-10 mt-3 flex w-screen max-w-max -translate-x-10 px-4" x-cloak x-show="open" @click.outside = "open = false">
-                        <div class="w-screen max-w-xs flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-100/5">
-                            <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
-                                    <i class="fa-solid fa-magnifying-glass"></i><span class="ml-2">Cybersecurity Risk Assessments</span>
-                                    <p class="mt-1 text-gray-600">Uncover your exposures with our deep-dive analysis identifying vulnerabilities across your systems.</p>
-                                </a>
-
-                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
-                                    <i class="fa-solid fa-user-shield"></i><span class="ml-2">Managed Security Services</span>
-                                    <p class="mt-1 text-gray-600">Stay vigilant against threats with our team providing 24/7 monitoring, detection, and response.</p>
-                                </a>
-
-                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
-                                    <i class="fa-regular fa-lightbulb"></i><span class="ml-2">Virtual CISO</span>
-                                    <p class="mt-1 text-gray-600">Get on-demand security leadership with our seasoned CISO advising on strategy and compliance.</p>
-                                </a>
-
-                                <a href="" class="font-semibold text-gray-900 hover:text-crimson-700">
-                                    <i class="fa-solid fa-building-shield"></i><span class="ml-2">Custom Security Projects</span>
-                                    <p class="mt-1 text-gray-600">Tighten up your defenses with bespoke solutions tailored to your unique environment and risks.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                   class="{{ $page->isActive('/about') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors relative
+                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
+                          after:transition-all after:duration-300 hover:after:w-full
+                          {{ $page->isActive('/about') ? 'after:w-full' : '' }}">
+                    About
+                </a>
+                <a href="/services"
+                   class="{{ $page->isActive('/services') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors relative
+                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
+                          after:transition-all after:duration-300 hover:after:w-full
+                          {{ $page->isActive('/services') ? 'after:w-full' : '' }}">
+                    Services
+                </a>
                 <a href="/contact"
-                    class="{{ $page->isActive('/contact') ? 'active border-b-2 border-crimson' : 'border-b-2 border-transparent' }}
-                    hover:border-crimson hover:border-b-2 text-lg uppercase tracking-widest leading-6 text-gray-200 hover:text-gray-300">Contact</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <div>
-                    <a href="/schedule"
-                        class="bg-crimson text-white px-4 py-2 rounded-lg shadow-lg font-semibold hover:bg-crimson-700 hover:text-white transform transition hover:-translate-y-1">
-                        Schedule a Strategy Session</a>
-                </div>
+                   class="{{ $page->isActive('/contact') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors relative
+                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
+                          after:transition-all after:duration-300 hover:after:w-full
+                          {{ $page->isActive('/contact') ? 'after:w-full' : '' }}">
+                    Contact
+                </a>
             </div>
 
-        </nav>
-    </header>
-</div>
+            {{-- CTA Button (Desktop) --}}
+            <div class="hidden lg:block">
+                <a href="/contact"
+                   class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-glow">
+                    <span>Let's Talk</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            {{-- Mobile menu button --}}
+            <div class="lg:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen"
+                        type="button"
+                        class="text-echo-200 hover:text-white p-2 -mr-2"
+                        aria-expanded="false"
+                        :aria-expanded="mobileMenuOpen.toString()">
+                    <span class="sr-only">Open menu</span>
+                    {{-- Hamburger icon --}}
+                    <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    {{-- Close icon --}}
+                    <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        {{-- Mobile menu --}}
+        <div x-show="mobileMenuOpen"
+             x-cloak
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-4"
+             class="lg:hidden py-4 border-t border-echo-800">
+            <div class="flex flex-col gap-4">
+                <a href="/about"
+                   class="{{ $page->isActive('/about') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors py-2">
+                    About
+                </a>
+                <a href="/services"
+                   class="{{ $page->isActive('/services') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors py-2">
+                    Services
+                </a>
+                <a href="/contact"
+                   class="{{ $page->isActive('/contact') ? 'text-crimson-400' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-400 transition-colors py-2">
+                    Contact
+                </a>
+                <a href="/contact"
+                   class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-3 rounded-lg font-medium transition-all duration-300 mt-2">
+                    <span>Let's Talk</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+{{-- Spacer to prevent content from being hidden under fixed nav --}}
+<div class="h-20"></div>

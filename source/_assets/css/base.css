@@ -1,12 +1,18 @@
+/* Echo Cyber - Base Styles */
+
 body {
-    font-size: 17px;
+    @apply font-sans;
+    @apply text-base;
+    @apply antialiased;
 }
 
 a {
-    @apply font-semibold;
+    @apply font-medium;
     @apply no-underline;
-    @apply text-blue-500;
-    @apply hover:text-blue-700;
+    @apply text-crimson-500;
+    @apply transition-colors;
+    @apply duration-200;
+    @apply hover:text-crimson-400;
 }
 
 blockquote {
@@ -15,16 +21,18 @@ blockquote {
     @apply text-lg;
     @apply font-normal;
     @apply italic;
-    @apply text-gray-800;
+    @apply text-echo-300;
     @apply border-l-4;
-    @apply border-blue-400;
+    @apply border-crimson-700;
 }
 
 code {
     @apply px-2;
-    @apply py-px;
+    @apply py-1;
     @apply text-sm;
-    @apply bg-gray-300;
+    @apply font-mono;
+    @apply bg-echo-800;
+    @apply text-crimson-400;
     @apply rounded;
 }
 
@@ -48,8 +56,10 @@ h5,
 h6 {
     @apply mt-8;
     @apply mb-4;
-    @apply text-gray-900;
+    @apply font-display;
+    @apply text-echo-50;
     @apply leading-tight;
+    @apply tracking-tight;
 
     &:first-child {
         @apply mt-0;
@@ -58,39 +68,46 @@ h6 {
 
 h1 {
     @apply text-5xl;
-    @apply font-extrabold;
+    @apply font-bold;
+
+    @screen lg {
+        @apply text-6xl;
+    }
 }
 
 h2 {
     @apply text-4xl;
     @apply font-bold;
+
+    @screen lg {
+        @apply text-5xl;
+    }
 }
 
 h3 {
     @apply text-3xl;
-    @apply font-bold;
+    @apply font-semibold;
 }
 
 h4 {
     @apply text-2xl;
-    @apply font-normal;
+    @apply font-semibold;
 }
 
 h5 {
     @apply text-xl;
-    @apply font-normal;
+    @apply font-medium;
 }
 
 h6 {
     @apply text-lg;
-    @apply font-light;
+    @apply font-medium;
 }
 
 hr {
     @apply my-12;
     @apply border-b;
-    @apply border-blue-200;
-    @apply rounded-full;
+    @apply border-echo-700;
 }
 
 li {
@@ -115,7 +132,8 @@ ul {
 }
 
 p {
-    @apply my-3;
+    @apply my-4;
+    @apply leading-relaxed;
 
     @screen md {
         @apply my-6;
@@ -125,11 +143,13 @@ p {
 pre {
     @apply p-4;
     @apply my-6;
-    @apply text-base;
-    @apply bg-gray-200;
-    @apply leading-loose;
-    @apply rounded;
-    @apply shadow;
+    @apply text-sm;
+    @apply font-mono;
+    @apply bg-echo-900;
+    @apply border;
+    @apply border-echo-700;
+    @apply leading-relaxed;
+    @apply rounded-lg;
     @apply overflow-x-auto;
 
     & code {
@@ -141,5 +161,17 @@ pre {
 
 ::selection {
     @apply text-white;
-    @apply bg-blue-400;
+    @apply bg-crimson-700;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+    @apply outline-2;
+    @apply outline-offset-2;
+    @apply outline-crimson-500;
 }
