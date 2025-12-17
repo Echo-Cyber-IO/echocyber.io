@@ -1,146 +1,187 @@
 ---
 title: About
-description: A little bit about the site
+description: Meet Michael Faas - Fractional CTO and CISO helping growing businesses build strategic technology and security capabilities.
 ---
 @extends('_layouts.main')
 
 @section('body')
-    <div class="relative isolate overflow-hidden bg-gray-900">
-        <div class="bg-gray-900 pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
-            <div class="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
-                <div
-                    class="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-                    <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-                        <div class="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                            <img class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 lg:object-cover object-contain shadow-2xl"
-                                src="../assets/img/Michael_Faas.jpg" alt="Owner - Michael Faas">
-                        </div>
-                    </div>
-                    <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-                        <figure class="relative isolate pt-6 sm:pt-12">
-                            <svg viewBox="0 0 162 128" fill="none" aria-hidden="true"
-                                class="absolute left-0 top-0 -z-10 h-32 stroke-white/20">
-                                <path id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"
-                                    d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z" />
-                                <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
-                            </svg>
-                            <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                                <p>At Echo Cyber, we are focused on one mission: decoding complex cybersecurity challenges
-                                    into clear solutions for businesses.</p>
-                            </blockquote>
-                            <figcaption class="mt-8 text-base">
-                                <div class="font-semibold text-white">Michael Faas</div>
-                                <div class="mt-1 text-gray-400">Owner - Echo Cyber</div>
-                            </figcaption>
-                        </figure>
-                    </div>
+
+{{-- Hero Section --}}
+<section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            {{-- Content --}}
+            <div>
+                <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+                    Technology leadership that speaks your language.
+                </h1>
+                <p class="text-xl text-echo-300 leading-relaxed mb-8">
+                    I'm Michael Faas, and I help growing businesses navigate the complex world of technology and security. My mission: translating technical complexity into clear, actionable strategy.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="mailto:info@echocyber.com"
+                       class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow">
+                        Let's Connect
+                    </a>
+                    <a href="https://www.linkedin.com/in/mfaas/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-echo-300 hover:text-white transition-colors">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
                 </div>
             </div>
+
+            {{-- Photo --}}
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-br from-crimson-900/20 to-transparent rounded-2xl blur-2xl"></div>
+                <img src="/assets/img/Michael_Faas.jpg"
+                     alt="Michael Faas - Fractional CTO & CISO"
+                     class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:max-w-none">
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Background Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+                Background
+            </h2>
+
+            <div class="prose prose-lg prose-invert max-w-none">
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    With over 20 years in enterprise technology and security, I've worn many hats: software engineer, security analyst, team lead, and technology executive. I've built systems that scale, led teams through complex projects, and helped organizations navigate everything from cloud migrations to security incidents.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    But what I've found most valuable isn't the technical knowledge itself - it's the ability to bridge the gap between technology teams and business leadership. Too often, critical technology decisions get lost in translation, and that's where things go wrong.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    That's why I started Echo Cyber. I saw too many growing businesses struggle with the same challenge: they needed strategic technology and security guidance, but couldn't justify (or find) a full-time executive. The fractional model solves that problem.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Philosophy Section --}}
+<section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+                Why most technology initiatives fail
+            </h2>
+
+            <div class="prose prose-lg prose-invert max-w-none">
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Most leaders think they have a complicated technology problem. They actually have a complex one. And that confusion is expensive.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    <strong class="text-white">Complicated</strong> is a jet engine. Thousands of parts, incredibly intricate, but fundamentally predictable. You can disassemble it, understand every component, troubleshoot when it breaks. More expertise equals more control.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    <strong class="text-white">Complex</strong> is an ecosystem. The parts don't just connect—they interact, adapt, and create behaviors that can't be predicted by studying the pieces. Remove one thing and maybe nothing happens. Or maybe everything collapses. You won't know until it happens.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Here's the danger: <strong class="text-white">they look identical from the outside.</strong>
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    That "straightforward" system modernization? Complex. The "simple" integration project? Complex. The reorg that was supposed to fix everything? Definitely complex.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Leadership sees a complicated problem and deploys a complicated solution—new software, reorganization, updated processes. But they've got a complex problem. The system absorbs the change, routes around it, and returns to equilibrium. Or worse, the intervention triggers something unexpected.
+                </p>
+
+                <p class="text-crimson-400 text-xl leading-relaxed mb-6 font-medium">
+                    The problem isn't that you're not smart enough. It's that you're using complicated-system thinking on a complex-system problem. Different game. Different rules.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed">
+                    I help leaders recognize which game they're actually playing—and navigate it with clear thinking instead of false certainty.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Approach Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl mb-16">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                My approach
+            </h2>
+            <p class="text-lg text-echo-300">
+                Three principles guide how I work with clients.
+            </p>
         </div>
 
-        <div class="relative isolate mx-auto max-w-3xl lg:max-w-7xl">
-            <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-                aria-hidden="true">
-                <defs>
-                    <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1"
-                        patternUnits="userSpaceOnUse">
-                        <path d="M.5 200V.5H200" fill="none" />
-                    </pattern>
-                </defs>
-                <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
-                    <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                        stroke-width="0" />
+        <div class="grid md:grid-cols-3 gap-8">
+            {{-- Principle 1 --}}
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
+                <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">01</div>
+                <h3 class="font-display text-xl font-bold text-white mb-4">
+                    Complex vs. Complicated
+                </h3>
+                <p class="text-echo-400">
+                    A system migration isn't a puzzle with one right answer. A security program isn't a checklist. These are complex challenges—interdependent, context-dependent, full of trade-offs. I help you navigate them as they actually are, not as vendors wish they were.
+                </p>
+            </div>
+
+            {{-- Principle 2 --}}
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
+                <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">02</div>
+                <h3 class="font-display text-xl font-bold text-white mb-4">
+                    Translation, not jargon
+                </h3>
+                <p class="text-echo-400">
+                    Architecture decisions, risk assessments, vendor evaluations—none of it matters if your leadership team can't understand and act on it. I translate geek into human so the people making decisions actually know what they're deciding.
+                </p>
+            </div>
+
+            {{-- Principle 3 --}}
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
+                <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">03</div>
+                <h3 class="font-display text-xl font-bold text-white mb-4">
+                    Signal over noise
+                </h3>
+                <p class="text-echo-400">
+                    Every vendor has a 'critical' solution. Every framework has 'essential' controls. I filter the noise and focus on what actually moves the needle for your business—whether that's a technology roadmap, a security investment, or a hiring decision.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- CTA Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                Let's talk about your challenges.
+            </h2>
+            <p class="text-lg text-echo-300 mb-8">
+                Whether you're facing a specific technology decision or need ongoing strategic guidance, I'm happy to have a conversation about how I might help.
+            </p>
+            <a href="mailto:info@echocyber.com"
+               class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
+                <span>Get in Touch</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
-                <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
-            </svg>
-            <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
-                aria-hidden="true">
-                <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
-                    style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
-                </div>
-            </div>
-            <div class="mx-auto max-w-6xl text-base leading-7 text-gray-100">
-                {{-- <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-100">Echo Cyber</h1> --}}
-                <p class="mt-6 text-xl leading-8">
-                    At Echo Cyber, our mission is translating "geek speak" into clear guidance that empowers businesses to
-                    improve their security. We were founded by Michael Faas, an experienced cybersecurity leader who saw a
-                    need for a more human approach to protecting organizations.
-                </p>
-                <p class="mt-6 text-xl leading-8">
-                    After spending years assisting companies in strengthening their defenses, Michael Faas knew that
-                    starting
-                    with a comprehensive risk assessment provided the necessary baseline to architect effective security
-                    programs tailored to each client’s unique needs. We don’t make assumptions – we start by listening and
-                    mapping out vulnerabilities to illuminate the best path forward.
-                </p>
-
-                <p class="mt-6 text-xl leading-8">
-                    Our services include:
-
-                <ul class="mt-8 max-w-xl space-y-4">
-                    <li class="flex gap-x-3">
-                        <svg class="mt-1 h-5 w-5 flex-none text-crimson-600" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span><strong class="font-semibold text-gray-200">Cybersecurity Risk Assessments</strong>
-                    </li>
-                    <li class="flex gap-x-3">
-                        <svg class="mt-1 h-5 w-5 flex-none text-crimson-600" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span><strong class="font-semibold text-gray-200">Managed Security Services</strong>
-                    </li>
-                    <li class="flex gap-x-3">
-                        <svg class="mt-1 h-5 w-5 flex-none text-crimson-600" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span><strong class="font-semibold text-gray-200">Virtual CISO Advisory</strong>
-                    </li>
-                    <li class="flex gap-x-3">
-                        <svg class="mt-1 h-5 w-5 flex-none text-crimson-600" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span><strong class="font-semibold text-gray-200">Custom Security Projects</strong>
-                    </li>
-                </ul>
-                </p>
-
-                <p class="mt-6 text-xl leading-8">
-                    We primarily serve small to mid-size businesses across a wide range of industries. Our clients trust us
-                    because we’ve been in the trenches and have a proven track record of distilling complex technical
-                    concepts into understandable and actionable strategies.
-                </p>
-                <p class="mt-6 text-xl leading-8">
-                    Radical transparency and an idea meritocracy are at the core of how we operate. We tell it like it is
-                    and invite open conversations focused purely on the best security outcomes.
-                </p>
-                <p class="mt-6 text-xl leading-8">
-                    Let us know if you would like us to help strengthen your company’s defenses. We’re here to listen and
-                    turn cybersecurity into clear, human-friendly guidance.
-                </p>
-                </p>
-            </div>
+            </a>
         </div>
-        {{-- <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-                <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-                    <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-                        alt="App screenshot" width="2432" height="1442"
-                        class="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10">
-                </div>
-            </div> --}}
     </div>
-    </div>
+</section>
 
-@stop
+@endsection
