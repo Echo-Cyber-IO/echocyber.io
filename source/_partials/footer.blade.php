@@ -6,13 +6,13 @@
             {{-- Logo and tagline --}}
             <div class="flex flex-col gap-4">
                 <a href="/" class="flex items-center gap-3 group">
-                    <img src="/assets/img/logo-small.png" alt="Echo Cyber" class="h-8 w-auto opacity-80 group-hover:opacity-100 transition-opacity">
+                    <img src="/assets/img/logo-hex.png" alt="Echo Cyber" class="h-10 w-auto opacity-80 group-hover:opacity-100 transition-opacity">
                     <span class="font-display text-xl font-bold text-echo-100 group-hover:text-white transition-colors">
                         Echo Cyber
                     </span>
                 </a>
-                <p class="text-echo-400 text-sm max-w-xs">
-                    Fractional CTO & CISO services for growing businesses.
+                <p class="text-echo-400 text-sm max-w-xs italic">
+                    Decoding cyber risks, delivering security.
                 </p>
             </div>
 

@@ -7,16 +7,98 @@ description: Executive-level technology and security leadership for growing busi
 @section('body')
 
 {{-- Hero Section --}}
-<section class="relative min-h-[90vh] flex items-center overflow-hidden">
-    {{-- Background pattern --}}
-    <div class="absolute inset-0 bg-signal-grid opacity-50"></div>
+<section class="relative min-h-[90vh] flex items-center">
+    {{-- Bottom-right gradient accent (top-left is now fixed in layout) --}}
+    <div class="absolute bottom-0 -right-20 w-80 h-80 bg-gradient-to-tl from-crimson-800/20 to-transparent transform skew-x-12 blur-2xl"></div>
 
-    {{-- Gradient orbs --}}
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-crimson-900/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-crimson-800/10 rounded-full blur-3xl"></div>
+    {{-- Hero circuit decoration --}}
+    <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-3/4 h-[120%] pointer-events-none hidden lg:block">
+        <svg viewBox="0 0 600 700" class="w-full h-full opacity-30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {{-- Main central hexagon cluster --}}
+            <path d="M300 200 L380 246 L380 338 L300 384 L220 338 L220 246 Z" stroke="#CC3333" stroke-width="2" fill="none"/>
+            <path d="M300 220 L360 254 L360 322 L300 356 L240 322 L240 254 Z" stroke="#CC3333" stroke-width="1.5" fill="none" opacity="0.7"/>
+            <path d="M300 245 L340 267 L340 313 L300 335 L260 313 L260 267 Z" stroke="#990000" stroke-width="1.5" fill="#990000" fill-opacity="0.15"/>
+
+            {{-- Circuit traces from main hexagon --}}
+            {{-- Top --}}
+            <line x1="300" y1="200" x2="300" y2="120" stroke="#CC3333" stroke-width="2"/>
+            <line x1="300" y1="120" x2="380" y2="80" stroke="#CC3333" stroke-width="2"/>
+            <circle cx="385" cy="77" r="5" fill="#CC3333"/>
+
+            {{-- Top branch --}}
+            <line x1="300" y1="150" x2="220" y2="100" stroke="#990000" stroke-width="1.5"/>
+            <line x1="220" y1="100" x2="220" y2="50" stroke="#990000" stroke-width="1.5"/>
+            <circle cx="220" cy="45" r="4" fill="#990000"/>
+
+            {{-- Upper right --}}
+            <line x1="380" y1="246" x2="450" y2="210" stroke="#CC3333" stroke-width="2"/>
+            <line x1="450" y1="210" x2="520" y2="210" stroke="#CC3333" stroke-width="2"/>
+            <circle cx="528" cy="210" r="5" fill="#CC3333"/>
+
+            {{-- Right side --}}
+            <line x1="380" y1="292" x2="480" y2="292" stroke="#990000" stroke-width="1.5"/>
+            <line x1="480" y1="292" x2="480" y2="350" stroke="#990000" stroke-width="1.5"/>
+            <circle cx="480" cy="358" r="4" fill="#990000"/>
+
+            {{-- Lower right --}}
+            <line x1="380" y1="338" x2="440" y2="380" stroke="#CC3333" stroke-width="2"/>
+            <line x1="440" y1="380" x2="440" y2="450" stroke="#CC3333" stroke-width="2"/>
+            <circle cx="440" cy="458" r="5" fill="#CC3333"/>
+
+            {{-- Bottom --}}
+            <line x1="300" y1="384" x2="300" y2="480" stroke="#CC3333" stroke-width="2"/>
+            <line x1="300" y1="480" x2="200" y2="530" stroke="#CC3333" stroke-width="2"/>
+            <circle cx="193" cy="534" r="5" fill="#CC3333"/>
+
+            {{-- Lower left --}}
+            <line x1="220" y1="338" x2="150" y2="380" stroke="#990000" stroke-width="1.5"/>
+            <line x1="150" y1="380" x2="150" y2="320" stroke="#990000" stroke-width="1.5"/>
+            <circle cx="150" cy="312" r="4" fill="#990000"/>
+
+            {{-- Left side --}}
+            <line x1="220" y1="292" x2="120" y2="292" stroke="#CC3333" stroke-width="2"/>
+            <line x1="120" y1="292" x2="80" y2="250" stroke="#CC3333" stroke-width="2"/>
+            <circle cx="75" cy="245" r="5" fill="#CC3333"/>
+
+            {{-- Secondary hexagon - upper right --}}
+            <path d="M480 100 L530 130 L530 190 L480 220 L430 190 L430 130 Z" stroke="#CC3333" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <line x1="530" y1="160" x2="580" y2="160" stroke="#CC3333" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="588" cy="160" r="4" fill="#CC3333" opacity="0.5"/>
+            <line x1="480" y1="100" x2="480" y2="60" stroke="#CC3333" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="480" cy="52" r="4" fill="#CC3333" opacity="0.5"/>
+
+            {{-- Secondary hexagon - lower right --}}
+            <path d="M500 420 L540 445 L540 495 L500 520 L460 495 L460 445 Z" stroke="#990000" stroke-width="1" fill="none" opacity="0.4"/>
+            <line x1="540" y1="470" x2="590" y2="470" stroke="#990000" stroke-width="1" opacity="0.4"/>
+            <circle cx="596" cy="470" r="3" fill="#990000" opacity="0.4"/>
+
+            {{-- Secondary hexagon - upper left --}}
+            <path d="M120 80 L160 105 L160 155 L120 180 L80 155 L80 105 Z" stroke="#CC3333" stroke-width="1" fill="none" opacity="0.35"/>
+            <line x1="80" y1="130" x2="30" y2="130" stroke="#CC3333" stroke-width="1" opacity="0.35"/>
+            <circle cx="22" cy="130" r="3" fill="#CC3333" opacity="0.35"/>
+
+            {{-- Secondary hexagon - lower --}}
+            <path d="M180 580 L220 605 L220 655 L180 680 L140 655 L140 605 Z" stroke="#990000" stroke-width="1" fill="none" opacity="0.3"/>
+            <line x1="220" y1="630" x2="270" y2="630" stroke="#990000" stroke-width="1" opacity="0.3"/>
+
+            {{-- Connecting traces between hexagons --}}
+            <line x1="430" y1="160" x2="385" y2="200" stroke="#990000" stroke-width="1" opacity="0.4"/>
+            <line x1="460" y1="445" x2="400" y2="400" stroke="#990000" stroke-width="1" opacity="0.3"/>
+
+            {{-- Floating accent nodes --}}
+            <circle cx="550" cy="300" r="3" fill="#CC3333" opacity="0.4"/>
+            <circle cx="570" cy="380" r="2" fill="#990000" opacity="0.3"/>
+            <circle cx="50" cy="200" r="3" fill="#CC3333" opacity="0.35"/>
+            <circle cx="30" cy="350" r="2" fill="#990000" opacity="0.3"/>
+            <circle cx="350" cy="550" r="3" fill="#CC3333" opacity="0.3"/>
+            <circle cx="100" cy="450" r="2" fill="#990000" opacity="0.25"/>
+            <circle cx="550" cy="80" r="2" fill="#CC3333" opacity="0.3"/>
+            <circle cx="400" y="600" r="2" fill="#990000" opacity="0.2"/>
+        </svg>
+    </div>
 
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl lg:max-w-xl">
             {{-- Eyebrow --}}
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-echo-800/50 border border-echo-700 mb-8">
                 <span class="relative flex h-2 w-2">
@@ -62,22 +144,43 @@ description: Executive-level technology and security leadership for growing busi
     </div>
 </section>
 
+{{-- Trusted By Section --}}
+<section class="py-12 border-y border-echo-800/50">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-col items-center gap-8">
+            <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
+            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-20 w-auto">
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="/assets/img/clients/sr-logo.png" alt="Strongrock" class="h-8 w-auto">
+                    <span class="text-echo-300 font-display text-lg font-semibold">Strongrock Engineering</span>
+                </div>
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-7 w-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- What I Do Section --}}
 <section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl mb-16">
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                Two roles. One mission.
+                Executive leadership, on your terms.
             </h2>
             <p class="text-lg text-echo-300">
-                Whether you need technology strategy, security leadership, or both - I bring executive-level expertise to help your business grow confidently.
+                I serve as your technology and security executive - attending your leadership meetings, guiding your team, and making the strategic calls. The difference? I do it part-time, which means you get senior expertise without the full-time price tag.
             </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             {{-- CTO Card --}}
-            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-2xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-crimson-900/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50 overflow-hidden">
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <div class="relative">
                     <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
@@ -123,8 +226,8 @@ description: Executive-level technology and security leadership for growing busi
             </div>
 
             {{-- CISO Card --}}
-            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-2xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-crimson-900/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50 overflow-hidden">
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <div class="relative">
                     <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
@@ -181,10 +284,10 @@ description: Executive-level technology and security leadership for growing busi
                     Why fractional?
                 </h2>
                 <p class="text-lg text-echo-300 mb-8">
-                    Not every business needs a full-time CTO or CISO. But every growing business needs strategic technology and security leadership at some point.
+                    Think of it like having a CFO on retainer. You get the strategic thinking and executive experience of a CTO or CISO - without the $300K+ salary, benefits, and hiring headaches.
                 </p>
                 <p class="text-lg text-echo-300 mb-8">
-                    Fractional leadership gives you access to executive-level expertise at a fraction of the cost. You get the strategic thinking, the experience, and the accountability - scaled to what you actually need.
+                    A fractional executive works with your business 10-20 hours per week, joining leadership meetings, guiding your team, and owning the decisions that matter. Same accountability as a full-time hire. Fraction of the cost.
                 </p>
                 <div class="flex items-center gap-4">
                     <a href="/about" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
@@ -198,20 +301,20 @@ description: Executive-level technology and security leadership for growing busi
 
             <div class="grid grid-cols-2 gap-6">
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">70%</div>
-                    <p class="text-echo-400 text-sm">Cost savings vs. full-time executive hire</p>
+                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">$150K+</div>
+                    <p class="text-echo-400 text-sm">Average annual savings vs. full-time exec</p>
                 </div>
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">24hr</div>
-                    <p class="text-echo-400 text-sm">Typical response time for urgent issues</p>
+                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">10-20</div>
+                    <p class="text-echo-400 text-sm">Hours per week, tailored to your needs</p>
                 </div>
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
                     <div class="text-4xl font-display font-bold text-crimson-500 mb-2">15+</div>
-                    <p class="text-echo-400 text-sm">Years of enterprise technology experience</p>
+                    <p class="text-echo-400 text-sm">Years enterprise technology experience</p>
                 </div>
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">Flex</div>
-                    <p class="text-echo-400 text-sm">Scale up or down based on your needs</p>
+                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">1 day</div>
+                    <p class="text-echo-400 text-sm">Typical response for urgent matters</p>
                 </div>
             </div>
         </div>
@@ -221,10 +324,10 @@ description: Executive-level technology and security leadership for growing busi
 {{-- CTA Section --}}
 <section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-3xl p-12 lg:p-16 overflow-hidden">
-            {{-- Background decoration --}}
-            <div class="absolute top-0 right-0 w-64 h-64 bg-crimson-800/20 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-crimson-900/20 rounded-full blur-3xl"></div>
+        <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
+            {{-- Background decoration - angular shapes --}}
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-crimson-800/20 transform rotate-45 blur-xl"></div>
+            <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-crimson-900/30 transform -rotate-12 blur-xl"></div>
 
             <div class="relative max-w-2xl">
                 <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">

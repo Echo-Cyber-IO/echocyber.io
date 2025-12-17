@@ -1,7 +1,7 @@
 {{-- Navigation --}}
 <header x-data="{ mobileMenuOpen: false, scrolled: false }"
         x-init="window.addEventListener('scroll', () => { scrolled = window.pageYOffset > 20 })"
-        :class="{ 'bg-echo-950/95 backdrop-blur-md shadow-lg': scrolled, 'bg-transparent': !scrolled }"
+        :class="{ 'bg-echo-950/70 backdrop-blur-md shadow-lg': scrolled, 'bg-transparent': !scrolled }"
         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
 
     <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Main navigation">
@@ -10,8 +10,8 @@
             {{-- Logo --}}
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center gap-3 group">
-                    <img src="/assets/img/logo-small.png" alt="Echo Cyber" class="h-10 w-auto">
-                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-400 transition-colors">
+                    <img src="/assets/img/logo-hex.png" alt="Echo Cyber" class="h-12 w-auto">
+                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-400 transition-colors hidden sm:inline">
                         Echo Cyber
                     </span>
                 </a>
