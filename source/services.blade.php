@@ -84,7 +84,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 <p class="text-lg text-echo-300 mb-8">
                     Strategic technology leadership to align your tech investments with business goals. I help you make the right decisions, build the right team, and avoid costly mistakes.
                 </p>
-                <a href="/contact" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
+                <a href="mailto:info@echocyber.com" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
                     Discuss your technology needs
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -159,7 +159,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 <p class="text-lg text-echo-300 mb-8">
                     Security leadership that protects your business without the complexity. Practical, risk-based guidance that fits your resources and growth stage.
                 </p>
-                <a href="/contact" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
+                <a href="mailto:info@echocyber.com" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
                     Discuss your security needs
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -268,7 +268,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 <p class="text-lg text-echo-300 mb-8">
                     That's okay. Most conversations start with "we're not exactly sure what we need." Let's talk through your situation and figure out together if there's a fit.
                 </p>
-                <a href="/contact"
+                <a href="mailto:info@echocyber.com"
                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
                     <span>Let's Figure It Out</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">

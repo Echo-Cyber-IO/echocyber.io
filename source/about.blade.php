@@ -19,11 +19,11 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
                     I'm Michael Faas, and I help growing businesses navigate the complex world of technology and security. My mission: translating technical complexity into clear, actionable strategy.
                 </p>
                 <div class="flex items-center gap-4">
-                    <a href="/contact"
+                    <a href="mailto:info@echocyber.com"
                        class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow">
                         Let's Connect
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/mfaas/" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 text-echo-300 hover:text-white transition-colors">
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -54,7 +54,7 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
 
             <div class="prose prose-lg prose-invert max-w-none">
                 <p class="text-echo-300 text-lg leading-relaxed mb-6">
-                    With over 15 years in enterprise technology and security, I've worn many hats: software engineer, security analyst, team lead, and technology executive. I've built systems that scale, led teams through complex projects, and helped organizations navigate everything from cloud migrations to security incidents.
+                    With over 20 years in enterprise technology and security, I've worn many hats: software engineer, security analyst, team lead, and technology executive. I've built systems that scale, led teams through complex projects, and helped organizations navigate everything from cloud migrations to security incidents.
                 </p>
 
                 <p class="text-echo-300 text-lg leading-relaxed mb-6">
@@ -69,8 +69,53 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
     </div>
 </section>
 
-{{-- Approach Section --}}
+{{-- Philosophy Section --}}
 <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+                Why most technology initiatives fail
+            </h2>
+
+            <div class="prose prose-lg prose-invert max-w-none">
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Most leaders think they have a complicated technology problem. They actually have a complex one. And that confusion is expensive.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    <strong class="text-white">Complicated</strong> is a jet engine. Thousands of parts, incredibly intricate, but fundamentally predictable. You can disassemble it, understand every component, troubleshoot when it breaks. More expertise equals more control.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    <strong class="text-white">Complex</strong> is an ecosystem. The parts don't just connect—they interact, adapt, and create behaviors that can't be predicted by studying the pieces. Remove one thing and maybe nothing happens. Or maybe everything collapses. You won't know until it happens.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Here's the danger: <strong class="text-white">they look identical from the outside.</strong>
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    That "straightforward" system modernization? Complex. The "simple" integration project? Complex. The reorg that was supposed to fix everything? Definitely complex.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed mb-6">
+                    Leadership sees a complicated problem and deploys a complicated solution—new software, reorganization, updated processes. But they've got a complex problem. The system absorbs the change, routes around it, and returns to equilibrium. Or worse, the intervention triggers something unexpected.
+                </p>
+
+                <p class="text-crimson-400 text-xl leading-relaxed mb-6 font-medium">
+                    The problem isn't that you're not smart enough. It's that you're using complicated-system thinking on a complex-system problem. Different game. Different rules.
+                </p>
+
+                <p class="text-echo-300 text-lg leading-relaxed">
+                    I help leaders recognize which game they're actually playing—and navigate it with clear thinking instead of false certainty.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Approach Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl mb-16">
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -86,10 +131,10 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
             <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
                 <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">01</div>
                 <h3 class="font-display text-xl font-bold text-white mb-4">
-                    Clarity first
+                    Complex vs. Complicated
                 </h3>
                 <p class="text-echo-400">
-                    I don't hide behind jargon. Every recommendation comes with clear reasoning, trade-offs explained, and a path forward you can actually follow.
+                    A system migration isn't a puzzle with one right answer. A security program isn't a checklist. These are complex challenges—interdependent, context-dependent, full of trade-offs. I help you navigate them as they actually are, not as vendors wish they were.
                 </p>
             </div>
 
@@ -97,10 +142,10 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
             <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
                 <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">02</div>
                 <h3 class="font-display text-xl font-bold text-white mb-4">
-                    Practical over perfect
+                    Translation, not jargon
                 </h3>
                 <p class="text-echo-400">
-                    The best security program is one you can actually implement. I focus on solutions that fit your resources, timeline, and risk tolerance - not theoretical ideals.
+                    Architecture decisions, risk assessments, vendor evaluations—none of it matters if your leadership team can't understand and act on it. I translate geek into human so the people making decisions actually know what they're deciding.
                 </p>
             </div>
 
@@ -108,10 +153,10 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
             <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
                 <div class="text-5xl font-display font-bold text-crimson-500/30 mb-4">03</div>
                 <h3 class="font-display text-xl font-bold text-white mb-4">
-                    Partnership mindset
+                    Signal over noise
                 </h3>
                 <p class="text-echo-400">
-                    I'm not a vendor. I work alongside your team as a trusted partner, invested in your long-term success rather than maximizing billable hours.
+                    Every vendor has a 'critical' solution. Every framework has 'essential' controls. I filter the noise and focus on what actually moves the needle for your business—whether that's a technology roadmap, a security investment, or a hiring decision.
                 </p>
             </div>
         </div>
@@ -128,7 +173,7 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
             <p class="text-lg text-echo-300 mb-8">
                 Whether you're facing a specific technology decision or need ongoing strategic guidance, I'm happy to have a conversation about how I might help.
             </p>
-            <a href="/contact"
+            <a href="mailto:info@echocyber.com"
                class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
                 <span>Get in Touch</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">

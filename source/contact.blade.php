@@ -42,8 +42,8 @@ description: Get in touch to discuss your technology and security leadership nee
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <a href="mailto:mfaas@echocyber.io" class="text-crimson-400 hover:text-crimson-300 transition-colors">
-                            mfaas@echocyber.io
+                        <a href="mailto:info@echocyber.com" class="text-crimson-400 hover:text-crimson-300 transition-colors">
+                            info@echocyber.com
                         </a>
                     </div>
 
@@ -66,7 +66,7 @@ description: Get in touch to discuss your technology and security leadership nee
                 </div>
             </div>
 
-            {{-- Contact Form (Wisetrack CRM) --}}
+            {{-- Contact Form (Wisetrack CRM) - Commented out until CRM is updated
             <div class="bg-echo-900/50 border border-echo-700 rounded-2xl p-2 lg:p-4 min-h-[700px]">
                 <iframe src="https://link.wisetrackcrm.com/widget/form/oe160e3F8IYMF7bOmt9P"
                     style="width:100%;height:100%;min-height:680px;border:none;border-radius:8px"
@@ -86,6 +86,7 @@ description: Get in touch to discuss your technology and security leadership nee
                 </iframe>
                 <script src="https://link.wisetrackcrm.com/js/form_embed.js"></script>
             </div>
+            --}}
         </div>
     </div>
 </section>

@@ -10,9 +10,9 @@
             {{-- Logo --}}
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center gap-3 group">
-                    <img src="/assets/img/logo-hex.png" alt="Echo Cyber" class="h-12 w-auto">
+                    <img src="/assets/img/logo-hex.png" alt="Michael Faas" class="h-12 w-auto">
                     <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-400 transition-colors hidden sm:inline">
-                        Echo Cyber
+                        Michael Faas
                     </span>
                 </a>
             </div>
@@ -47,7 +47,7 @@
 
             {{-- CTA Button (Desktop) --}}
             <div class="hidden lg:block">
-                <a href="/contact"
+                <a href="mailto:info@echocyber.com"
                    class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-glow">
                     <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -102,7 +102,7 @@
                           font-medium hover:text-crimson-400 transition-colors py-2">
                     Contact
                 </a>
-                <a href="/contact"
+                <a href="mailto:info@echocyber.com"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-3 rounded-lg font-medium transition-all duration-300 mt-2">
                     <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">

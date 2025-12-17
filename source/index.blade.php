@@ -116,12 +116,12 @@ description: Executive-level technology and security leadership for growing busi
 
             {{-- Subheadline --}}
             <p class="text-xl lg:text-2xl text-echo-300 leading-relaxed mb-10 max-w-2xl">
-                Get executive-level CTO and CISO expertise for your growing business without the full-time overhead. Clear strategy. Real results.
+                Technology strategy. Security leadership. Architecture decisions. Vendor evaluation. The CTO and CISO work your business needs—without the full-time overhead. And unlike most consultants, I won't pretend your challenges have simple answers when they don't.
             </p>
 
             {{-- CTAs --}}
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="/contact"
+                <a href="mailto:info@echocyber.com"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
                     <span>Start the Conversation</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
@@ -170,10 +170,13 @@ description: Executive-level technology and security leadership for growing busi
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl mb-16">
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                Executive leadership, on your terms.
+                Strategic technology leadership that speaks your language.
             </h2>
+            <p class="text-lg text-echo-300 mb-4">
+                Technology roadmaps. Architecture decisions. Security programs. Vendor negotiations. Team building. Compliance. These aren't complicated puzzles with right answers—they're complex decisions that depend on your specific context, constraints, and goals.
+            </p>
             <p class="text-lg text-echo-300">
-                I serve as your technology and security executive - attending your leadership meetings, guiding your team, and making the strategic calls. The difference? I do it part-time, which means you get senior expertise without the full-time price tag.
+                I serve as your fractional CTO and CISO, bringing executive-level judgment to the decisions that matter. But more importantly, I translate the complexity into strategy your whole leadership team can understand and act on.
             </p>
         </div>
 
@@ -193,7 +196,7 @@ description: Executive-level technology and security leadership for growing busi
                         Fractional CTO
                     </h3>
                     <p class="text-echo-300 mb-6">
-                        Strategic technology leadership to align your tech investments with business goals. From architecture decisions to team building, get the guidance you need to scale.
+                        Technology strategy for complex environments. I help you build roadmaps, make architecture decisions, evaluate vendors, and develop teams—while recognizing that these aren't puzzle problems with clean solutions. They're judgment calls that need clear thinking and honest trade-offs.
                     </p>
 
                     <ul class="space-y-3 text-echo-400">
@@ -240,7 +243,7 @@ description: Executive-level technology and security leadership for growing busi
                         Fractional CISO
                     </h3>
                     <p class="text-echo-300 mb-6">
-                        Security leadership that protects your business without the complexity. Get practical, risk-based security guidance that fits your budget and growth stage.
+                        Security leadership without the fear-mongering. I build programs, assess risk, guide compliance, and plan for incidents—focused on what actually matters for your business, not what vendors are selling this quarter.
                     </p>
 
                     <ul class="space-y-3 text-echo-400">
@@ -309,7 +312,7 @@ description: Executive-level technology and security leadership for growing busi
                     <p class="text-echo-400 text-sm">Hours per week, tailored to your needs</p>
                 </div>
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">15+</div>
+                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">20+</div>
                     <p class="text-echo-400 text-sm">Years enterprise technology experience</p>
                 </div>
                 <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
@@ -336,9 +339,9 @@ description: Executive-level technology and security leadership for growing busi
                 <p class="text-lg text-echo-300 mb-8">
                     Let's have a conversation about where you are today and where you want to go. No pressure, no sales pitch - just a straightforward discussion about how I might be able to help.
                 </p>
-                <a href="/contact"
+                <a href="mailto:info@echocyber.com"
                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
-                    <span>Schedule a Call</span>
+                    <span>Get in Touch</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
