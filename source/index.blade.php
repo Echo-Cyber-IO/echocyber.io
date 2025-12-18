@@ -121,7 +121,7 @@ description: Executive-level technology and security leadership for growing busi
 
             {{-- CTAs --}}
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="mailto:info@echocyber.com"
+                <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
                     <span>Start the Conversation</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
@@ -339,7 +339,7 @@ description: Executive-level technology and security leadership for growing busi
                 <p class="text-lg text-echo-300 mb-8">
                     Let's have a conversation about where you are today and where you want to go. No pressure, no sales pitch - just a straightforward discussion about how I might be able to help.
                 </p>
-                <a href="mailto:info@echocyber.com"
+                <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
                     <span>Get in Touch</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">

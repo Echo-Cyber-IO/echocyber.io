@@ -47,7 +47,7 @@
 
             {{-- CTA Button (Desktop) --}}
             <div class="hidden lg:block">
-                <a href="mailto:info@echocyber.com"
+                <a href="/contact"
                    class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-glow">
                     <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -102,7 +102,7 @@
                           font-medium hover:text-crimson-400 transition-colors py-2">
                     Contact
                 </a>
-                <a href="mailto:info@echocyber.com"
+                <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-3 rounded-lg font-medium transition-all duration-300 mt-2">
                     <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">

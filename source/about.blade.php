@@ -19,7 +19,7 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
                     I'm Michael Faas, and I help growing businesses navigate the complex world of technology and security. My mission: translating technical complexity into clear, actionable strategy.
                 </p>
                 <div class="flex items-center gap-4">
-                    <a href="mailto:info@echocyber.com"
+                    <a href="/contact"
                        class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow">
                         Let's Connect
                     </a>
@@ -173,7 +173,7 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
             <p class="text-lg text-echo-300 mb-8">
                 Whether you're facing a specific technology decision or need ongoing strategic guidance, I'm happy to have a conversation about how I might help.
             </p>
-            <a href="mailto:info@echocyber.com"
+            <a href="/contact"
                class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
                 <span>Get in Touch</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">

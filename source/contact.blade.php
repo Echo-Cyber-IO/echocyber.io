@@ -66,27 +66,173 @@ description: Get in touch to discuss your technology and security leadership nee
                 </div>
             </div>
 
-            {{-- Contact Form (Wisetrack CRM) - Commented out until CRM is updated
-            <div class="bg-echo-900/50 border border-echo-700 rounded-2xl p-2 lg:p-4 min-h-[700px]">
-                <iframe src="https://link.wisetrackcrm.com/widget/form/oe160e3F8IYMF7bOmt9P"
-                    style="width:100%;height:100%;min-height:680px;border:none;border-radius:8px"
-                    id="inline-oe160e3F8IYMF7bOmt9P"
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Website Inbound"
-                    data-height="680"
-                    data-layout-iframe-id="inline-oe160e3F8IYMF7bOmt9P"
-                    data-form-id="oe160e3F8IYMF7bOmt9P"
-                    title="Contact Form">
-                </iframe>
-                <script src="https://link.wisetrackcrm.com/js/form_embed.js"></script>
+            {{-- Contact Form --}}
+            <div class="bg-echo-900/50 border border-echo-700 rounded-2xl p-6 lg:p-8">
+                <form
+                    x-data="{
+                        submitting: false,
+                        submitted: false,
+                        error: false,
+                        formData: {
+                            firstName: '',
+                            lastName: '',
+                            email: '',
+                            company: '',
+                            phone: '',
+                            message: ''
+                        },
+                        async submit() {
+                            this.submitting = true;
+                            this.error = false;
+
+                            try {
+                                const response = await fetch('https://services.leadconnectorhq.com/hooks/LTsOV0bzU0aByRBneCoy/webhook-trigger/cac4af7b-574e-4b21-82a4-1754bb95e4c3', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({
+                                        first_name: this.formData.firstName,
+                                        last_name: this.formData.lastName,
+                                        email: this.formData.email,
+                                        company_name: this.formData.company,
+                                        phone: this.formData.phone,
+                                        message: this.formData.message,
+                                        source: 'echocyber.io'
+                                    })
+                                });
+
+                                if (response.ok) {
+                                    this.submitted = true;
+                                } else {
+                                    this.error = true;
+                                }
+                            } catch (e) {
+                                this.error = true;
+                            }
+
+                            this.submitting = false;
+                        }
+                    }"
+                    @submit.prevent="submit"
+                    class="space-y-6"
+                >
+                    {{-- Success State --}}
+                    <div x-show="submitted" x-cloak class="text-center py-12">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/20 mb-6">
+                            <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-2">Message sent!</h3>
+                        <p class="text-echo-400">I'll get back to you within 24 hours.</p>
+                    </div>
+
+                    {{-- Form Fields --}}
+                    <div x-show="!submitted" class="space-y-6">
+                        {{-- Name Row --}}
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-echo-300 mb-2">First Name *</label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    x-model="formData.firstName"
+                                    required
+                                    class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all"
+                                    placeholder="First name"
+                                >
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-echo-300 mb-2">Last Name *</label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    x-model="formData.lastName"
+                                    required
+                                    class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all"
+                                    placeholder="Last name"
+                                >
+                            </div>
+                        </div>
+
+                        {{-- Email --}}
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-echo-300 mb-2">Email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                x-model="formData.email"
+                                required
+                                class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all"
+                                placeholder="you@company.com"
+                            >
+                        </div>
+
+                        {{-- Company & Phone Row --}}
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-echo-300 mb-2">Company</label>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    x-model="formData.company"
+                                    class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all"
+                                    placeholder="Your company"
+                                >
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-echo-300 mb-2">Phone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    x-model="formData.phone"
+                                    class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all"
+                                    placeholder="(555) 123-4567"
+                                >
+                            </div>
+                        </div>
+
+                        {{-- Message --}}
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-echo-300 mb-2">How can I help? *</label>
+                            <textarea
+                                id="message"
+                                x-model="formData.message"
+                                required
+                                rows="5"
+                                class="w-full px-4 py-3 bg-echo-800/50 border border-echo-600 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:ring-2 focus:ring-crimson-500 focus:border-transparent transition-all resize-none"
+                                placeholder="Tell me about your situation, challenges, or questions..."
+                            ></textarea>
+                        </div>
+
+                        {{-- Error Message --}}
+                        <div x-show="error" x-cloak class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+                            <p class="text-red-400 text-sm">Something went wrong. Please try again or email me directly at <a href="mailto:info@echocyber.com" class="underline">info@echocyber.com</a></p>
+                        </div>
+
+                        {{-- Submit Button --}}
+                        <button
+                            type="submit"
+                            :disabled="submitting"
+                            class="w-full px-6 py-4 bg-crimson-600 hover:bg-crimson-500 disabled:bg-crimson-800 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                        >
+                            <span x-show="!submitting">Send Message</span>
+                            <span x-show="submitting" class="flex items-center gap-2">
+                                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Sending...
+                            </span>
+                        </button>
+
+                        <p class="text-echo-500 text-sm text-center">
+                            I'll respond within 24 hours on business days.
+                        </p>
+                    </div>
+                </form>
             </div>
-            --}}
         </div>
     </div>
 </section>
