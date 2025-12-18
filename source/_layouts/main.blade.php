@@ -12,6 +12,86 @@
     <meta property="og:url" content="{{ $page->getUrl() }}" />
     <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
+    {{-- Schema.org structured data --}}
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@graph": [
+            {
+                "@@type": "ProfessionalService",
+                "@@id": "{{ $page->baseUrl }}/#organization",
+                "name": "Echo Cyber Solutions",
+                "url": "{{ $page->baseUrl }}",
+                "description": "Fractional CTO & CISO services helping growing businesses navigate technology complexity",
+                "areaServed": [
+                    {
+                        "@@type": "Country",
+                        "name": "United States"
+                    },
+                    {
+                        "@@type": "Country",
+                        "name": "Canada"
+                    }
+                ],
+                "founder": {
+                    "@@type": "Person",
+                    "@@id": "{{ $page->baseUrl }}/#founder",
+                    "name": "Michael Faas",
+                    "jobTitle": "Fractional CTO & CISO",
+                    "hasCredential": {
+                        "@@type": "EducationalOccupationalCredential",
+                        "credentialCategory": "Professional Certification",
+                        "name": "CISSP",
+                        "description": "Certified Information Systems Security Professional"
+                    },
+                    "sameAs": [
+                        "https://www.linkedin.com/in/mfaas/"
+                    ]
+                },
+                "hasOfferCatalog": {
+                    "@@type": "OfferCatalog",
+                    "name": "Engagement Options",
+                    "itemListElement": [
+                        {
+                            "@@type": "Offer",
+                            "itemOffered": {
+                                "@@type": "Service",
+                                "name": "Tune",
+                                "description": "Strategy Session - A focused engagement to assess your technology landscape and identify opportunities"
+                            }
+                        },
+                        {
+                            "@@type": "Offer",
+                            "itemOffered": {
+                                "@@type": "Service",
+                                "name": "Signal",
+                                "description": "Fractional Engagement - Ongoing part-time technology leadership integrated with your team"
+                            }
+                        },
+                        {
+                            "@@type": "Offer",
+                            "itemOffered": {
+                                "@@type": "Service",
+                                "name": "Echo",
+                                "description": "Advisory - Continuous guidance and strategic counsel for established clients"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@@type": "WebSite",
+                "@@id": "{{ $page->baseUrl }}/#website",
+                "url": "{{ $page->baseUrl }}",
+                "name": "Echo Cyber Solutions",
+                "publisher": {
+                    "@@id": "{{ $page->baseUrl }}/#organization"
+                }
+            }
+        ]
+    }
+    </script>
+
     <title>{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
     <link rel="home" href="{{ $page->baseUrl }}">
