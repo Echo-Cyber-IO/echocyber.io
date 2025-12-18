@@ -14,7 +14,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 Executive leadership, flexibly delivered.
             </h1>
             <p class="text-xl text-echo-300 leading-relaxed">
-                Whether you need a strategic technology partner, security leadership, or both - I provide fractional executive services that scale with your business needs and budget.
+                Whether you need a strategic technology partner, security leadership, or both - I provide fractional executive services that scale with your business needs and budget. No jargon, no fear-mongering, no pretending complex problems have simple answers.
             </p>
         </div>
     </div>
@@ -82,7 +82,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                     Fractional CTO
                 </h2>
                 <p class="text-lg text-echo-300 mb-8">
-                    Strategic technology leadership to align your tech investments with business goals. I help you make the right decisions, build the right team, and avoid costly mistakes.
+                    Strategic technology leadership to align your tech investments with business goals. I help you navigate complex decisions, build the right team, and translate technical trade-offs into language your whole leadership team can act on.
                 </p>
                 <a href="/contact" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
                     Discuss your technology needs
@@ -157,7 +157,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                     Fractional CISO
                 </h2>
                 <p class="text-lg text-echo-300 mb-8">
-                    Security leadership that protects your business without the complexity. Practical, risk-based guidance that fits your resources and growth stage.
+                    Security leadership that protects your business without the fear-mongering. Practical, risk-based guidance focused on what actually matters for your business - not what vendors are selling this quarter.
                 </p>
                 <a href="/contact" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
                     Discuss your security needs
