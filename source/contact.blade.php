@@ -6,8 +6,12 @@ description: Get in touch to discuss your technology and security leadership nee
 
 @section('body')
 
-<section class="py-24 lg:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="relative py-24 lg:py-32">
+    {{-- Subtle gradient accent --}}
+    <div class="absolute top-0 right-0 w-96 h-96 bg-crimson-900/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-crimson-900/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16">
             {{-- Content --}}
             <div>
