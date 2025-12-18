@@ -13,6 +13,10 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
 
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-3xl">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Services</span>
+            </div>
             <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Executive leadership, flexibly delivered.
             </h1>
@@ -58,11 +62,13 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
         {{-- Tier cards --}}
         <div class="grid lg:grid-cols-3 gap-8">
             {{-- Tune --}}
-            <div class="bg-echo-800/50 border border-echo-700 rounded-2xl p-8 hover:border-crimson-800/50 transition-colors">
+            <div class="bg-echo-800/50 border border-echo-700 rounded-xl p-8 hover:border-crimson-800/50 transition-colors">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg">
-                        <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        <svg class="w-5 h-5 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+                            <line x1="12" y1="9.5" x2="12" y2="4" />
                         </svg>
                     </div>
                     <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Entry</span>
@@ -109,7 +115,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
             </div>
 
             {{-- Signal --}}
-            <div class="relative bg-echo-800/50 border-2 border-crimson-800/50 rounded-2xl p-8 ring-1 ring-crimson-900/20">
+            <div class="relative bg-echo-800/50 border-2 border-crimson-800/50 rounded-xl p-8 ring-1 ring-crimson-900/20">
                 {{-- Featured badge --}}
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-crimson-600 rounded-full text-xs font-semibold text-white">
                     Full Engagement
@@ -117,8 +123,8 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
 
                 <div class="flex items-center gap-3 mb-4 mt-2">
                     <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg">
-                        <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        <svg class="w-5 h-5 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
                     </div>
                     <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Fractional</span>
@@ -165,11 +171,11 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
             </div>
 
             {{-- Echo --}}
-            <div class="bg-echo-800/50 border border-echo-700 rounded-2xl p-8 hover:border-crimson-800/50 transition-colors">
+            <div class="bg-echo-800/50 border border-echo-700 rounded-xl p-8 hover:border-crimson-800/50 transition-colors">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg">
-                        <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        <svg class="w-5 h-5 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12h4l2-5 4 10 2-5h8" />
                         </svg>
                     </div>
                     <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Advisory</span>
@@ -246,7 +252,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 </a>
             </div>
 
-            <div class="bg-echo-800/30 border border-echo-700 rounded-2xl p-8">
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
                 <h3 class="font-display text-lg font-bold text-white mb-6">What's included</h3>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-4">
@@ -324,7 +330,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 </a>
             </div>
 
-            <div class="bg-echo-800/30 border border-echo-700 rounded-2xl p-8">
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
                 <h3 class="font-display text-lg font-bold text-white mb-6">What's included</h3>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-4">
@@ -436,7 +442,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 </p>
                 <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
-                    <span>Let's Figure It Out</span>
+                    <span>Get in Touch</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>

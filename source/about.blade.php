@@ -15,6 +15,10 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             {{-- Content --}}
             <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">About</span>
+                </div>
                 <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
                     Technology leadership that speaks your language.
                 </h1>
@@ -24,7 +28,7 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
                 <div class="flex items-center gap-4">
                     <a href="/contact"
                        class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow">
-                        Let's Connect
+                        Let's Talk
                     </a>
                     <a href="https://www.linkedin.com/in/mfaas/" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 text-echo-300 hover:text-white transition-colors">

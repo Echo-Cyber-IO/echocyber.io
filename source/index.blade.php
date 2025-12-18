@@ -120,7 +120,7 @@ description: Executive-level technology and security leadership for growing busi
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
-                    <span>Start the Conversation</span>
+                    <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
@@ -399,7 +399,7 @@ description: Executive-level technology and security leadership for growing busi
 </section>
 
 {{-- CTA Section --}}
-<section class="py-24 lg:py-32 bg-echo-900/50">
+<section class="py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
             {{-- Background decoration - angular shapes --}}
