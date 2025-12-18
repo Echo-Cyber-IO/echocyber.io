@@ -33,9 +33,6 @@
     {{-- Vite refresh for development hot reload --}}
     @viteRefresh()
 
-    {{-- Vite refresh for development hot reload --}}
-    @viteRefresh()
-
     {{-- Compiled styles --}}
     <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
 </head>

@@ -11,7 +11,7 @@
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center gap-3 group">
                     <img src="/assets/img/logo-hex.png" alt="Michael Faas" class="h-12 w-auto">
-                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-400 transition-colors hidden sm:inline">
+                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-500 transition-colors hidden sm:inline">
                         Michael Faas
                     </span>
                 </a>
@@ -20,24 +20,24 @@
             {{-- Desktop Navigation --}}
             <div class="hidden lg:flex lg:items-center lg:gap-x-10">
                 <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors relative
+                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors relative
                           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
                           after:transition-all after:duration-300 hover:after:w-full
                           {{ $page->isActive('/about') ? 'after:w-full' : '' }}">
                     About
                 </a>
                 <a href="/services"
-                   class="{{ $page->isActive('/services') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors relative
+                   class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors relative
                           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
                           after:transition-all after:duration-300 hover:after:w-full
                           {{ $page->isActive('/services') ? 'after:w-full' : '' }}">
                     Services
                 </a>
                 <a href="/contact"
-                   class="{{ $page->isActive('/contact') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors relative
+                   class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors relative
                           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
                           after:transition-all after:duration-300 hover:after:w-full
                           {{ $page->isActive('/contact') ? 'after:w-full' : '' }}">
@@ -88,18 +88,18 @@
              class="lg:hidden py-4 border-t border-echo-800">
             <div class="flex flex-col gap-4">
                 <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors py-2">
+                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors py-2">
                     About
                 </a>
                 <a href="/services"
-                   class="{{ $page->isActive('/services') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors py-2">
+                   class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors py-2">
                     Services
                 </a>
                 <a href="/contact"
-                   class="{{ $page->isActive('/contact') ? 'text-crimson-400' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-400 transition-colors py-2">
+                   class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors py-2">
                     Contact
                 </a>
                 <a href="/contact"

@@ -100,12 +100,9 @@ description: Executive-level technology and security leadership for growing busi
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
         <div class="max-w-3xl lg:max-w-xl">
             {{-- Eyebrow --}}
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-echo-800/50 border border-echo-700 mb-8">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-crimson-500"></span>
-                </span>
-                <span class="text-sm font-medium text-echo-300">Fractional Executive Services</span>
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Fractional Executive Services</span>
             </div>
 
             {{-- Headline --}}
@@ -123,7 +120,7 @@ description: Executive-level technology and security leadership for growing busi
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="/contact"
                    class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
-                    <span>Start the Conversation</span>
+                    <span>Let's Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
@@ -169,6 +166,10 @@ description: Executive-level technology and security leadership for growing busi
 <section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl mb-16">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">What I Do</span>
+            </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
                 Strategic technology leadership that speaks your language.
             </h2>
@@ -187,7 +188,7 @@ description: Executive-level technology and security leadership for growing busi
 
                 <div class="relative">
                     <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
@@ -234,7 +235,7 @@ description: Executive-level technology and security leadership for growing busi
 
                 <div class="relative">
                     <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
@@ -278,11 +279,84 @@ description: Executive-level technology and security leadership for growing busi
     </div>
 </section>
 
-{{-- Why Fractional Section --}}
+{{-- Engagement Tiers Teaser --}}
 <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Engagement Options</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                Ways to engage
+            </h2>
+            <p class="text-lg text-echo-300 max-w-2xl mx-auto">
+                Three tiers designed to meet you where you are.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+            {{-- Tune --}}
+            <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/50">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
+                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+                        <line x1="12" y1="9.5" x2="12" y2="4" />
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-2">Tune</h3>
+                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Strategy session</p>
+                <p class="text-echo-400 text-sm leading-relaxed">Tune in, calibrate, assess. A focused session to diagnose where you are.</p>
+            </div>
+
+            {{-- Signal (featured) --}}
+            <div class="group bg-echo-800/40 border-2 border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/60 hover:border-crimson-800">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/60 group-hover:bg-crimson-950/80 rounded-2xl mb-5 transition-colors">
+                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-2">Signal</h3>
+                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Fractional engagement</p>
+                <p class="text-echo-400 text-sm leading-relaxed">Clear signal through the noise. Embedded leadership, 10 hours per week.</p>
+            </div>
+
+            {{-- Echo --}}
+            <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/50">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
+                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        {{-- Bold pulse with 2 clear peaks --}}
+                        <path d="M2 12h4l2-5 4 10 2-5h8" />
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-2">Echo</h3>
+                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Ongoing advisory</p>
+                <p class="text-echo-400 text-sm leading-relaxed">The feedback loop. Strategic guidance that continues long-term.</p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="/services" class="text-crimson-500 hover:text-crimson-400 font-medium inline-flex items-center gap-2 transition-colors">
+                See full engagement details
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+{{-- Why Fractional Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">The Model</span>
+                </div>
                 <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
                     Why fractional?
                 </h2>
@@ -293,7 +367,7 @@ description: Executive-level technology and security leadership for growing busi
                     A fractional executive works with your business 10-20 hours per week, joining leadership meetings, guiding your team, and owning the decisions that matter. Same accountability as a full-time hire. Fraction of the cost.
                 </p>
                 <div class="flex items-center gap-4">
-                    <a href="/about" class="text-crimson-400 hover:text-crimson-300 font-medium inline-flex items-center gap-2 transition-colors">
+                    <a href="/about" class="text-crimson-500 hover:text-crimson-400 font-medium inline-flex items-center gap-2 transition-colors">
                         Learn more about my approach
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -325,7 +399,7 @@ description: Executive-level technology and security leadership for growing busi
 </section>
 
 {{-- CTA Section --}}
-<section class="py-24 lg:py-32 bg-echo-900/50">
+<section class="py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
             {{-- Background decoration - angular shapes --}}
