@@ -15,6 +15,10 @@ description: Get in touch to discuss your technology and security leadership nee
         <div class="grid lg:grid-cols-2 gap-16">
             {{-- Content --}}
             <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Get In Touch</span>
+                </div>
                 <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
                     Let's talk.
                 </h1>
@@ -46,7 +50,7 @@ description: Get in touch to discuss your technology and security leadership nee
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <a href="mailto:info@echocyber.com" class="text-crimson-400 hover:text-crimson-300 transition-colors">
+                        <a href="mailto:info@echocyber.com" class="text-crimson-500 hover:text-crimson-400 transition-colors">
                             info@echocyber.com
                         </a>
                     </div>

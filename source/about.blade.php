@@ -51,8 +51,12 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
 <section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Background</span>
+            </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
-                Background
+                20+ years in the trenches
             </h2>
 
             <div class="prose prose-lg prose-invert max-w-none">
@@ -76,6 +80,10 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
 <section class="py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Philosophy</span>
+            </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
                 Why most technology initiatives fail
             </h2>
@@ -105,9 +113,11 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
                     Leadership sees a complicated problem and deploys a complicated solution—new software, reorganization, updated processes. But they've got a complex problem. The system absorbs the change, routes around it, and returns to equilibrium. Or worse, the intervention triggers something unexpected.
                 </p>
 
-                <p class="text-crimson-400 text-xl leading-relaxed mb-6 font-medium">
-                    The problem isn't that you're not smart enough. It's that you're using complicated-system thinking on a complex-system problem. Different game. Different rules.
-                </p>
+                <blockquote class="border-l-4 border-crimson-500 pl-6 my-8 py-2">
+                    <p class="text-xl lg:text-2xl leading-relaxed text-white italic">
+                        "The problem isn't that you're not smart enough. It's that you're using complicated-system thinking on a complex-system problem. Different game. Different rules."
+                    </p>
+                </blockquote>
 
                 <p class="text-echo-300 text-lg leading-relaxed">
                     I help leaders recognize which game they're actually playing—and navigate it with clear thinking instead of false certainty.
@@ -121,11 +131,15 @@ description: Meet Michael Faas - Fractional CTO and CISO helping growing busines
 <section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl mb-16">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">My Approach</span>
+            </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                My approach
+                Three guiding principles
             </h2>
             <p class="text-lg text-echo-300">
-                Three principles guide how I work with clients.
+                These shape how I work with every client.
             </p>
         </div>
 
