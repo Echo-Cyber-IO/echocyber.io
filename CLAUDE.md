@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Echo Cyber Solutions website built with Jigsaw, a PHP-based static site generator from Tighten. The site uses Laravel Mix for asset compilation, Tailwind CSS for styling, and Vue.js for interactive components.
+Echo Cyber Solutions website built with Jigsaw 1.8, a PHP-based static site generator from Tighten. The site uses Vite for asset compilation, Tailwind CSS for styling, and Alpine.js for interactions.
 
 ## Development Commands
 
@@ -13,7 +13,7 @@ Echo Cyber Solutions website built with Jigsaw, a PHP-based static site generato
 composer install
 npm install
 
-# Development build - compiles assets and builds site with BrowserSync
+# Development build - compiles assets and builds site with hot reload
 npm run watch
 
 # Manual builds
@@ -44,17 +44,18 @@ npm run prod                            # Builds assets and site
 ### Configuration Files
 - `config.php` - Site-wide configuration and collection definitions
 - `config.production.php` - Production overrides (baseUrl)
-- `webpack.mix.js` - Laravel Mix asset pipeline configuration
-- `tailwind.config.js` - Tailwind with custom colors (crimson, echogray)
+- `vite.config.js` - Vite asset pipeline configuration
+- `tailwind.config.js` - Tailwind with custom colors (crimson, echo palettes)
 - `bootstrap.php` - Jigsaw build hooks (sitemap, search index)
 
 ### Technology Stack
-- **Static Generation**: Jigsaw 1.7 with Blade templating
-- **CSS**: Tailwind CSS 3 with custom theme extensions
-- **JavaScript**: Vue.js 2 (search component), Alpine.js (interactions), highlight.js (code blocks)
-- **Fonts**: Inter var, Roboto Slab, Nunito Sans
-- **Icons**: Font Awesome (via CDN)
+- **Static Generation**: Jigsaw 1.8 with Blade templating
+- **Asset Pipeline**: Vite 6 with @tighten/jigsaw-vite-plugin
+- **CSS**: Tailwind CSS 3 with custom theme (crimson, echo color palettes)
+- **JavaScript**: Alpine.js (interactions), highlight.js (code blocks)
+- **Fonts**: Space Grotesk (display), Outfit (body), JetBrains Mono (code)
 - **Deployment**: Netlify (auto-deploys from build)
+- **SEO**: Schema.org structured data (ProfessionalService, Person, Service)
 
 ### Content Format
 Blog posts use YAML frontmatter:
@@ -73,7 +74,37 @@ categories:
 ```
 
 ### Build Pipeline
-1. Laravel Mix compiles `source/_assets/` to `source/assets/build/`
+1. Vite compiles `source/_assets/` to `source/assets/build/`
 2. Jigsaw processes Blade templates and Markdown content
 3. Output goes to `build_local/` (dev) or `build_production/` (prod)
 4. Post-build listeners generate sitemap.xml and search index
+
+## Service Tier Structure
+
+The site uses a **Tune → Signal → Echo** engagement model:
+
+| Tier | Type | Description |
+|------|------|-------------|
+| **Tune** | Strategy Session | One-time assessment, starting at $7,500 |
+| **Signal** | Fractional Engagement | 10 hrs/week, 3-month min, starting at $10k/month |
+| **Echo** | Advisory | Ongoing guidance, requires prior Tune or Signal |
+
+Custom icons: Tune (dial), Signal (heroicons broadcast), Echo (pulse)
+
+## Design Conventions
+
+### Color Usage
+- **Text**: `text-crimson-500` (#CC3333) - NOT crimson-400 (too pink)
+- **Hover text**: `hover:text-crimson-400` - NOT crimson-300
+- **Borders**: Solid `border-crimson-900` or `border-crimson-800` (no opacity)
+- **Icon backgrounds**: `bg-crimson-950` with 40-80% opacity
+
+### Component Patterns
+- **Card border radius**: `rounded-xl` (consistent across site)
+- **CTA sections**: `rounded-3xl` (intentionally larger for emphasis)
+- **Eyebrows**: Centered with double crimson bars for centered sections, single left bar for left-aligned content
+- **CTA language**: "Let's Talk" (primary buttons), "Get in Touch" (white buttons)
+
+### Blade Template Notes
+- Schema.org JSON-LD uses `@@` to escape `@` symbols (Blade interprets `@` as directives)
+- `@viteRefresh()` only needed once in main.blade.php
