@@ -398,8 +398,38 @@ description: Executive-level technology and security leadership for growing busi
     </div>
 </section>
 
-{{-- CTA Section --}}
+{{-- Newsletter Section --}}
 <section class="py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Newsletter</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                Signal vs. Noise
+            </h2>
+            <p class="text-lg text-echo-300 mb-8">
+                Cutting through the chaos of cybersecurity and technology — so you can lead with clarity.
+            </p>
+
+            {{-- Beehiiv Embed --}}
+            <div class="max-w-lg mx-auto">
+                <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+                <iframe src="https://subscribe-forms.beehiiv.com/b961a68a-112f-4a22-984f-1ffef0ae248c"
+                        class="beehiiv-embed"
+                        data-test-id="beehiiv-embed"
+                        frameborder="0"
+                        scrolling="no"
+                        style="width: 100%; height: 315px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- CTA Section --}}
+<section class="py-24 lg:py-32 bg-echo-900/50">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
             {{-- Background decoration - angular shapes --}}
