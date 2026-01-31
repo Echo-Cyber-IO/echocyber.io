@@ -422,7 +422,7 @@ description: Executive-level technology and security leadership for growing busi
                         data-test-id="beehiiv-embed"
                         frameborder="0"
                         scrolling="no"
-                        style="width: 100%; height: 315px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
+                        style="width: 100%; height: 150px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
             </div>
         </div>
     </div>
