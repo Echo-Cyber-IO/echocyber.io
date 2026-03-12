@@ -81,12 +81,14 @@ description: Get in touch to discuss your technology and security leadership nee
                         submitting: false,
                         submitted: false,
                         error: false,
+                        _loadedAt: Date.now(),
                         formData: {
                             firstName: '',
                             lastName: '',
                             email: '',
                             company: '',
                             phone: '',
+                            website: '',
                             message: ''
                         },
                         async submit() {
@@ -94,7 +96,7 @@ description: Get in touch to discuss your technology and security leadership nee
                             this.error = false;
 
                             try {
-                                const response = await fetch('https://services.leadconnectorhq.com/hooks/LTsOV0bzU0aByRBneCoy/webhook-trigger/cac4af7b-574e-4b21-82a4-1754bb95e4c3', {
+                                const response = await fetch('/.netlify/functions/contact', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
@@ -105,7 +107,10 @@ description: Get in touch to discuss your technology and security leadership nee
                                         email: this.formData.email,
                                         company_name: this.formData.company,
                                         phone: this.formData.phone,
+                                        website: this.formData.website,
                                         message: this.formData.message,
+                                        _form_loaded: String(this._loadedAt),
+                                        _form_submitted: String(Date.now()),
                                         source: 'echocyber.io'
                                     })
                                 });
@@ -138,6 +143,12 @@ description: Get in touch to discuss your technology and security leadership nee
 
                     {{-- Form Fields --}}
                     <div x-show="!submitted" class="space-y-6">
+                        {{-- Honeypot — hidden from humans, bots fill it --}}
+                        <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" x-model="formData.website" tabindex="-1" autocomplete="off">
+                        </div>
+
                         {{-- Name Row --}}
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div>
