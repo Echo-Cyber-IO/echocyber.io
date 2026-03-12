@@ -1,8 +1,11 @@
 // Netlify Function: Contact form proxy with bot protection
 // Hides GHL webhook URL server-side, adds honeypot + heuristics + rate limiting
 
-const GHL_WEBHOOK_URL = process.env.GHL_WEBHOOK_URL
-  || 'https://services.leadconnectorhq.com/hooks/LTsOV0bzU0aByRBneCoy/webhook-trigger/cac4af7b-574e-4b21-82a4-1754bb95e4c3';
+const GHL_WEBHOOK_URL = process.env.GHL_WEBHOOK_URL;
+
+if (!GHL_WEBHOOK_URL) {
+  console.error('[contact] GHL_WEBHOOK_URL env var not set');
+}
 
 // In-memory rate limiting (resets on cold start — fine for this traffic level)
 const submissions = new Map();
@@ -121,6 +124,12 @@ export default async (req, context) => {
   // Required fields
   if (!data.first_name?.trim() || !data.last_name?.trim() || !data.message?.trim()) {
     return new Response(JSON.stringify({ error: 'Required fields missing' }), { status: 400, headers });
+  }
+
+  // Fail if webhook URL not configured
+  if (!GHL_WEBHOOK_URL) {
+    console.error('[contact] GHL_WEBHOOK_URL not configured — cannot forward submission');
+    return new Response(JSON.stringify({ error: 'Server configuration error' }), { status: 500, headers });
   }
 
   // Forward clean submission to GHL
