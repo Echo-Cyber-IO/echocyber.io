@@ -21,6 +21,7 @@
                 <a href="/about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
                 <a href="/services" class="text-echo-300 hover:text-white text-sm transition-colors">Services</a>
                 <a href="/contact" class="text-echo-300 hover:text-white text-sm transition-colors">Contact</a>
+                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-white text-sm transition-colors">Newsletter</a>
             </nav>
 
             {{-- Social links --}}
