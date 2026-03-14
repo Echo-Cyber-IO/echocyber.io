@@ -157,6 +157,12 @@ description: Executive-level technology and security leadership for growing busi
                 <div class="flex items-center">
                     <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-7 w-auto">
                 </div>
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-10 w-auto">
+                </div>
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-8 w-auto invert">
+                </div>
             </div>
         </div>
     </div>
