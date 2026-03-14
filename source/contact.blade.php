@@ -50,8 +50,8 @@ description: Get in touch to discuss your technology and security leadership nee
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <a href="mailto:info@echocyber.com" class="text-crimson-500 hover:text-crimson-400 transition-colors">
-                            info@echocyber.com
+                        <a href="mailto:mfaas@echocyber.io" class="text-crimson-500 hover:text-crimson-400 transition-colors">
+                            mfaas@echocyber.io
                         </a>
                     </div>
 
@@ -227,7 +227,7 @@ description: Get in touch to discuss your technology and security leadership nee
 
                         {{-- Error Message --}}
                         <div x-show="error" x-cloak class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
-                            <p class="text-red-400 text-sm">Something went wrong. Please try again or email me directly at <a href="mailto:info@echocyber.com" class="underline">info@echocyber.com</a></p>
+                            <p class="text-red-400 text-sm">Something went wrong. Please try again or email me directly at <a href="mailto:mfaas@echocyber.io" class="underline">mfaas@echocyber.io</a></p>
                         </div>
 
                         {{-- Submit Button --}}
