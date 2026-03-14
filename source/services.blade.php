@@ -142,13 +142,13 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        10 hours/week engagement
+                        10 hours/week embedded leadership
                     </li>
                     <li class="flex items-start gap-2 text-sm text-echo-300">
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        Systems Map at 30 days
+                        Systems Map delivered at 30 days
                     </li>
                     <li class="flex items-start gap-2 text-sm text-echo-300">
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -160,7 +160,25 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        Vendor & team management
+                        Vendor evaluation & management
+                    </li>
+                    <li class="flex items-start gap-2 text-sm text-echo-300">
+                        <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Policy & playbook development
+                    </li>
+                    <li class="flex items-start gap-2 text-sm text-echo-300">
+                        <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Direct Slack/Teams access
+                    </li>
+                    <li class="flex items-start gap-2 text-sm text-echo-300">
+                        <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Monthly executive briefing
                     </li>
                 </ul>
 
@@ -211,7 +229,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        Access to SOPs & playbooks
+                        Continued access to SOPs & playbooks
                     </li>
                 </ul>
 
