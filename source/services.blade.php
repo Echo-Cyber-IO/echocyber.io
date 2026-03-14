@@ -36,7 +36,7 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="text-2xl font-display font-bold text-crimson-500">Fortune 500</span>
-                    <span class="text-echo-400">to Startups</span>
+                    <span class="text-echo-400">to Founder-Led</span>
                 </div>
             </div>
         </div>
@@ -407,8 +407,8 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                <h3 class="font-display text-lg font-bold text-white mb-2">Growing startups</h3>
-                <p class="text-echo-400 text-sm">Series A-B companies that need strategic guidance but aren't ready for a full-time exec.</p>
+                <h3 class="font-display text-lg font-bold text-white mb-2">Growing businesses</h3>
+                <p class="text-echo-400 text-sm">Founder-led companies that need strategic guidance but aren't ready for a full-time exec.</p>
             </div>
             <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
                 <h3 class="font-display text-lg font-bold text-white mb-2">SMBs scaling up</h3>
