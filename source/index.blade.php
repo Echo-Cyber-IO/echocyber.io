@@ -148,7 +148,7 @@ description: Executive-level technology and security leadership for growing busi
             <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
             <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-28 w-auto">
+                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-32 w-auto">
                 </div>
                 <div class="flex items-center">
                     <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-20 w-auto">
