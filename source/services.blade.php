@@ -199,13 +199,13 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        Bi-monthly sprint planning
+                        Quarterly business reviews
                     </li>
                     <li class="flex items-start gap-2 text-sm text-echo-300">
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
-                        Unlimited email support
+                        Direct async support
                     </li>
                     <li class="flex items-start gap-2 text-sm text-echo-300">
                         <svg class="w-4 h-4 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -301,8 +301,8 @@ description: Fractional CTO and CISO services for growing businesses. Strategic 
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
                         </svg>
                         <div>
-                            <span class="text-white font-medium">Board & investor communications</span>
-                            <p class="text-echo-400 text-sm mt-1">Translate technical progress for stakeholders</p>
+                            <span class="text-white font-medium">Leadership & stakeholder communications</span>
+                            <p class="text-echo-400 text-sm mt-1">Translate technical progress into language your whole team can act on</p>
                         </div>
                     </li>
                 </ul>
