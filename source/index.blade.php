@@ -151,16 +151,16 @@ description: Executive-level technology and security leadership for growing busi
                     <img src="/assets/img/clients/bose.png" alt="Bose" class="h-20 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-7 w-auto">
+                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-10 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-7 w-auto">
+                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-10 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-7 w-auto">
+                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-10 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-6 w-auto">
+                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-9 w-auto">
                 </div>
             </div>
         </div>
