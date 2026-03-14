@@ -146,7 +146,7 @@ description: Executive-level technology and security leadership for growing busi
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col items-center gap-8">
             <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
-            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <div class="flex flex-wrap items-end justify-center gap-8 sm:gap-12">
                 <div class="flex items-center">
                     <img src="/assets/img/clients/bose.png" alt="Bose" class="h-32 w-auto">
                 </div>
