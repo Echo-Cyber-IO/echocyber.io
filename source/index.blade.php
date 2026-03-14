@@ -150,9 +150,8 @@ description: Executive-level technology and security leadership for growing busi
                 <div class="flex items-center">
                     <img src="/assets/img/clients/bose.png" alt="Bose" class="h-20 w-auto">
                 </div>
-                <div class="flex items-center gap-3">
-                    <img src="/assets/img/clients/sr-logo.png" alt="Strongrock" class="h-8 w-auto">
-                    <span class="text-echo-300 font-display text-lg font-semibold">Strongrock Engineering</span>
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-7 w-auto">
                 </div>
                 <div class="flex items-center">
                     <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-7 w-auto">
