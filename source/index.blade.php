@@ -146,21 +146,21 @@ description: Executive-level technology and security leadership for growing busi
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col items-center gap-8">
             <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
-            <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 sm:gap-x-16">
-                <div class="flex items-center justify-center" style="width: 140px;">
-                    <img src="/assets/img/clients/bose.png" alt="Bose" class="max-h-10 max-w-full w-auto">
+            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-32 w-auto">
                 </div>
-                <div class="flex items-center justify-center" style="width: 200px;">
-                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="max-h-12 max-w-full w-auto">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-20 w-auto">
                 </div>
-                <div class="flex items-center justify-center" style="width: 140px;">
-                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="max-h-12 max-w-full w-auto">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-12 w-auto">
                 </div>
-                <div class="flex items-center justify-center" style="width: 200px;">
-                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="max-h-12 max-w-full w-auto">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-12 w-auto">
                 </div>
-                <div class="flex items-center justify-center" style="width: 160px;">
-                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="max-h-12 max-w-full w-auto">
+                <div class="flex items-center">
+                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-10 w-auto">
                 </div>
             </div>
         </div>
