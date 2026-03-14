@@ -148,19 +148,19 @@ description: Executive-level technology and security leadership for growing busi
             <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
             <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-16 w-auto">
+                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-20 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-14 w-auto">
+                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-16 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-12 w-auto">
+                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-14 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-12 w-auto">
+                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-14 w-auto">
                 </div>
                 <div class="flex items-center">
-                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-10 w-auto">
+                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-12 w-auto">
                 </div>
             </div>
         </div>
