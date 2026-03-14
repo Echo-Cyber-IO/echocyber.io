@@ -429,6 +429,11 @@ description: Executive-level technology and security leadership for growing busi
                         scrolling="no"
                         style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
             </div>
+            <p class="mt-4 text-sm text-echo-400">
+                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-crimson-500 transition-colors">
+                    Browse past issues →
+                </a>
+            </p>
         </div>
     </div>
 </section>
