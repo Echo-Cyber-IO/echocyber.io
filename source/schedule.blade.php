@@ -5,7 +5,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
 @extends('_layouts.main')
 
 @section('body')
-    <section class="pt-4 pb-16 lg:pt-6 lg:pb-24">
+    <section class="pb-16 lg:pb-24">
         <div class="mx-auto max-w-7xl px-4">
             {{-- Calendar Widget --}}
             <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
