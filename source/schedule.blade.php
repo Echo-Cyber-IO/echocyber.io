@@ -6,7 +6,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
 
 @section('body')
     <section class="py-16 lg:py-24">
-        <div class="mx-auto max-w-4xl px-4">
+        <div class="mx-auto max-w-7xl px-4">
             {{-- Calendar Widget --}}
             <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
                 style="width: 100%; min-height: 800px; border: none; overflow: hidden;" scrolling="no"
