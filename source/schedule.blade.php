@@ -5,27 +5,13 @@ description: This page contains the scheduling widget.
 @extends('_layouts.main')
 
 @section('body')
-    <div class="bg-gray-900 py-16">
-        <div class="mx-auto max-w-7xl">
+    <div class="py-16">
+        <div class="mx-auto max-w-7xl px-4">
             <iframe src="https://apicrm.ctox.com/widget/booking/zAqfOrmeZgIyao4KAxMq"
-                style="width: 100%;border:none;overflow: hidden;" scrolling="no"
-                id="zAqfOrmeZgIyao4KAxMq_1774581419819"></iframe><br>
+                style="width: 100%; min-height: 700px; border: none; overflow: hidden;" scrolling="no"
+                id="zAqfOrmeZgIyao4KAxMq_1774581419819"></iframe>
             <script src="https://apicrm.ctox.com/js/form_embed.js" type="text/javascript"></script>
-            <!-- Custom HR -->
-            <div class="flex items-center">
-                <div class="h-0.5 bg-crimson-900 flex-1"></div>
-                <div class="h-2 w-2 bg-crimson-900 rounded-full mr-4"></div>
-                <div class="h-2 w-2 bg-crimson-900 rounded-full"></div>
-                <div class="h-0.5 bg-crimson-900 flex-1"></div>
-            </div>
-            <div class="flex items-center my-2">
-                <div class="h-0.5 bg-gray-700 flex-1"></div>
-                <div class="h-0.5 bg-gray-700 flex-1"></div>
-                <div class="h-2 w-2 bg-gray-700 rounded-full mr-4"></div>
-                <div class="h-2 w-2 bg-gray-700 rounded-full"></div>
-                <div class="h-0.5 bg-gray-700 flex-1"></div>
-            </div>
-            <div class="bg-white rounded-lg mt-8">
+            <div class="bg-white rounded-lg mt-12">
                 <div class="mx-auto max-w-7xl px-6 py-24 sm:pt-32 lg:px-8 lg:py-40">
                     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                         <div class="lg:col-span-5">
