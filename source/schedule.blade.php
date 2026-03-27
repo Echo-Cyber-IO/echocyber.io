@@ -5,13 +5,15 @@ description: Book a free strategy session with Mike Faas to discuss your busines
 @extends('_layouts.main')
 
 @section('body')
-    <section class="py-16 lg:py-24">
+    <section class="pt-4 pb-16 lg:pt-6 lg:pb-24">
         <div class="mx-auto max-w-7xl px-4">
             {{-- Calendar Widget --}}
-            <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
-                style="width: 100%; min-height: 800px; border: none; overflow: hidden;" scrolling="no"
-                id="KjGTZUQdoqLZpU5NtmNL_1774582373290"
-                allow="payment"></iframe>
+            <div class="bg-echo-800/30 border border-echo-700 rounded-xl overflow-hidden">
+                <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
+                    style="width: 100%; min-height: 800px; border: none; overflow: hidden;" scrolling="no"
+                    id="KjGTZUQdoqLZpU5NtmNL_1774582373290"
+                    allow="payment"></iframe>
+            </div>
             <script src="https://apicrm.ctox.com/js/form_embed.js" type="text/javascript"></script>
         </div>
     </section>
