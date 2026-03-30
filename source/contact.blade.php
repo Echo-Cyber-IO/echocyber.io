@@ -45,7 +45,7 @@ description: Get in touch to discuss your technology and security leadership nee
                     <div class="bg-crimson-900/20 border border-crimson-800/40 rounded-xl p-6">
                         <h3 class="font-display text-lg font-bold text-white mb-2">Prefer to just book?</h3>
                         <p class="text-echo-400 mb-4">Skip the form and grab a 30-minute strategy session directly on my calendar.</p>
-                        <a href="/schedule" class="inline-flex items-center gap-2 px-5 py-3 bg-crimson-600 hover:bg-crimson-500 text-white font-semibold rounded-lg transition-colors">
+                        <a href="/schedule" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-crimson-600 hover:bg-crimson-500 text-white font-semibold rounded-lg transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
