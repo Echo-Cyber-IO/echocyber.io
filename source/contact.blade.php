@@ -26,7 +26,7 @@ description: Get in touch to discuss your technology and security leadership nee
                     Whether you have a specific challenge in mind or just want to explore how fractional leadership might work for your business, I'm happy to have a conversation.
                 </p>
 
-                <div class="space-y-8 mb-12">
+                <div class="space-y-8">
                     <div>
                         <h3 class="font-display text-lg font-bold text-white mb-2">What to expect</h3>
                         <p class="text-echo-400">
@@ -225,7 +225,7 @@ description: Get in touch to discuss your technology and security leadership nee
         </div>
 
         {{-- Bottom row: Book + Direct Contact side by side --}}
-        <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
             {{-- Book directly --}}
             <div class="bg-crimson-900/20 border border-crimson-800/40 rounded-xl p-6">
                 <h3 class="font-display text-lg font-bold text-white mb-2">Prefer to just book?</h3>
