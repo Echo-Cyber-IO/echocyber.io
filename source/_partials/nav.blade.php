@@ -35,6 +35,14 @@
                           {{ $page->isActive('/services') ? 'after:w-full' : '' }}">
                     Services
                 </a>
+                <a href="/assessment"
+                   class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors relative
+                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
+                          after:transition-all after:duration-300 hover:after:w-full
+                          {{ $page->isActive('/assessment') ? 'after:w-full' : '' }}">
+                    Assessment
+                </a>
                 <a href="/contact"
                    class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors relative
@@ -96,6 +104,11 @@
                    class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors py-2">
                     Services
+                </a>
+                <a href="/assessment"
+                   class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors py-2">
+                    Assessment
                 </a>
                 <a href="/contact"
                    class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
