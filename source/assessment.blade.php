@@ -211,7 +211,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
     <!-- Question -->
     <div class="flex-1 flex items-center justify-center px-6 py-12">
-      <div class="max-w-2xl w-full fade-in" :key="currentQ">
+      <div class="max-w-3xl w-full fade-in" :key="currentQ">
         <!-- Category change indicator -->
         <div x-show="isNewCategory" class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-400 text-sm font-medium">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
