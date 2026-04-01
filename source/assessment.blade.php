@@ -62,26 +62,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
           </button>
         </div>
 
-        <!-- Trust Indicators -->
-        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <div>
-            <div class="text-2xl font-bold text-white font-display">8</div>
-            <div class="text-sm text-echo-400">Critical Areas</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-white font-display">A&ndash;F</div>
-            <div class="text-sm text-echo-400">Letter Grades</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-white font-display">$$$</div>
-            <div class="text-sm text-echo-400">Risk in Dollars</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-white font-display">Free</div>
-            <div class="text-sm text-echo-400">No Strings</div>
-          </div>
-        </div>
-
         <!-- What You Get -->
         <div class="mt-20 max-w-5xl">
           <h2 class="text-2xl font-bold mb-10 font-display">In 15 minutes you'll know:</h2>
