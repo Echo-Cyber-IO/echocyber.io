@@ -83,37 +83,22 @@ description: Find out where your company stands in 15 minutes. Free security ass
         </div>
 
         <!-- What You Get -->
-        <div class="mt-20 max-w-2xl">
-          <h2 class="text-2xl font-bold mb-8 font-display">What you'll walk away with</h2>
-          <div class="space-y-4">
-            <div class="flex gap-4 items-start p-4 rounded-lg bg-echo-900/50 border border-echo-800">
-              <div class="w-10 h-10 rounded-lg bg-crimson/10 flex items-center justify-center shrink-0">
-                <span class="text-crimson-500 font-bold">A</span>
-              </div>
-              <div>
-                <div class="font-semibold">Letter grades across 8 security areas</div>
-                <div class="text-sm text-echo-400">Identity &amp; access, devices &amp; patching, email &amp; phishing, backups &amp; recovery, network, data protection, vendor &amp; SaaS risk, and incident readiness</div>
-              </div>
-            </div>
-            <div class="flex gap-4 items-start p-4 rounded-lg bg-echo-900/50 border border-echo-800">
-              <div class="w-10 h-10 rounded-lg bg-crimson/10 flex items-center justify-center shrink-0">
-                <span class="text-crimson-500 font-bold">$</span>
-              </div>
-              <div>
-                <div class="font-semibold">Risk translated to business impact</div>
-                <div class="text-sm text-echo-400">Every gap quantified in dollars &mdash; the language your CFO speaks</div>
-              </div>
-            </div>
-            <div class="flex gap-4 items-start p-4 rounded-lg bg-echo-900/50 border border-echo-800">
-              <div class="w-10 h-10 rounded-lg bg-crimson/10 flex items-center justify-center shrink-0">
-                <span class="text-crimson-500 font-bold">&rarr;</span>
-              </div>
-              <div>
-                <div class="font-semibold">A prioritized action plan</div>
-                <div class="text-sm text-echo-400">What to fix first, what it costs, and what happens if you don't</div>
-              </div>
-            </div>
-          </div>
+        <div class="mt-16 max-w-2xl">
+          <h2 class="text-2xl font-bold mb-6 font-display">In 15 minutes you'll know:</h2>
+          <ul class="space-y-3 text-echo-300 text-lg">
+            <li class="flex items-start gap-3">
+              <span class="text-crimson-500 mt-1">&#9656;</span>
+              <span>Which of your 8 security areas are solid &mdash; and which aren't</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-crimson-500 mt-1">&#9656;</span>
+              <span>What those gaps cost you in real dollars</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-crimson-500 mt-1">&#9656;</span>
+              <span>What to fix first and what can wait</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
