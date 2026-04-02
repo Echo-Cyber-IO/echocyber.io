@@ -50,7 +50,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
             {{-- Headshot --}}
             <div class="hidden lg:flex lg:col-span-2 justify-center">
-                <div class="w-72 h-80 rounded-2xl overflow-hidden border border-echo-700 shadow-lg">
+                <div class="w-72 h-[28rem] rounded-2xl overflow-hidden border border-echo-700 shadow-lg">
                     <img src="/assets/img/mike-faas-hero.jpg" alt="Mike Faas — Fractional CTO and CISO" class="w-full h-full object-cover object-top">
                 </div>
             </div>
@@ -74,7 +74,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                 <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">The Real Problem</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-950 mb-6">
-                Every vendor says it's urgent. You can't tell what's real.
+                Every vendor says it's urgent.<br>You can't tell what's real.
             </h2>
         </div>
 
@@ -124,7 +124,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 {{-- Red-line divider --}}
 <div class="flex justify-center py-2 bg-white">
-    <img src="/assets/img/red-line.png" alt="" class="w-48 opacity-60" role="presentation">
+    <img src="/assets/img/red-line.png" alt="" class="w-80 opacity-80" role="presentation">
 </div>
 
 {{-- Section 3: Sound Familiar? (light) --}}
@@ -185,7 +185,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
                     <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Your Guide</span>
                 </div>
-                <div class="flex items-start gap-6 mb-6">
+                <div class="flex items-center gap-6 mb-6">
                     <img src="/assets/img/mike-faas-square.jpg" alt="Mike Faas" class="w-20 h-20 rounded-xl object-cover border border-stone-200 flex-shrink-0">
                     <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-950">
                         I've sat in the CISO chair. I've lived the governance problems I write about.
@@ -324,7 +324,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 {{-- Red-line divider --}}
 <div class="flex justify-center py-2 bg-stone-100">
-    <img src="/assets/img/red-line.png" alt="" class="w-48 opacity-60" role="presentation">
+    <img src="/assets/img/red-line.png" alt="" class="w-80 opacity-80" role="presentation">
 </div>
 
 {{-- Section 7: Pricing (light) --}}
@@ -491,7 +491,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 {{-- Red-line divider --}}
 <div class="flex justify-center py-2 bg-stone-100">
-    <img src="/assets/img/red-line.png" alt="" class="w-48 opacity-60" role="presentation">
+    <img src="/assets/img/red-line.png" alt="" class="w-80 opacity-80" role="presentation">
 </div>
 
 {{-- Section 8: Signal Score CTA (dark) --}}
