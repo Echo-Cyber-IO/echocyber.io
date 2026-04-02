@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Fractional CTO & CISO for growth-stage companies navigating technology and security decisions without full-time executive leadership.">
+
+    <meta property="og:title" content="Fractional CTO & CISO | Echo Cyber" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://echocyber.io/" />
+    <meta property="og:description" content="Fractional CTO & CISO for growth-stage companies navigating technology and security decisions without full-time executive leadership." />
+
+    <title>Fractional CTO &amp; CISO | Echo Cyber</title>
+
+    <link rel="icon" href="/favicon.ico">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        echo: {
+                            950: '#0a0e17',
+                            900: '#0f1420',
+                            800: '#1a2035',
+                            700: '#2a3350',
+                            600: '#3d4a6a',
+                            500: '#6b7a99',
+                            400: '#8a96b0',
+                            300: '#b0b9cc',
+                            200: '#d0d6e3',
+                            100: '#eaecf2',
+                        },
+                        crimson: {
+                            950: '#1a0808',
+                            900: '#3b1010',
+                            800: '#6b1a1a',
+                            700: '#992222',
+                            600: '#b52a2a',
+                            500: '#CC3333',
+                            400: '#e05555',
+                            300: '#ee8888',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(204, 51, 51, 0.3)',
+                        'glow-lg': '0 0 40px rgba(204, 51, 51, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        .bg-hex-grid {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232a3350' fill-opacity='0.15'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-echo-950 text-echo-200 min-h-screen flex flex-col font-body">
+
+    <!-- Hex grid background -->
+    <div class="fixed inset-0 bg-hex-grid opacity-30 pointer-events-none z-0"></div>
+    <!-- Gradient blur blob -->
+    <div class="fixed top-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-crimson-900/40 to-transparent transform -skew-x-12 blur-2xl pointer-events-none z-0"></div>
+
+    <!-- ==================== HEADER / NAV ==================== -->
+    <header x-data="{ mobileMenuOpen: false, scrolled: false }"
+        x-init="window.addEventListener('scroll', () => { scrolled = window.pageYOffset > 20 })"
+        :class="{ 'bg-echo-950/70 backdrop-blur-md shadow-lg': scrolled, 'bg-transparent': !scrolled }"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+
+        <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex h-20 items-center justify-between">
+
+                <div class="flex-shrink-0">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-500 transition-colors">
+                            Michael Faas
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex lg:items-center lg:gap-x-10">
+                    <a href="#services"
+                       class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500 after:transition-all after:duration-300 hover:after:w-full">
+                        Services
+                    </a>
+                    <a href="#about"
+                       class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500 after:transition-all after:duration-300 hover:after:w-full">
+                        About
+                    </a>
+                    <a href="#pricing"
+                       class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500 after:transition-all after:duration-300 hover:after:w-full">
+                        Pricing
+                    </a>
+                    <a href="#assessment"
+                       class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500 after:transition-all after:duration-300 hover:after:w-full">
+                        Assessment
+                    </a>
+                    <a href="#contact"
+                       class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500 after:transition-all after:duration-300 hover:after:w-full">
+                        Contact
+                    </a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="#contact"
+                       class="inline-flex items-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-glow">
+                        <span>Let's Talk</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile hamburger -->
+                <div class="lg:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen"
+                            type="button"
+                            class="text-echo-200 hover:text-white p-2 -mr-2"
+                            :aria-expanded="mobileMenuOpen.toString()">
+                        <span class="sr-only">Open menu</span>
+                        <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div x-show="mobileMenuOpen"
+                 x-cloak
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 -translate-y-4"
+                 x-transition:enter-end="opacity-100 translate-y-0"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100 translate-y-0"
+                 x-transition:leave-end="opacity-0 -translate-y-4"
+                 class="lg:hidden py-4 border-t border-echo-800">
+                <div class="flex flex-col gap-4">
+                    <a href="#services" @click="mobileMenuOpen = false" class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">Services</a>
+                    <a href="#about" @click="mobileMenuOpen = false" class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">About</a>
+                    <a href="#pricing" @click="mobileMenuOpen = false" class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">Pricing</a>
+                    <a href="#assessment" @click="mobileMenuOpen = false" class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">Assessment</a>
+                    <a href="#contact" @click="mobileMenuOpen = false" class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">Contact</a>
+                    <a href="#contact"
+                       class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-3 rounded-lg font-medium transition-all duration-300 mt-2">
+                        <span>Let's Talk</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div class="h-20"></div>
+
+    <main class="flex-grow">
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative min-h-[90vh] flex items-center">
+            <!-- Gradient blob -->
+            <div class="absolute bottom-0 -right-20 w-80 h-80 bg-gradient-to-tl from-crimson-800/20 to-transparent transform skew-x-12 blur-2xl"></div>
+
+            <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-28">
+                <div class="grid lg:grid-cols-5 gap-12 items-center">
+                    <div class="lg:col-span-3">
+                        <!-- Eyebrow -->
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                            <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Fractional CTO &amp; CISO</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+                            Your business outgrew its security.
+                            <span class="text-crimson-500">You haven't outgrown your options.</span>
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-xl lg:text-2xl text-echo-300 leading-relaxed mb-10 max-w-2xl">
+                            I'm the CTO and CISO you're not ready to hire full-time. I plug into your leadership team, fix what's broken, and build what's missing.
+                        </p>
+
+                        <!-- Dual CTAs -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact"
+                               class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
+                                <span>Schedule a Clarity Call</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="/assessment"
+                               class="inline-flex items-center justify-center gap-2 bg-transparent border border-echo-600 hover:border-echo-500 text-echo-200 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                                Take the Signal Score Assessment
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Headshot placeholder -->
+                    <div class="hidden lg:flex lg:col-span-2 justify-center">
+                        <div class="w-72 h-80 bg-echo-800/50 border border-echo-700 rounded-2xl flex items-center justify-center">
+                            <span class="text-echo-500 font-mono text-sm">Photo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- ==================== PROBLEM SECTION ==================== -->
+        <section id="services" class="py-20 lg:py-28 bg-echo-900/50">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">The Real Problem</span>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                        Every vendor says it's urgent. You can't tell what's real.
+                    </h2>
+                </div>
+
+                <!-- Three scenario blocks -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- Block 1 -->
+                    <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative">
+                            <div class="inline-flex items-center justify-center w-10 h-10 bg-crimson-900/30 rounded-lg mb-5">
+                                <span class="text-crimson-500 font-display font-bold text-lg">01</span>
+                            </div>
+                            <p class="text-echo-300 leading-relaxed">
+                                A board member asks about your security posture and you're tap-dancing. That's not a knowledge gap &mdash; it's a governance gap.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 2 -->
+                    <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative">
+                            <div class="inline-flex items-center justify-center w-10 h-10 bg-crimson-900/30 rounded-lg mb-5">
+                                <span class="text-crimson-500 font-display font-bold text-lg">02</span>
+                            </div>
+                            <p class="text-echo-300 leading-relaxed">
+                                You're making million-dollar tech decisions with vendor slide decks and gut instinct. You know it's not sustainable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3 -->
+                    <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative">
+                            <div class="inline-flex items-center justify-center w-10 h-10 bg-crimson-900/30 rounded-lg mb-5">
+                                <span class="text-crimson-500 font-display font-bold text-lg">03</span>
+                            </div>
+                            <p class="text-echo-300 leading-relaxed">
+                                You're not ready for a $300K hire you don't know how to evaluate. The last consultant talked in acronyms nobody could act on.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philosophical anchor -->
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="border-l-4 border-crimson-600 pl-8 py-4 text-left md:border-l-0 md:border-t-4 md:border-b-4 md:border-crimson-600/30 md:pl-0 md:py-8 md:px-8 md:text-center">
+                        <p class="font-display text-xl sm:text-2xl lg:text-3xl text-white leading-snug font-medium">
+                            Most security failures aren't technical. They're what happens when leaders optimize what they should be governing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== GUIDE SECTION ==================== -->
+        <section id="about" class="py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                            <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Your Guide</span>
+                        </div>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                            I've sat in the CISO chair. I've lived the governance problems I write about.
+                        </h2>
+                        <p class="text-lg text-echo-300 mb-6">
+                            I'm Mike Faas. 25+ years building security and technology programs &mdash; Fortune 500 to high-growth startups. Clients hire me because I translate complexity into clarity. I speak boardroom and server room. And I'd rather tell you the uncomfortable truth than sell you a comfortable lie.
+                        </p>
+                        <p class="text-base text-echo-400 italic">
+                            Based in Raleigh, NC. Dad. Blue belt. Reluctant morning person.
+                        </p>
+                    </div>
+
+                    <!-- Spiky POV pull quotes -->
+                    <div class="space-y-6">
+                        <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-crimson-600"></div>
+                            <svg class="h-8 w-8 text-crimson-500/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                            <p class="text-lg text-white font-medium leading-relaxed">
+                                Cybersecurity isn't a problem. It's a signal. A breach doesn't mean your firewall failed. It means your org chart did.
+                            </p>
+                        </div>
+
+                        <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-crimson-600"></div>
+                            <svg class="h-8 w-8 text-crimson-500/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                            <p class="text-lg text-white font-medium leading-relaxed">
+                                If your CISO reports to the CIO who reports to the CFO, you don't have a security program. You have a suggestion box with extra steps.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PLAN / PRICING SECTION ==================== -->
+        <section id="pricing" class="py-20 lg:py-28 bg-echo-900/50">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">The Path Forward</span>
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                        Three ways to work together. Start wherever makes sense.
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <!-- Tune -->
+                    <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 transition-all duration-300 hover:bg-echo-800/50 flex flex-col">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
+                                <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+                                    <line x1="12" y1="9.5" x2="12" y2="4" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-white mb-1">Tune</h3>
+                            <p class="text-crimson-500 text-lg font-semibold mb-1">$7,500</p>
+                            <p class="text-echo-500 text-sm">one-time</p>
+                        </div>
+                        <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3 text-center">Strategic Assessment</p>
+                        <p class="text-echo-400 text-sm leading-relaxed mb-6">
+                            I map your landscape, find the highest-leverage fixes, and hand you a roadmap you can actually execute. Best first step if you're not sure what you need.
+                        </p>
+                        <ul class="space-y-3 text-echo-300 text-sm mt-auto">
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Stakeholder interviews + current-state assessment</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Technology and security gap analysis</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Prioritized roadmap with clear next steps</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Signal (highlighted) -->
+                    <div class="group bg-echo-800/40 border-2 border-crimson-900 rounded-xl p-8 transition-all duration-300 hover:bg-echo-800/60 hover:border-crimson-800 flex flex-col relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                            <span class="bg-crimson-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+                        </div>
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/60 group-hover:bg-crimson-950/80 rounded-2xl mb-5 transition-colors">
+                                <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-white mb-1">Signal</h3>
+                            <p class="text-crimson-500 text-lg font-semibold mb-1">$10,000/mo</p>
+                            <p class="text-echo-500 text-sm">3-month minimum</p>
+                        </div>
+                        <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3 text-center">Fractional CTO/CISO</p>
+                        <p class="text-echo-400 text-sm leading-relaxed mb-6">
+                            I join your leadership team part-time. Strategy, vendor calls, team building, incident response, board prep &mdash; the CTO or CISO work without the $250K+ salary.
+                        </p>
+                        <ul class="space-y-3 text-echo-300 text-sm mt-auto">
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>10 hours/week embedded with your team</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Staff meetings, vendor calls, board prep</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Governance design + security program buildout</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Roadmap execution and vendor negotiation</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Echo -->
+                    <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 transition-all duration-300 hover:bg-echo-800/50 flex flex-col">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
+                                <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 12h4l2-5 4 10 2-5h8" />
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-white mb-1">Echo</h3>
+                            <p class="text-crimson-500 text-lg font-semibold mb-1">$3,000/mo</p>
+                            <p class="text-echo-500 text-sm">6-month commitment</p>
+                        </div>
+                        <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3 text-center">Ongoing Advisory</p>
+                        <p class="text-echo-400 text-sm leading-relaxed mb-6">
+                            For clients who've finished a Signal engagement. Monthly counsel, quarterly reviews, escalation support. Momentum without full-time cost.
+                        </p>
+                        <ul class="space-y-3 text-echo-300 text-sm mt-auto">
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Monthly check-ins + quarterly strategic reviews</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>On-call for key decisions and vendor evaluations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Governance oversight and course corrections</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Below tiers note -->
+                <p class="text-center text-echo-400 text-sm max-w-xl mx-auto">
+                    Not sure which tier? Most clients start with Tune. It's designed to give you clarity before you commit to anything else.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== FAILURE SECTION ==================== -->
+        <section class="py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">What's at Stake</span>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+                        The biggest risk isn't the breach. It's the slow drift.
+                    </h2>
+                    <div class="space-y-6 text-lg text-echo-300 leading-relaxed">
+                        <p>
+                            Another good engineer who quits because they're burned out. Another deal lost because "we need to see your SOC 2."
+                        </p>
+                        <p>
+                            This drift compounds. And every quarter you wait, the fix gets more expensive.
+                        </p>
+                        <p class="text-white font-medium">
+                            You don't need to panic. But you do need a plan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SUCCESS / TRANSFORMATION SECTION ==================== -->
+        <section class="py-20 lg:py-28 bg-echo-900/50">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">What Changes</span>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                        From guessing to governing.
+                    </h2>
+                </div>
+
+                <!-- Before/After comparison -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Before -->
+                    <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-echo-500"></div>
+                            <h3 class="font-display text-xl font-bold text-echo-400 uppercase tracking-wide">Before</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-echo-400">
+                                <svg class="h-5 w-5 text-echo-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                <span>3 AM panic when a Slack alert fires and nobody knows who owns it</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-echo-400">
+                                <svg class="h-5 w-5 text-echo-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                <span>Vendor pitches that all sound like the same fever dream</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-echo-400">
+                                <svg class="h-5 w-5 text-echo-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                <span>Decisions made with fingers crossed</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- After -->
+                    <div class="bg-echo-800/30 border border-crimson-800/40 rounded-xl p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-crimson-500"></div>
+                            <h3 class="font-display text-xl font-bold text-crimson-500 uppercase tracking-wide">After</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-echo-200">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>An incident runbook that actually gets used &mdash; at 3 AM and in the boardroom</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-echo-200">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Vendor calls where you ask the right questions instead of nodding along</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-echo-200">
+                                <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Decisions backed by evidence, not hope</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ==================== SIGNAL SCORE CTA SECTION ==================== -->
+        <section id="assessment" class="py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Free Assessment</span>
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                        Not ready for a call? Start here.
+                    </h2>
+                    <p class="text-lg text-echo-300 mb-10 leading-relaxed">
+                        15-minute self-assessment. 8 categories. Instant A&ndash;F grade. No email required.
+                    </p>
+                    <a href="/assessment"
+                       class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
+                        <span>Take the Signal Score Assessment</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER SECTION ==================== -->
+        <section class="py-20 lg:py-28 bg-echo-900/50">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                        <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Weekly Newsletter</span>
+                        <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                        Signal vs. Noise
+                    </h2>
+                    <p class="text-lg text-echo-300 mb-8">
+                        Cutting through the chaos of cybersecurity and technology &mdash; so you can lead with clarity. One email per week. No fluff, no vendor hype, no fear-mongering.
+                    </p>
+
+                    <!-- Beehiiv embed -->
+                    <div class="max-w-lg mx-auto">
+                        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+                        <iframe src="https://subscribe-forms.beehiiv.com/b961a68a-112f-4a22-984f-1ffef0ae248c"
+                                class="beehiiv-embed"
+                                data-test-id="beehiiv-embed"
+                                frameborder="0"
+                                scrolling="no"
+                                style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
+                    </div>
+                    <p class="mt-4 text-sm text-echo-400">
+                        <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-crimson-500 transition-colors">
+                            Browse past issues &rarr;
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER CTA ==================== -->
+        <section id="contact" class="py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
+                    <!-- Decorative blobs -->
+                    <div class="absolute -top-12 -right-12 w-48 h-48 bg-crimson-800/20 transform rotate-45 blur-xl"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-crimson-900/30 transform -rotate-12 blur-xl"></div>
+
+                    <div class="relative max-w-2xl mx-auto text-center">
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                            Ready to turn complexity into clarity?
+                        </h2>
+                        <p class="text-lg text-echo-300 mb-8">
+                            30 minutes. No pitch &mdash; just honest questions and straight answers.
+                        </p>
+                        <a href="#"
+                           class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
+                            <span>Let's Talk</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <p class="mt-6 text-echo-400 italic text-sm">Echo Cyber Consulting &mdash; Translating geek into human.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-echo-900 border-t border-echo-800">
+        <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+
+                <!-- Logo -->
+                <div class="flex flex-col gap-4">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <span class="font-display text-xl font-bold text-echo-100 group-hover:text-white transition-colors">
+                            Michael Faas
+                        </span>
+                    </a>
+                    <p class="text-echo-400 text-sm max-w-xs italic">
+                        Navigating complexity. Translating tech.
+                    </p>
+                </div>
+
+                <!-- Nav links -->
+                <nav class="flex flex-wrap gap-x-8 gap-y-4" aria-label="Footer navigation">
+                    <a href="#services" class="text-echo-300 hover:text-white text-sm transition-colors">Services</a>
+                    <a href="#about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
+                    <a href="#pricing" class="text-echo-300 hover:text-white text-sm transition-colors">Pricing</a>
+                    <a href="/assessment" class="text-echo-300 hover:text-white text-sm transition-colors">Assessment</a>
+                    <a href="#contact" class="text-echo-300 hover:text-white text-sm transition-colors">Contact</a>
+                    <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-white text-sm transition-colors">Newsletter</a>
+                </nav>
+
+                <!-- Social icons — LinkedIn only -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.linkedin.com/in/mfaas/" target="_blank" rel="noopener noreferrer"
+                       class="text-echo-500 hover:text-crimson-500 transition-colors"
+                       aria-label="LinkedIn">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-echo-800">
+                <p class="text-echo-500 text-sm text-center lg:text-left">
+                    &copy; 2026 Echo Cyber LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div x-data="{ show: false }"
+         x-on:scroll.window="show = window.pageYOffset >= 300"
+         class="fixed bottom-8 right-8 z-50">
+        <button x-show="show"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-4"
+                x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
+                class="bg-crimson-700 hover:bg-crimson-600 text-white p-3 rounded-full shadow-glow transition-all duration-300 hover:shadow-glow-lg"
+                aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+
+</body>
+
+</html>
