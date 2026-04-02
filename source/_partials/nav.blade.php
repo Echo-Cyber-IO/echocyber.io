@@ -9,24 +9,13 @@
 
             {{-- Logo --}}
             <div class="flex-shrink-0">
-                <a href="/" class="flex items-center gap-3 group">
-                    <img src="/assets/img/logo-hex.png" alt="Michael Faas" class="h-12 w-auto">
-                    <span class="font-display text-2xl font-bold text-white group-hover:text-crimson-500 transition-colors hidden sm:inline">
-                        Michael Faas
-                    </span>
+                <a href="/" class="flex items-center group">
+                    <img src="/assets/img/echo-cyber-logo-white.png" alt="Echo Cyber" class="h-10 w-auto group-hover:opacity-80 transition-opacity">
                 </a>
             </div>
 
             {{-- Desktop Navigation --}}
             <div class="hidden lg:flex lg:items-center lg:gap-x-10">
-                <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors relative
-                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
-                          after:transition-all after:duration-300 hover:after:w-full
-                          {{ $page->isActive('/about') ? 'after:w-full' : '' }}">
-                    About
-                </a>
                 <a href="/services"
                    class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors relative
@@ -34,6 +23,14 @@
                           after:transition-all after:duration-300 hover:after:w-full
                           {{ $page->isActive('/services') ? 'after:w-full' : '' }}">
                     Services
+                </a>
+                <a href="/about"
+                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors relative
+                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
+                          after:transition-all after:duration-300 hover:after:w-full
+                          {{ $page->isActive('/about') ? 'after:w-full' : '' }}">
+                    About
                 </a>
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
@@ -95,15 +92,15 @@
              x-transition:leave-end="opacity-0 -translate-y-4"
              class="lg:hidden py-4 border-t border-echo-800">
             <div class="flex flex-col gap-4">
-                <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors py-2">
-                    About
-                </a>
                 <a href="/services"
                    class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors py-2">
                     Services
+                </a>
+                <a href="/about"
+                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
+                          font-medium hover:text-crimson-500 transition-colors py-2">
+                    About
                 </a>
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}

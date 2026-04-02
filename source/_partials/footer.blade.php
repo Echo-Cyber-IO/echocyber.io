@@ -5,11 +5,8 @@
 
             {{-- Logo and tagline --}}
             <div class="flex flex-col gap-4">
-                <a href="/" class="flex items-center gap-3 group">
-                    <img src="/assets/img/logo-hex.png" alt="Michael Faas" class="h-10 w-auto opacity-80 group-hover:opacity-100 transition-opacity">
-                    <span class="font-display text-xl font-bold text-echo-100 group-hover:text-white transition-colors">
-                        Michael Faas
-                    </span>
+                <a href="/" class="flex items-center group">
+                    <img src="/assets/img/echo-cyber-logo-white.png" alt="Echo Cyber" class="h-8 w-auto group-hover:opacity-80 transition-opacity">
                 </a>
                 <p class="text-echo-400 text-sm max-w-xs italic">
                     Navigating complexity. Translating tech.
@@ -18,8 +15,8 @@
 
             {{-- Navigation links --}}
             <nav class="flex flex-wrap gap-x-8 gap-y-4" aria-label="Footer navigation">
-                <a href="/about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
                 <a href="/services" class="text-echo-300 hover:text-white text-sm transition-colors">Services</a>
+                <a href="/about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
                 <a href="/assessment" class="text-echo-300 hover:text-white text-sm transition-colors">Assessment</a>
                 <a href="/contact" class="text-echo-300 hover:text-white text-sm transition-colors">Contact</a>
                 <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-white text-sm transition-colors">Newsletter</a>
