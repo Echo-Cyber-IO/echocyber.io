@@ -39,8 +39,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     <dd class="mt-2 font-display text-4xl font-bold text-white">40+</dd>
                 </div>
                 <div class="text-center">
-                    <dt class="text-sm text-echo-500">Users migrated (single project)</dt>
-                    <dd class="mt-2 font-display text-4xl font-bold text-white">893</dd>
+                    <dt class="text-sm text-echo-500">Security questionnaires conquered</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-white">500+</dd>
                 </div>
                 <div class="text-center">
                     <dt class="text-sm text-echo-500">Buzzwords on this page</dt>
