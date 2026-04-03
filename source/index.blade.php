@@ -51,17 +51,21 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
     </div>
 </section>
 
-{{-- ==================== TRUST BAR ==================== --}}
-<section class="border-y border-echo-800 bg-echo-900/50 py-12">
+{{-- ==================== TRUST BAR (pull quote) ==================== --}}
+<section class="border-y border-echo-800 bg-echo-900/50 py-12 sm:py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <p class="text-center font-mono text-xs uppercase tracking-widest text-echo-500">Trusted by teams at</p>
-        <div class="mx-auto mt-8 grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-8 sm:max-w-xl sm:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none">
-            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/bose.png" alt="Bose" width="158" height="48">
-            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" width="158" height="48">
-            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/carhartt.png" alt="Carhartt" width="158" height="48">
-            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/carnival.png" alt="Carnival" width="158" height="48">
-            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/strongrock.png" alt="Strong Rock" width="158" height="48">
-        </div>
+        <figure class="mx-auto max-w-3xl text-center">
+            <svg class="mx-auto h-8 w-8 text-crimson-700/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+            </svg>
+            <blockquote class="mt-6 text-xl font-medium leading-8 text-white sm:text-2xl sm:leading-9">
+                <p>&ldquo;Mike has the ability to communicate technical concepts to a non-technical audience. When assigned a task, you can trust it will be done with the same level of attention to detail as if you had done it yourself.&rdquo;</p>
+            </blockquote>
+            <figcaption class="mt-8">
+                <div class="font-semibold text-white">JD Helms</div>
+                <div class="mt-1 text-sm text-echo-400">COO @ SoftwareOne &middot; Co-Founder @ PsychReport.ai</div>
+            </figcaption>
+        </figure>
     </div>
 </section>
 
