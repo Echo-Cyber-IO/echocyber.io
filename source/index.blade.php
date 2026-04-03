@@ -348,15 +348,9 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             {{-- Case Study 1 --}}
             <article class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg ring-1 ring-stone-900/5">
                 <div>
-                    <div class="flex items-start gap-x-4">
-                        <div class="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
-                            <span class="font-display text-sm font-bold text-crimson-700">01</span>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-stone-900">Fortune 500 Retailer</p>
-                            <p class="text-xs text-stone-500">Hundreds of locations · 5,000+ employees</p>
-                        </div>
-                    </div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-crimson-600">Case 01</p>
+                    <p class="mt-2 text-lg font-semibold text-stone-900">Fortune 500 Retailer</p>
+                    <p class="text-sm text-stone-500">Hundreds of locations · 5,000+ employees</p>
                     <p class="mt-6 text-sm leading-6 text-stone-600">
                         Security enforcement was nonexistent at the edge — POS systems across hundreds of stores required manual intervention, with no centralized governance or policy control.
                     </p>
@@ -371,15 +365,9 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             {{-- Case Study 2 --}}
             <article class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg ring-1 ring-stone-900/5">
                 <div>
-                    <div class="flex items-start gap-x-4">
-                        <div class="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
-                            <span class="font-display text-sm font-bold text-crimson-700">02</span>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-stone-900">High-Growth Ecommerce Brand</p>
-                            <p class="text-xs text-stone-500">900+ users · Rapid scale</p>
-                        </div>
-                    </div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-crimson-600">Case 02</p>
+                    <p class="mt-2 text-lg font-semibold text-stone-900">High-Growth Ecommerce Brand</p>
+                    <p class="text-sm text-stone-500">900+ users · Rapid scale</p>
                     <p class="mt-6 text-sm leading-6 text-stone-600">
                         Outgrew their collaboration platform but couldn't afford downtime during a migration that touched every employee, 32TB of data, and 40 business-critical sites.
                     </p>
