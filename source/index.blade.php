@@ -1,466 +1,455 @@
 ---
 title: Fractional CTO & CISO
-description: Executive-level technology and security leadership for growing businesses. Get strategic guidance without the full-time commitment.
+description: Fractional CTO & CISO for growth-stage companies navigating technology and security decisions without full-time executive leadership.
 ---
 @extends('_layouts.main')
 
 @section('body')
 
-{{-- Hero Section --}}
-<section class="relative min-h-[90vh] flex items-center">
-    {{-- Bottom-right gradient accent (top-left is now fixed in layout) --}}
-    <div class="absolute bottom-0 -right-20 w-80 h-80 bg-gradient-to-tl from-crimson-800/20 to-transparent transform skew-x-12 blur-2xl"></div>
-
-    {{-- Hero circuit decoration --}}
-    <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-3/4 h-[120%] pointer-events-none hidden lg:block">
-        <svg viewBox="0 0 600 700" class="w-full h-full opacity-30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {{-- Main central hexagon cluster --}}
-            <path d="M300 200 L380 246 L380 338 L300 384 L220 338 L220 246 Z" stroke="#CC3333" stroke-width="2" fill="none"/>
-            <path d="M300 220 L360 254 L360 322 L300 356 L240 322 L240 254 Z" stroke="#CC3333" stroke-width="1.5" fill="none" opacity="0.7"/>
-            <path d="M300 245 L340 267 L340 313 L300 335 L260 313 L260 267 Z" stroke="#990000" stroke-width="1.5" fill="#990000" fill-opacity="0.15"/>
-
-            {{-- Circuit traces from main hexagon --}}
-            {{-- Top --}}
-            <line x1="300" y1="200" x2="300" y2="120" stroke="#CC3333" stroke-width="2"/>
-            <line x1="300" y1="120" x2="380" y2="80" stroke="#CC3333" stroke-width="2"/>
-            <circle cx="385" cy="77" r="5" fill="#CC3333"/>
-
-            {{-- Top branch --}}
-            <line x1="300" y1="150" x2="220" y2="100" stroke="#990000" stroke-width="1.5"/>
-            <line x1="220" y1="100" x2="220" y2="50" stroke="#990000" stroke-width="1.5"/>
-            <circle cx="220" cy="45" r="4" fill="#990000"/>
-
-            {{-- Upper right --}}
-            <line x1="380" y1="246" x2="450" y2="210" stroke="#CC3333" stroke-width="2"/>
-            <line x1="450" y1="210" x2="520" y2="210" stroke="#CC3333" stroke-width="2"/>
-            <circle cx="528" cy="210" r="5" fill="#CC3333"/>
-
-            {{-- Right side --}}
-            <line x1="380" y1="292" x2="480" y2="292" stroke="#990000" stroke-width="1.5"/>
-            <line x1="480" y1="292" x2="480" y2="350" stroke="#990000" stroke-width="1.5"/>
-            <circle cx="480" cy="358" r="4" fill="#990000"/>
-
-            {{-- Lower right --}}
-            <line x1="380" y1="338" x2="440" y2="380" stroke="#CC3333" stroke-width="2"/>
-            <line x1="440" y1="380" x2="440" y2="450" stroke="#CC3333" stroke-width="2"/>
-            <circle cx="440" cy="458" r="5" fill="#CC3333"/>
-
-            {{-- Bottom --}}
-            <line x1="300" y1="384" x2="300" y2="480" stroke="#CC3333" stroke-width="2"/>
-            <line x1="300" y1="480" x2="200" y2="530" stroke="#CC3333" stroke-width="2"/>
-            <circle cx="193" cy="534" r="5" fill="#CC3333"/>
-
-            {{-- Lower left --}}
-            <line x1="220" y1="338" x2="150" y2="380" stroke="#990000" stroke-width="1.5"/>
-            <line x1="150" y1="380" x2="150" y2="320" stroke="#990000" stroke-width="1.5"/>
-            <circle cx="150" cy="312" r="4" fill="#990000"/>
-
-            {{-- Left side --}}
-            <line x1="220" y1="292" x2="120" y2="292" stroke="#CC3333" stroke-width="2"/>
-            <line x1="120" y1="292" x2="80" y2="250" stroke="#CC3333" stroke-width="2"/>
-            <circle cx="75" cy="245" r="5" fill="#CC3333"/>
-
-            {{-- Secondary hexagon - upper right --}}
-            <path d="M480 100 L530 130 L530 190 L480 220 L430 190 L430 130 Z" stroke="#CC3333" stroke-width="1.5" fill="none" opacity="0.5"/>
-            <line x1="530" y1="160" x2="580" y2="160" stroke="#CC3333" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="588" cy="160" r="4" fill="#CC3333" opacity="0.5"/>
-            <line x1="480" y1="100" x2="480" y2="60" stroke="#CC3333" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="480" cy="52" r="4" fill="#CC3333" opacity="0.5"/>
-
-            {{-- Secondary hexagon - lower right --}}
-            <path d="M500 420 L540 445 L540 495 L500 520 L460 495 L460 445 Z" stroke="#990000" stroke-width="1" fill="none" opacity="0.4"/>
-            <line x1="540" y1="470" x2="590" y2="470" stroke="#990000" stroke-width="1" opacity="0.4"/>
-            <circle cx="596" cy="470" r="3" fill="#990000" opacity="0.4"/>
-
-            {{-- Secondary hexagon - upper left --}}
-            <path d="M120 80 L160 105 L160 155 L120 180 L80 155 L80 105 Z" stroke="#CC3333" stroke-width="1" fill="none" opacity="0.35"/>
-            <line x1="80" y1="130" x2="30" y2="130" stroke="#CC3333" stroke-width="1" opacity="0.35"/>
-            <circle cx="22" cy="130" r="3" fill="#CC3333" opacity="0.35"/>
-
-            {{-- Secondary hexagon - lower --}}
-            <path d="M180 580 L220 605 L220 655 L180 680 L140 655 L140 605 Z" stroke="#990000" stroke-width="1" fill="none" opacity="0.3"/>
-            <line x1="220" y1="630" x2="270" y2="630" stroke="#990000" stroke-width="1" opacity="0.3"/>
-
-            {{-- Connecting traces between hexagons --}}
-            <line x1="430" y1="160" x2="385" y2="200" stroke="#990000" stroke-width="1" opacity="0.4"/>
-            <line x1="460" y1="445" x2="400" y2="400" stroke="#990000" stroke-width="1" opacity="0.3"/>
-
-            {{-- Floating accent nodes --}}
-            <circle cx="550" cy="300" r="3" fill="#CC3333" opacity="0.4"/>
-            <circle cx="570" cy="380" r="2" fill="#990000" opacity="0.3"/>
-            <circle cx="50" cy="200" r="3" fill="#CC3333" opacity="0.35"/>
-            <circle cx="30" cy="350" r="2" fill="#990000" opacity="0.3"/>
-            <circle cx="350" cy="550" r="3" fill="#CC3333" opacity="0.3"/>
-            <circle cx="100" cy="450" r="2" fill="#990000" opacity="0.25"/>
-            <circle cx="550" cy="80" r="2" fill="#CC3333" opacity="0.3"/>
-            <circle cx="400" y="600" r="2" fill="#990000" opacity="0.2"/>
-        </svg>
-    </div>
-
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
-        <div class="max-w-3xl lg:max-w-xl">
-            {{-- Eyebrow --}}
-            <div class="flex items-center gap-3 mb-8">
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Fractional Executive Services</span>
-            </div>
-
-            {{-- Headline --}}
-            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-                Strategic tech leadership,
-                <span class="text-crimson-500">when you need it.</span>
+{{-- ==================== HERO ==================== --}}
+{{-- Full dark. Statement, not a sales pitch. --}}
+<section class="relative overflow-hidden bg-echo-950">
+    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div class="mx-auto max-w-3xl text-center">
+            <h1 class="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
+                Translating <span class="text-crimson-500">geek</span> into human.
             </h1>
-
-            {{-- Subheadline --}}
-            <p class="text-xl lg:text-2xl text-echo-300 leading-relaxed mb-10 max-w-2xl">
-                Technology strategy. Security leadership. Architecture decisions. Vendor evaluation. The CTO and CISO work your business needs—without the full-time overhead. And unlike most consultants, I won't pretend your challenges have simple answers when they don't.
+            <p class="mx-auto mt-8 max-w-2xl text-xl leading-8 text-echo-300">
+                Fractional CTO &amp; CISO for founders who know they need a technology and security strategy&nbsp;&mdash; but aren't ready to hire a $250K executive to get one.
             </p>
-
-            {{-- CTAs --}}
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="/contact"
-                   class="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg group">
-                    <span>Let's Talk</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
+            <div class="mt-10 flex items-center justify-center gap-x-8">
+                <a href="/contact" class="rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
+                    Schedule a Clarity Call
                 </a>
-                <a href="/services"
-                   class="inline-flex items-center justify-center gap-2 bg-transparent border border-echo-600 hover:border-echo-500 text-echo-200 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                    Learn More
+                <a href="/assessment" class="text-sm font-semibold text-echo-300 transition-colors hover:text-white">
+                    Take the Signal Score <span aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
-    </div>
 
-    {{-- Scroll indicator --}}
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-    </div>
-</section>
-
-{{-- Trusted By Section --}}
-<section class="py-12 border-y border-echo-800/50">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex flex-col items-center gap-8">
-            <span class="text-echo-500 text-sm font-medium uppercase tracking-wider">Trusted by teams at</span>
-            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-                <div class="flex items-center">
-                    <img src="/assets/img/clients/bose.png" alt="Bose" class="h-32 w-auto">
+        {{-- Stats strip --}}
+        <div class="mx-auto mt-20 max-w-4xl">
+            <dl class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
+                <div class="text-center">
+                    <dt class="text-sm text-echo-500">Years in the field</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-white">25+</dd>
                 </div>
-                <div class="flex items-center">
-                    <img src="/assets/img/clients/strongrock.png" alt="Strongrock Engineering Group" class="h-20 w-auto">
+                <div class="text-center">
+                    <dt class="text-sm text-echo-500">Security programs built</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-white">40+</dd>
                 </div>
-                <div class="flex items-center">
-                    <img src="/assets/img/clients/carnival.png" alt="Carnival Cruise Lines" class="h-12 w-auto">
+                <div class="text-center">
+                    <dt class="text-sm text-echo-500">Users migrated (single project)</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-white">893</dd>
                 </div>
-                <div class="flex items-center">
-                    <img src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" class="h-12 w-auto">
+                <div class="text-center">
+                    <dt class="text-sm text-echo-500">Buzzwords on this page</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-crimson-500">0</dd>
                 </div>
-                <div class="flex items-center">
-                    <img src="/assets/img/clients/carhartt.png" alt="Carhartt" class="h-10 w-auto">
-                </div>
-            </div>
+            </dl>
         </div>
     </div>
 </section>
 
-{{-- What I Do Section --}}
-<section class="py-24 lg:py-32 bg-echo-900/50">
+{{-- ==================== TRUST BAR ==================== --}}
+<section class="border-y border-echo-800 bg-echo-900/50 py-12">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl mb-16">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">What I Do</span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                Strategic technology leadership that speaks your language.
+        <p class="text-center font-mono text-xs uppercase tracking-widest text-echo-500">Trusted by teams at</p>
+        <div class="mx-auto mt-8 grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-8 sm:max-w-xl sm:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none">
+            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/bose.png" alt="Bose" width="158" height="48">
+            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/brcc.png" alt="Black Rifle Coffee Company" width="158" height="48">
+            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/carhartt.png" alt="Carhartt" width="158" height="48">
+            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/carnival.png" alt="Carnival" width="158" height="48">
+            <img class="col-span-1 max-h-10 w-full object-contain brightness-0 invert opacity-40 transition-opacity hover:opacity-70" src="/assets/img/clients/strongrock.png" alt="Strong Rock" width="158" height="48">
+        </div>
+    </div>
+</section>
+
+{{-- ==================== THE PROBLEM (conversational) ==================== --}}
+<section class="bg-echo-950 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">The real problem</p>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+                You don't have a security problem. You have a leadership gap.
             </h2>
-            <p class="text-lg text-echo-300 mb-4">
-                Technology roadmaps. Architecture decisions. Security programs. Vendor negotiations. Team building. Compliance. These aren't complicated puzzles with right answers—they're complex decisions that depend on your specific context, constraints, and goals.
-            </p>
-            <p class="text-lg text-echo-300">
-                I serve as your fractional CTO and CISO, bringing executive-level judgment to the decisions that matter. But more importantly, I translate the complexity into strategy your whole leadership team can understand and act on.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            {{-- CTO Card --}}
-            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50 overflow-hidden">
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div class="relative">
-                    <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">
-                        Fractional CTO
-                    </h3>
-                    <p class="text-echo-300 mb-6">
-                        Technology strategy for complex environments. I help you build roadmaps, make architecture decisions, evaluate vendors, and develop teams—while recognizing that these aren't puzzle problems with clean solutions. They're judgment calls that need clear thinking and honest trade-offs.
-                    </p>
-
-                    <ul class="space-y-3 text-echo-400">
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Technology roadmap & strategy</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Architecture & technical decisions</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Vendor evaluation & management</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Team mentorship & hiring</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {{-- CISO Card --}}
-            <div class="group relative bg-echo-800/30 border border-echo-700 rounded-xl p-8 lg:p-10 hover:border-crimson-700/50 transition-all duration-500 hover:bg-echo-800/50 overflow-hidden">
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-crimson-900/20 transform rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div class="relative">
-                    <div class="inline-flex items-center justify-center w-14 h-14 bg-crimson-900/30 rounded-xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">
-                        Fractional CISO
-                    </h3>
-                    <p class="text-echo-300 mb-6">
-                        Security leadership without the fear-mongering. I build programs, assess risk, guide compliance, and plan for incidents—focused on what actually matters for your business, not what vendors are selling this quarter.
-                    </p>
-
-                    <ul class="space-y-3 text-echo-400">
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Security program development</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Risk assessment & management</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Compliance guidance (SOC 2, etc.)</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="h-5 w-5 text-crimson-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Incident response planning</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="mt-10 space-y-6 text-lg leading-8 text-echo-300">
+                <p>
+                    Every vendor in your inbox is selling urgency. Firewalls, endpoint protection, zero trust, AI-powered threat detection&nbsp;&mdash; the list never stops and nobody's translating it into decisions you can actually make.
+                </p>
+                <p>
+                    Meanwhile, you've got a client sending you a security questionnaire and your team is scrambling. Your cyber insurance premium just doubled. Someone mentioned SOC 2 and the room went quiet.
+                </p>
+                <p class="text-white font-medium">
+                    Sound familiar?
+                </p>
+                <p>
+                    These aren't technology problems. They're what happens when a growing company doesn't have someone in the room who speaks both boardroom and server room.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-{{-- Engagement Tiers Teaser --}}
-<section class="py-24 lg:py-32">
+{{-- ==================== WHO I AM (split layout) ==================== --}}
+<section id="about" class="bg-echo-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Engagement Options</span>
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-                Ways to engage
-            </h2>
-            <p class="text-lg text-echo-300 max-w-2xl mx-auto">
-                Three tiers designed to meet you where you are.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-10">
-            {{-- Tune --}}
-            <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/50">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
-                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="8" />
-                        <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
-                        <line x1="12" y1="9.5" x2="12" y2="4" />
-                    </svg>
-                </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-2">Tune</h3>
-                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Strategy session</p>
-                <p class="text-echo-400 text-sm leading-relaxed">Tune in, calibrate, assess. A focused session to diagnose where you are.</p>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-16 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            {{-- Photo --}}
+            <div class="lg:col-span-2">
+                <img src="/assets/img/mike-faas-hero.jpg"
+                     alt="Mike Faas"
+                     class="w-full rounded-2xl object-cover object-top aspect-[3/4] ring-1 ring-echo-700/30">
             </div>
 
-            {{-- Signal (featured) --}}
-            <div class="group bg-echo-800/40 border-2 border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/60 hover:border-crimson-800">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/60 group-hover:bg-crimson-950/80 rounded-2xl mb-5 transition-colors">
-                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>
-                </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-2">Signal</h3>
-                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Fractional engagement</p>
-                <p class="text-echo-400 text-sm leading-relaxed">Clear signal through the noise. Embedded leadership, 10 hours per week.</p>
-            </div>
-
-            {{-- Echo --}}
-            <div class="group bg-echo-800/30 border border-echo-700 hover:border-crimson-900 rounded-xl p-8 text-center transition-all duration-300 hover:bg-echo-800/50">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-crimson-950/40 group-hover:bg-crimson-950/60 rounded-2xl mb-5 transition-colors">
-                    <svg class="h-8 w-8 text-crimson-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        {{-- Bold pulse with 2 clear peaks --}}
-                        <path d="M2 12h4l2-5 4 10 2-5h8" />
-                    </svg>
-                </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-2">Echo</h3>
-                <p class="text-crimson-500 text-sm font-semibold uppercase tracking-wide mb-3">Ongoing advisory</p>
-                <p class="text-echo-400 text-sm leading-relaxed">The feedback loop. Strategic guidance that continues long-term.</p>
-            </div>
-        </div>
-
-        <div class="text-center">
-            <a href="/services" class="text-crimson-500 hover:text-crimson-400 font-medium inline-flex items-center gap-2 transition-colors">
-                See full engagement details
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-{{-- Why Fractional Section --}}
-<section class="py-24 lg:py-32 bg-echo-900/50">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                    <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">The Model</span>
-                </div>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Why fractional?
+            {{-- Bio --}}
+            <div class="lg:col-span-3">
+                <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Who you're working with</p>
+                <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    I'm Mike Faas.
                 </h2>
-                <p class="text-lg text-echo-300 mb-8">
-                    Think of it like having a CFO on retainer. You get the strategic thinking and executive experience of a CTO or CISO - without the $300K+ salary, benefits, and hiring headaches.
-                </p>
-                <p class="text-lg text-echo-300 mb-8">
-                    A fractional executive works with your business 10-20 hours per week, joining leadership meetings, guiding your team, and owning the decisions that matter. Same accountability as a full-time hire. Fraction of the cost.
-                </p>
-                <div class="flex items-center gap-4">
-                    <a href="/about" class="text-crimson-500 hover:text-crimson-400 font-medium inline-flex items-center gap-2 transition-colors">
-                        Learn more about my approach
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
+                <div class="mt-8 space-y-6 text-lg leading-8 text-echo-300">
+                    <p>
+                        25+ years building security and technology programs&nbsp;&mdash; Fortune 500 to high-growth startups. I've sat in the CISO chair. I've built the governance programs. I've had the vendor calls where nobody in the room knew what questions to ask.
+                    </p>
+                    <p>
+                        I started Echo Cyber because too many smart founders are making million-dollar technology decisions with vendor slide decks and gut instinct. They don't need another consultant who talks in acronyms. They need someone who can walk into a board meeting and explain what's actually going on&nbsp;&mdash; in plain English.
+                    </p>
+                    <p class="text-sm italic text-echo-500">
+                        Based in Raleigh, NC. Dad. Blue belt. Reluctant morning person.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ==================== WHAT PEOPLE SAY ==================== --}}
+<section class="bg-echo-950 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <p class="text-center font-mono text-xs uppercase tracking-widest text-crimson-500">What people say</p>
+
+        <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {{-- Jackson --}}
+            <figure class="flex flex-col justify-between rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50 h-full">
+                <blockquote class="text-base leading-7 text-echo-200">
+                    <p>&ldquo;Mike has an exceptional talent for building authentic, trust-based relationships with customers. He was a key contributor to both strategic direction and client engagement. His skill set brings immediate value and would be an asset to any organization.&rdquo;</p>
+                </blockquote>
+                <figcaption class="mt-8 flex items-center gap-x-4 border-t border-echo-700/50 pt-6">
+                    <div class="h-10 w-10 flex-none rounded-full bg-crimson-900/50 flex items-center justify-center ring-1 ring-crimson-700/30">
+                        <span class="text-crimson-400 font-bold text-sm">JJ</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white text-sm">James L. Jackson, MBA, CISM</div>
+                        <div class="text-echo-500 text-sm">Cybersecurity Leader</div>
+                    </div>
+                </figcaption>
+            </figure>
+
+            {{-- Helms --}}
+            <figure class="flex flex-col justify-between rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50 h-full">
+                <blockquote class="text-base leading-7 text-echo-200">
+                    <p>&ldquo;Mike has the ability to communicate technical concepts to a non-technical audience. When assigned a task, you can trust it will be done with the same level of attention to detail as if you had done it yourself.&rdquo;</p>
+                </blockquote>
+                <figcaption class="mt-8 flex items-center gap-x-4 border-t border-echo-700/50 pt-6">
+                    <div class="h-10 w-10 flex-none rounded-full bg-crimson-900/50 flex items-center justify-center ring-1 ring-crimson-700/30">
+                        <span class="text-crimson-400 font-bold text-sm">JH</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white text-sm">JD Helms</div>
+                        <div class="text-echo-500 text-sm">COO @ SoftwareOne &middot; Co-Founder @ PsychReport.ai</div>
+                    </div>
+                </figcaption>
+            </figure>
+
+            {{-- Sorensen --}}
+            <figure class="flex flex-col justify-between rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50 h-full">
+                <blockquote class="text-base leading-7 text-echo-200">
+                    <p>&ldquo;Mike is a strategic leader with deep expertise across multiple technology areas. He knows how to build trusted relationships with his customers, vendors, senior managers, peers, and direct reports. He is one of the good guys.&rdquo;</p>
+                </blockquote>
+                <figcaption class="mt-8 flex items-center gap-x-4 border-t border-echo-700/50 pt-6">
+                    <div class="h-10 w-10 flex-none rounded-full bg-crimson-900/50 flex items-center justify-center ring-1 ring-crimson-700/30">
+                        <span class="text-crimson-400 font-bold text-sm">KS</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white text-sm">Karan Sorensen, Ed.D, MBA, MS</div>
+                        <div class="text-echo-500 text-sm">Innovation &amp; Technology Executive</div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+{{-- ==================== HOW IT WORKS (narrative pricing) ==================== --}}
+<section id="pricing" class="bg-echo-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">How it works</p>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+                Three ways to work together.
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-echo-300">
+                No discovery calls that are really sales pitches. No "custom pricing" that means "we'll charge whatever we think you'll pay." Here's exactly what it costs.
+            </p>
+        </div>
+
+        <div class="mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {{-- Tune --}}
+            <div class="flex flex-col rounded-2xl bg-echo-950 p-8 ring-1 ring-echo-700/50">
+                <div class="flex-1">
+                    <div class="flex items-baseline justify-between">
+                        <h3 class="font-display text-xl font-semibold text-white">Tune</h3>
+                        <span class="text-xs font-medium uppercase tracking-wider text-echo-500">Strategic Assessment</span>
+                    </div>
+                    <p class="mt-6 flex items-baseline gap-x-2">
+                        <span class="font-display text-4xl font-bold tracking-tight text-white">$7,500</span>
+                        <span class="text-sm text-echo-500">one-time</span>
+                    </p>
+                    <p class="mt-6 text-sm leading-6 text-echo-300">
+                        I map your technology and security landscape, interview your stakeholders, identify the highest-leverage fixes, and hand you a prioritized roadmap you can actually execute.
+                    </p>
+                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-400">
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Stakeholder interviews + current-state assessment
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Technology and security gap analysis
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Prioritized roadmap with clear next steps
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8 pt-6 border-t border-echo-800">
+                    <a href="/contact" class="block w-full rounded-lg bg-echo-800 px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-echo-700 transition-all hover:bg-echo-700 hover:ring-echo-600">
+                        Get started
                     </a>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">$150K+</div>
-                    <p class="text-echo-400 text-sm">Average annual savings vs. full-time exec</p>
+            {{-- Signal (featured) --}}
+            <div class="relative flex flex-col rounded-2xl bg-echo-950 p-8 ring-2 ring-crimson-700/50 shadow-glow-sm">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <span class="inline-block rounded-full bg-crimson-700 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">Most Popular</span>
                 </div>
-                <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">10-20</div>
-                    <p class="text-echo-400 text-sm">Hours per week, tailored to your needs</p>
+                <div class="flex-1">
+                    <div class="flex items-baseline justify-between">
+                        <h3 class="font-display text-xl font-semibold text-white">Signal</h3>
+                        <span class="text-xs font-medium uppercase tracking-wider text-crimson-400">Fractional CTO/CISO</span>
+                    </div>
+                    <p class="mt-6 flex items-baseline gap-x-2">
+                        <span class="font-display text-4xl font-bold tracking-tight text-white">$10,000</span>
+                        <span class="text-sm text-echo-500">/month &middot; 3-month min</span>
+                    </p>
+                    <p class="mt-6 text-sm leading-6 text-echo-300">
+                        I join your leadership team part-time. Strategy sessions, vendor calls, team building, incident response, board prep&nbsp;&mdash; whatever the role requires that week.
+                    </p>
+                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-300">
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            10 hours/week embedded with your team
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Staff meetings, vendor calls, board prep
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Governance design + security program buildout
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Roadmap execution and vendor negotiation
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">20+</div>
-                    <p class="text-echo-400 text-sm">Years enterprise technology experience</p>
+                <div class="mt-8 pt-6 border-t border-echo-800">
+                    <a href="/contact" class="block w-full rounded-lg bg-crimson-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow">
+                        Get started
+                    </a>
                 </div>
-                <div class="bg-echo-800/30 border border-echo-700 rounded-xl p-6">
-                    <div class="text-4xl font-display font-bold text-crimson-500 mb-2">1 day</div>
-                    <p class="text-echo-400 text-sm">Typical response for urgent matters</p>
+            </div>
+
+            {{-- Echo --}}
+            <div class="flex flex-col rounded-2xl bg-echo-950 p-8 ring-1 ring-echo-700/50">
+                <div class="flex-1">
+                    <div class="flex items-baseline justify-between">
+                        <h3 class="font-display text-xl font-semibold text-white">Echo</h3>
+                        <span class="text-xs font-medium uppercase tracking-wider text-echo-500">Ongoing Advisory</span>
+                    </div>
+                    <p class="mt-6 flex items-baseline gap-x-2">
+                        <span class="font-display text-4xl font-bold tracking-tight text-white">$3,000</span>
+                        <span class="text-sm text-echo-500">/month &middot; 6-month commitment</span>
+                    </p>
+                    <p class="mt-6 text-sm leading-6 text-echo-300">
+                        For clients who've finished a Signal engagement. Monthly counsel, quarterly strategic reviews, and on-call support for the decisions that matter.
+                    </p>
+                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-400">
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Monthly check-ins + quarterly strategic reviews
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            On-call for key decisions and vendor evaluations
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Governance oversight and course corrections
+                        </li>
+                    </ul>
                 </div>
+                <div class="mt-8 pt-6 border-t border-echo-800">
+                    <a href="/contact" class="block w-full rounded-lg bg-echo-800 px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-echo-700 transition-all hover:bg-echo-700 hover:ring-echo-600">
+                        Get started
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="mx-auto mt-10 max-w-2xl text-center text-sm text-echo-500">
+            Most clients start with Tune. No pressure, no lock-in beyond what's listed above.
+        </p>
+    </div>
+</section>
+
+{{-- ==================== TRACK RECORD ==================== --}}
+<section class="bg-echo-950 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Track record</p>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Real engagements. Real results.
+            </h2>
+            <p class="mt-4 text-echo-400 text-sm">Names withheld&nbsp;&mdash; NDAs are a feature, not a limitation.</p>
+        </div>
+
+        <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            {{-- Case 1 --}}
+            <article class="rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50">
+                <p class="text-xs font-bold uppercase tracking-wider text-crimson-500">Case 01</p>
+                <h3 class="mt-3 text-lg font-semibold text-white">Fortune 500 Retailer</h3>
+                <p class="mt-1 text-sm text-echo-500">Hundreds of locations &middot; 5,000+ employees</p>
+                <div class="mt-6 space-y-4 text-sm leading-6 text-echo-300">
+                    <p>
+                        <span class="font-semibold text-echo-200">The problem:</span> Security enforcement was nonexistent at the edge&nbsp;&mdash; POS systems across hundreds of stores required manual intervention, with no centralized governance or policy control.
+                    </p>
+                    <p>
+                        <span class="font-semibold text-echo-200">What I did:</span> Designed a cloud-native device governance framework, migrated 15 legacy policies, and automated enrollment across 4 platforms. The organization had enforceable, auditable security posture for the first time.
+                    </p>
+                </div>
+            </article>
+
+            {{-- Case 2 --}}
+            <article class="rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50">
+                <p class="text-xs font-bold uppercase tracking-wider text-crimson-500">Case 02</p>
+                <h3 class="mt-3 text-lg font-semibold text-white">High-Growth Ecommerce Brand</h3>
+                <p class="mt-1 text-sm text-echo-500">900+ users &middot; Rapid scale</p>
+                <div class="mt-6 space-y-4 text-sm leading-6 text-echo-300">
+                    <p>
+                        <span class="font-semibold text-echo-200">The problem:</span> Outgrew their collaboration platform but couldn't afford downtime during a migration that touched every employee, 32TB of data, and 40 business-critical sites.
+                    </p>
+                    <p>
+                        <span class="font-semibold text-echo-200">What I did:</span> Led a zero-disruption platform migration&nbsp;&mdash; 893 active users, 1,200+ archived accounts, identity sync, and policy-driven device reconfiguration. Eliminated legacy infrastructure and reduced administrative overhead.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+{{-- ==================== SIGNAL SCORE CTA ==================== --}}
+<section id="assessment" class="bg-echo-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free assessment</p>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Not ready for a call? Start here.
+            </h2>
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-echo-300">
+                The Signal Score is a 15-minute self-assessment across 8 categories. You get an instant A&ndash;F grade. No email required. No sales follow-up. Just clarity.
+            </p>
+            <div class="mt-10">
+                <a href="/assessment" class="inline-block rounded-lg bg-white px-8 py-4 text-sm font-semibold text-echo-900 shadow-sm transition-all hover:bg-echo-100">
+                    Take the Signal Score Assessment
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-{{-- Newsletter Section --}}
-<section class="py-24 lg:py-32">
+{{-- ==================== NEWSLETTER ==================== --}}
+<section class="border-t border-echo-800 bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Newsletter</span>
-                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+        <div class="mx-auto max-w-2xl text-center">
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Weekly newsletter</p>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white">
                 Signal vs. Noise
             </h2>
-            <p class="text-lg text-echo-300 mb-8">
-                Cutting through the chaos of cybersecurity and technology — so you can lead with clarity.
+            <p class="mt-6 text-lg leading-8 text-echo-300">
+                Cutting through the chaos of cybersecurity and technology&nbsp;&mdash; so you can lead with clarity. One email per week. No fluff, no vendor hype, no fear-mongering.
             </p>
+        </div>
 
-            {{-- Beehiiv Embed --}}
-            <div class="max-w-lg mx-auto">
-                <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-                <iframe src="https://subscribe-forms.beehiiv.com/b961a68a-112f-4a22-984f-1ffef0ae248c"
-                        class="beehiiv-embed"
-                        data-test-id="beehiiv-embed"
-                        frameborder="0"
-                        scrolling="no"
-                        style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
-            </div>
-            <p class="mt-4 text-sm text-echo-400">
-                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-crimson-500 transition-colors">
-                    Browse past issues →
+        <div class="mx-auto mt-10 max-w-lg">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/b961a68a-112f-4a22-984f-1ffef0ae248c"
+                    class="beehiiv-embed"
+                    data-test-id="beehiiv-embed"
+                    frameborder="0"
+                    scrolling="no"
+                    style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
+            <p class="mt-4 text-center text-sm text-echo-500">
+                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-1 text-echo-400 transition-colors hover:text-white">
+                    Browse past issues <span aria-hidden="true">&rarr;</span>
                 </a>
             </p>
         </div>
     </div>
 </section>
 
-{{-- CTA Section --}}
-<section class="py-24 lg:py-32 bg-echo-900/50">
+{{-- ==================== FINAL CTA ==================== --}}
+<section id="contact" class="bg-echo-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="relative bg-gradient-to-br from-crimson-900/40 to-crimson-950/40 border border-crimson-800/30 rounded-2xl p-12 lg:p-16 overflow-hidden">
-            {{-- Background decoration - angular shapes --}}
-            <div class="absolute -top-12 -right-12 w-48 h-48 bg-crimson-800/20 transform rotate-45 blur-xl"></div>
-            <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-crimson-900/30 transform -rotate-12 blur-xl"></div>
-
-            <div class="relative max-w-2xl">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Ready to level up your technology strategy?
-                </h2>
-                <p class="text-lg text-echo-300 mb-8">
-                    Let's have a conversation about where you are today and where you want to go. No pressure, no sales pitch - just a straightforward discussion about how I might be able to help.
-                </p>
-                <a href="/contact"
-                   class="inline-flex items-center justify-center gap-2 bg-white hover:bg-echo-100 text-echo-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group">
-                    <span>Get in Touch</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+                Ready to have a real conversation?
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-echo-300">
+                30 minutes. No pitch&nbsp;&mdash; just honest questions and straight answers. You'll walk away with actionable next steps either way.
+            </p>
+            <div class="mt-10">
+                <a href="/contact" class="inline-block rounded-lg bg-crimson-700 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow">
+                    Schedule a Clarity Call
                 </a>
             </div>
+            <p class="mt-6 text-sm italic text-echo-600">
+                Translating geek into human.
+            </p>
         </div>
     </div>
 </section>
