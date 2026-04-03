@@ -408,7 +408,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
         <div class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {{-- Tune --}}
-            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-stone-200 xl:p-10 lg:mt-8 lg:rounded-r-none">
+            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-stone-200 xl:p-10 lg:mt-8 ">
                 <div>
                     <div class="flex items-center justify-between gap-x-4">
                         <h3 class="font-display text-lg font-semibold leading-8 text-stone-900">Tune</h3>
@@ -503,7 +503,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             </div>
 
             {{-- Echo --}}
-            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-stone-200 xl:p-10 lg:mt-8 lg:rounded-l-none">
+            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-stone-200 xl:p-10 lg:mt-8 ">
                 <div>
                     <div class="flex items-center justify-between gap-x-4">
                         <h3 class="font-display text-lg font-semibold leading-8 text-stone-900">Echo</h3>
