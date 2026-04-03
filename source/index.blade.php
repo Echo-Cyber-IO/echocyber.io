@@ -610,8 +610,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     frameborder="0"
                     scrolling="no"
                     style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
-            <p class="mt-4 text-sm text-echo-400">
-                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 transition-colors hover:text-white">
+            <p class="mt-4 text-center text-sm text-echo-400">
+                <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-1 text-echo-300 transition-colors hover:text-white">
                     Browse past issues <span aria-hidden="true">→</span>
                 </a>
             </p>
