@@ -87,7 +87,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section id="services" class="bg-stone-50 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-left">
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-center gap-x-4">
                 <div class="h-1 w-8 rounded-full bg-crimson-600"></div>
                 <span class="font-mono text-xs uppercase tracking-wider text-crimson-600">The Real Problem</span>
             </div>
@@ -141,16 +141,11 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
     </div>
 </section>
 
-{{-- Red-line divider --}}
-<div class="flex justify-center bg-white py-2">
-    <img src="/assets/img/red-line.png" alt="" class="w-80 opacity-80" role="presentation">
-</div>
-
 {{-- Section 3: Sound Familiar? --}}
 <section class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-center gap-x-4">
                 <div class="h-1 w-8 rounded-full bg-crimson-600"></div>
                 <span class="font-mono text-xs uppercase tracking-wider text-crimson-600">Sound Familiar?</span>
             </div>
@@ -202,7 +197,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
         {{-- Pull quote --}}
         <div class="mx-auto mt-16 max-w-2xl lg:mx-0 lg:max-w-xl">
-            <figure class="border-l-2 border-crimson-600 pl-8">
+            <figure class="pl-8">
                 <blockquote class="text-xl font-medium leading-8 tracking-tight text-stone-900 sm:text-2xl sm:leading-9">
                     <p>&ldquo;Most security failures aren't technical. They're what happens when leaders optimize what they should be governing.&rdquo;</p>
                 </blockquote>
@@ -219,9 +214,9 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {{-- Left: Image + Bio --}}
             <div>
-                <div class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-4">
                     <div class="h-1 w-8 rounded-full bg-crimson-600"></div>
-                    <span class="font-mono text-xs uppercase tracking-wider text-crimson-600">Your Guide</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-crimson-600">Who You're Working With</span>
                 </div>
 
                 <div class="mt-8 flex items-start gap-x-6">
@@ -249,7 +244,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     </blockquote>
                     <figcaption class="mt-6 flex items-center gap-x-4 border-t border-stone-900/10 pt-6">
                         <div class="h-px flex-auto bg-gradient-to-r from-crimson-500/30 to-transparent"></div>
-                        <span class="text-sm font-semibold text-crimson-600">From the blog</span>
+                        <span class="text-sm font-semibold text-crimson-600">Mike Faas</span>
                     </figcaption>
                 </figure>
 
@@ -259,7 +254,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     </blockquote>
                     <figcaption class="mt-6 flex items-center gap-x-4 border-t border-stone-900/10 pt-6">
                         <div class="h-px flex-auto bg-gradient-to-r from-crimson-500/30 to-transparent"></div>
-                        <span class="text-sm font-semibold text-crimson-600">From the blog</span>
+                        <span class="text-sm font-semibold text-crimson-600">Mike Faas</span>
                     </figcaption>
                 </figure>
             </div>
@@ -278,11 +273,11 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             </div>
         </div>
 
-        <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
-            <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {{-- Jackson --}}
-                <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
-                    <figure class="rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5">
+                <div class="flex">
+                    <figure class="flex flex-col justify-between rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5 h-full">
                         <blockquote class="text-stone-900">
                             <p>&ldquo;Mike has an exceptional talent for building authentic, trust-based relationships with customers. He was a key contributor to both strategic direction and client engagement. His skill set brings immediate value and would be an asset to any organization.&rdquo;</p>
                         </blockquote>
@@ -299,8 +294,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                 </div>
 
                 {{-- Helms --}}
-                <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
-                    <figure class="rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5">
+                <div class="flex">
+                    <figure class="flex flex-col justify-between rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5 h-full">
                         <blockquote class="text-stone-900">
                             <p>&ldquo;Mike has the ability to communicate technical concepts to a non-technical audience. When assigned a task, you can trust it will be done with the same level of attention to detail as if you had done it yourself.&rdquo;</p>
                         </blockquote>
@@ -317,8 +312,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                 </div>
 
                 {{-- Sorensen --}}
-                <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
-                    <figure class="rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5">
+                <div class="flex">
+                    <figure class="flex flex-col justify-between rounded-2xl bg-stone-50 p-8 text-sm leading-6 ring-1 ring-inset ring-stone-900/5 h-full">
                         <blockquote class="text-stone-900">
                             <p>&ldquo;Mike is a strategic leader with deep expertise across multiple technology areas. He knows how to build trusted relationships with his customers, vendors, senior managers, peers, and direct reports. He is one of the good guys.&rdquo;</p>
                         </blockquote>
@@ -342,7 +337,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section class="bg-stone-50 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-center gap-x-4">
                 <div class="h-1 w-8 rounded-full bg-crimson-600"></div>
                 <span class="font-mono text-xs uppercase tracking-wider text-crimson-600">Track Record</span>
             </div>
@@ -353,8 +348,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             {{-- Case Study 1 --}}
             <article class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg ring-1 ring-stone-900/5">
                 <div>
-                    <div class="flex items-center gap-x-3">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
+                    <div class="flex items-center gap-x-4">
+                        <div class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
                             <span class="font-display text-sm font-bold text-crimson-700">01</span>
                         </div>
                         <div>
@@ -376,8 +371,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             {{-- Case Study 2 --}}
             <article class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg ring-1 ring-stone-900/5">
                 <div>
-                    <div class="flex items-center gap-x-3">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
+                    <div class="flex items-center gap-x-4">
+                        <div class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-crimson-50 ring-1 ring-crimson-500/20">
                             <span class="font-display text-sm font-bold text-crimson-700">02</span>
                         </div>
                         <div>
@@ -400,11 +395,6 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 </section>
 
 {{-- ==================== ACT 3: PLAN ==================== --}}
-
-{{-- Red-line divider --}}
-<div class="flex justify-center bg-white py-2">
-    <img src="/assets/img/red-line.png" alt="" class="w-80 opacity-80" role="presentation">
-</div>
 
 {{-- Section 7: Pricing — Tailwind Plus "Three tiers" with emphasized middle --}}
 <section id="pricing" class="relative isolate bg-white py-24 sm:py-32">
