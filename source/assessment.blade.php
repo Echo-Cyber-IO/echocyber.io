@@ -40,7 +40,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
         <div class="relative z-10 lg:w-full lg:max-w-2xl">
           <!-- Diagonal cut SVG -->
           <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"
-               class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-echo-950/0 lg:block">
+               class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-echo-950 lg:block">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
 
@@ -82,35 +82,46 @@ description: Find out where your company stands in 15 minutes. Free security ass
       </div>
 
       <!-- Right: Sample Signal Score card -->
-      <div class="relative bg-gradient-to-br from-echo-900 via-echo-900 to-crimson-950/40 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
-          <div class="absolute -top-32 -right-32 w-[400px] h-[400px] bg-gradient-to-br from-crimson-700/20 to-transparent blur-3xl pointer-events-none"></div>
+      <div class="relative bg-gradient-to-br from-echo-900 via-echo-900 to-crimson-950/60 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        {{-- Stronger ambient glows --}}
+        <div aria-hidden="true" class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-crimson-600/30 to-transparent blur-3xl"></div>
+          <div class="absolute -bottom-40 -left-20 w-[400px] h-[400px] bg-gradient-to-tr from-crimson-800/20 to-transparent blur-3xl"></div>
         </div>
 
         <div class="relative flex h-full items-center justify-center px-6 py-20 lg:px-12 lg:py-16">
-          <div class="w-full max-w-md">
+          <div class="relative w-full max-w-md">
+            {{-- Card halo glow behind --}}
+            <div aria-hidden="true" class="absolute -inset-6 rounded-3xl bg-gradient-to-br from-crimson-700/20 via-crimson-900/10 to-yellow-500/10 blur-2xl"></div>
 
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse"></div>
-                <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample result</p>
-              </div>
-              <span class="font-mono text-xs text-echo-500">Yours in 15 min</span>
-            </div>
+            {{-- The card itself --}}
+            <div class="relative rounded-2xl bg-echo-950/90 p-7 ring-1 ring-crimson-700/40 shadow-2xl shadow-crimson-950/60 backdrop-blur-sm">
 
-            <div class="mt-8 flex items-center gap-6">
-              <div class="flex-none inline-flex items-center justify-center w-32 h-32 rounded-3xl border-4 border-yellow-400 bg-yellow-500/5 shadow-2xl shadow-yellow-500/10">
-                <span class="font-display text-7xl font-bold text-yellow-400">C</span>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse shadow-lg shadow-crimson-500/50"></div>
+                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample</p>
+                </div>
+                <span class="font-mono text-xs text-echo-500">Yours in 15 min</span>
               </div>
-              <div class="flex-1 min-w-0">
-                <p class="font-display text-2xl font-bold text-white">Room to Grow</p>
-                <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
-                <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/10 px-2 py-1 ring-1 ring-yellow-500/20">
-                  <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
-                  <span class="font-mono text-xs font-semibold text-yellow-400">$300K&ndash;$750K annual risk</span>
+
+              <div class="mt-8 flex items-center gap-6">
+                {{-- Grade circle with glow ring --}}
+                <div class="relative flex-none">
+                  <div aria-hidden="true" class="absolute -inset-2 rounded-3xl bg-yellow-400/20 blur-xl"></div>
+                  <div class="relative inline-flex items-center justify-center w-32 h-32 rounded-3xl border-4 border-yellow-400 bg-gradient-to-br from-yellow-500/15 to-yellow-700/5 shadow-2xl shadow-yellow-400/30">
+                    <span class="font-display text-7xl font-bold text-yellow-400 drop-shadow-[0_0_12px_rgba(250,204,21,0.4)]">C</span>
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-display text-2xl font-bold text-white">Room to Grow</p>
+                  <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
+                  <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/15 px-2 py-1 ring-1 ring-yellow-500/30 shadow-sm shadow-yellow-500/10">
+                    <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
+                    <span class="font-mono text-xs font-semibold text-yellow-400">$300K&ndash;$750K annual risk</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
             <div class="mt-8 space-y-3 border-t border-echo-800 pt-6">
               <p class="text-xs font-mono uppercase tracking-widest text-echo-500">Grades by area</p>
@@ -127,7 +138,8 @@ description: Find out where your company stands in 15 minutes. Free security ass
               @endforeach
             </div>
 
-            <p class="mt-6 text-center text-xs italic text-echo-500">Sample result. Yours will be specific to your business.</p>
+              <p class="mt-6 text-center text-xs italic text-echo-500">Sample result. Yours will be specific to your business.</p>
+            </div>
 
           </div>
         </div>
