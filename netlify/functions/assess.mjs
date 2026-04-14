@@ -10,22 +10,6 @@ const GHL_PIPELINE_STAGE_ID = process.env.GHL_SIGNAL_SCORE_STAGE_ID; // "Assessm
 const BEEHIIV_API_KEY = process.env.BEEHIIV_API_KEY;
 const BEEHIIV_PUB_ID = process.env.BEEHIIV_PUB_ID || 'pub_4aa9e626-adfb-44d3-991a-ba8cbdd146fa';
 
-// GHL custom field IDs (location LTsOV0bzU0aByRBneCoy). v2 PUT requires `id`, not `key`.
-const GHL_FIELD_IDS = {
-  signal_score_overall:  'ZEC6MyAbeNjNECD5ZWnE',
-  signal_score_grade:    'c91vWcKu1hXTzb6csZiI',
-  signal_score_date:     '8X2Zi9NmibFGE0u5OBsw',
-  signal_score_identity: '9ecPXB8N1KqNfYM8prrD',
-  signal_score_devices:  'IIFjeI8DNLo6ufKRTkCu',
-  signal_score_email:    'rtILuO2a4olsaqbBIw9t',
-  signal_score_backup:   'HPM3g2SNknPSq4WT62cQ',
-  signal_score_network:  'jwDmrX2EOGiz1W0rgnBg',
-  signal_score_data:     '0s05Ns2zVg75BoX6zvsr',
-  signal_score_vendor:   'Quq9gfjinXBtXQKM3iJT',
-  signal_score_incident: 'c7fGdLMHwpVCxndMSJ99',
-  role_title:            'IrGm6128k8emGRrdHA0h',
-  company_size:          'x7UYzjeQlFY7fQp0oB8K',
-};
 
 // ── Scoring Engine ──────────────────────────────────────────────────────────
 
@@ -139,6 +123,31 @@ function scoreAssessment(answers) {
 
 // ── GHL Integration ─────────────────────────────────────────────────────────
 
+// Lazy-loaded map of GHL custom field fieldKey → id for the location.
+// GHL v2 PUT /contacts/{id} requires field IDs (not keys); we fetch the map
+// once per cold start and cache for the lambda's lifetime.
+let fieldIdCache = null;
+async function getFieldId(fieldKey) {
+  if (!fieldIdCache) {
+    const res = await ghlRequest('GET', `/locations/${GHL_LOCATION_ID}/customFields`);
+    const fields = res?.customFields || [];
+    fieldIdCache = Object.fromEntries(fields.map(f => [f.fieldKey, f.id]));
+    console.log(`[assess] Cached ${fields.length} GHL custom field IDs`);
+  }
+  const id = fieldIdCache[fieldKey];
+  if (!id) console.warn(`[assess] Unknown GHL field key: ${fieldKey}`);
+  return id;
+}
+
+async function buildCustomFields(entries) {
+  // entries: [[fieldKey, field_value], ...]
+  const resolved = await Promise.all(entries.map(async ([key, value]) => {
+    const id = await getFieldId(key);
+    return id ? { id, field_value: value } : null;
+  }));
+  return resolved.filter(Boolean);
+}
+
 async function ghlRequest(method, path, body = null) {
   const opts = {
     method,
@@ -170,6 +179,10 @@ async function findOrCreateContact(lead) {
     contactId = search.contacts[0].id;
   } else {
     // Create new contact
+    const customFields = await buildCustomFields([
+      ['contact.role_title', lead.role || ''],
+      ['contact.company_size', lead.companySize || ''],
+    ]);
     const created = await ghlRequest('POST', '/contacts/', {
       locationId: GHL_LOCATION_ID,
       firstName: lead.firstName,
@@ -178,10 +191,7 @@ async function findOrCreateContact(lead) {
       companyName: lead.company || '',
       source: 'Signal Score Assessment',
       tags: ['signal-score'],
-      customFields: [
-        { id: GHL_FIELD_IDS.role_title, field_value: lead.role || '' },
-        { id: GHL_FIELD_IDS.company_size, field_value: lead.companySize || '' },
-      ],
+      customFields,
     });
     contactId = created?.contact?.id;
   }
@@ -192,17 +202,19 @@ async function findOrCreateContact(lead) {
 async function updateContactScores(contactId, results) {
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
+  const customFields = await buildCustomFields([
+    ['contact.signal_score_overall', String(results.totalScore)],
+    ['contact.signal_score_grade', results.overallGrade],
+    ['contact.signal_score_date', now],
+    ...results.categories.map(c => [
+      `contact.signal_score_${c.key}`,
+      `${c.grade} (${c.score}/${c.maxPoints})`,
+    ]),
+  ]);
+
   await ghlRequest('PUT', `/contacts/${contactId}`, {
     tags: ['signal-score', `signal-grade-${results.overallGrade.toLowerCase()}`],
-    customFields: [
-      { id: GHL_FIELD_IDS.signal_score_overall, field_value: String(results.totalScore) },
-      { id: GHL_FIELD_IDS.signal_score_grade, field_value: results.overallGrade },
-      { id: GHL_FIELD_IDS.signal_score_date, field_value: now },
-      ...results.categories.map(c => ({
-        id: GHL_FIELD_IDS[`signal_score_${c.key}`],
-        field_value: `${c.grade} (${c.score}/${c.maxPoints})`,
-      })),
-    ],
+    customFields,
   });
 }
 
