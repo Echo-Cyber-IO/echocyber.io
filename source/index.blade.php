@@ -20,12 +20,15 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             <p class="mx-auto mt-8 max-w-2xl text-xl leading-8 text-echo-300">
                 Fractional CTO &amp; CISO for founders who know they need a technology and security strategy&nbsp;&mdash; but aren't ready to hire a $250K executive to get one.
             </p>
-            <div class="mt-10 flex items-center justify-center gap-x-8">
-                <a href="/contact" class="rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
+            <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-5">
+                <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
                     Schedule a Clarity Call
                 </a>
-                <a href="/assessment" class="text-sm font-semibold text-echo-300 transition-colors hover:text-white">
-                    Take the Signal Score <span aria-hidden="true">&rarr;</span>
+                <a href="/assessment" class="group inline-flex items-center gap-2 rounded-lg border border-crimson-700 bg-crimson-900/20 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-crimson-500 hover:bg-crimson-900/40 hover:shadow-glow">
+                    Discover your Signal Score
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
                 </a>
             </div>
         </div>
