@@ -6,90 +6,110 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 @section('body')
 
-{{-- ==================== HERO (offset image pattern, Signal Score teaser) ==================== --}}
-<section class="relative isolate overflow-hidden bg-gradient-to-b from-crimson-950/10 to-transparent pt-14">
+{{-- ==================== HERO (angled image pattern, full Signal Score panel) ==================== --}}
+<section class="relative bg-echo-950">
+    <div class="mx-auto max-w-7xl">
+        {{-- Left content (constrained to lg:w-1/2) --}}
+        <div class="relative z-10 lg:w-full lg:max-w-2xl">
+            {{-- Angled cut SVG: dark polygon overlapping right edge of left content,
+                 cutting into the right-side panel diagonally --}}
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"
+                 class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-echo-950 lg:block">
+                <polygon points="0,0 90,0 50,100 0,100" />
+            </svg>
 
-    {{-- Skewed crimson-tinted background panel (TailwindPlus signature) --}}
-    <div aria-hidden="true"
-         class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-echo-900/40 shadow-xl shadow-crimson-900/20 ring-1 ring-crimson-700/10 sm:-mr-80 lg:-mr-96"></div>
-
-    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-
-            {{-- Wide headline (spans both columns on lg, single col on xl) --}}
-            <h1 class="max-w-2xl font-display text-5xl font-bold tracking-tight text-balance text-white sm:text-7xl lg:col-span-2 xl:col-auto">
-                Translating <span class="text-crimson-500">geek</span> into human.
-            </h1>
-
-            {{-- Subhead + CTAs (lower-left on xl) --}}
-            <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-                <p class="text-lg font-medium text-pretty text-echo-300 sm:text-xl/8">
-                    Fractional CTO &amp; CISO for founders who know they need a technology and security strategy&nbsp;&mdash; but aren't ready to hire a $250K executive to get one.
-                </p>
-                <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:gap-x-5">
-                    <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
-                        Schedule a Clarity Call
-                    </a>
-                    <a href="/assessment" class="group inline-flex items-center gap-2 rounded-lg border border-crimson-700 bg-crimson-900/20 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-crimson-500 hover:bg-crimson-900/40 hover:shadow-glow">
-                        Discover your Signal Score
-                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
+            <div class="relative px-6 py-24 sm:py-32 lg:px-8 lg:py-40 lg:pr-0">
+                <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                    <h1 class="font-display text-5xl font-bold tracking-tight text-pretty text-white sm:text-7xl">
+                        Translating <span class="text-crimson-500">geek</span> into human.
+                    </h1>
+                    <p class="mt-8 text-lg font-medium text-pretty text-echo-300 sm:text-xl/8">
+                        Fractional CTO &amp; CISO for founders who know they need a technology and security strategy&nbsp;&mdash; but aren't ready to hire a $250K executive to get one.
+                    </p>
+                    <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:gap-x-5">
+                        <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
+                            Schedule a Clarity Call
+                        </a>
+                        <a href="#assessment-card" class="group inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-crimson-400">
+                            See a sample Signal Score
+                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            {{-- Signal Score sample card (offset right on xl) --}}
-            <a href="/assessment" class="group block mt-10 w-full max-w-lg lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-16">
-                <div class="relative rounded-2xl bg-echo-950/80 p-6 ring-1 ring-crimson-700/30 shadow-2xl shadow-crimson-950/50 backdrop-blur-sm transition-all group-hover:ring-crimson-600/50 group-hover:shadow-crimson-900/30 sm:p-8">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse"></div>
-                            <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample</p>
-                        </div>
-                        <span class="text-xs text-echo-500">15-min · free</span>
-                    </div>
-
-                    <div class="mt-6 flex items-center gap-6">
-                        <div class="flex-none inline-flex items-center justify-center w-24 h-24 rounded-2xl border-4 border-yellow-400 bg-yellow-500/5">
-                            <span class="font-display text-5xl font-bold text-yellow-400">C</span>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="font-display text-lg font-bold text-white">Room to Grow</p>
-                            <p class="mt-1 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
-                            <p class="mt-2 font-mono text-xs text-yellow-400/80">$300K–$750K annual risk</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 space-y-2.5 border-t border-echo-800 pt-5">
-                        @foreach([['Identity & Access', 'B', 'bg-blue-500', 75], ['Email & Phishing', 'C', 'bg-yellow-500', 50], ['Backup & Recovery', 'D', 'bg-orange-500', 30], ['Incident Readiness', 'F', 'bg-red-500', 12]] as $row)
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-echo-300">{{ $row[0] }}</span>
-                                <div class="flex items-center gap-3">
-                                    <div class="h-1.5 w-24 rounded-full bg-echo-800 overflow-hidden">
-                                        <div class="h-full {{ $row[2] }}" style="width: {{ $row[3] }}%"></div>
-                                    </div>
-                                    <span class="font-mono font-bold text-white w-3 text-center">{{ $row[1] }}</span>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <div class="mt-6 flex items-center justify-between border-t border-echo-800 pt-4">
-                        <span class="text-sm text-echo-400">Find your grade</span>
-                        <span class="inline-flex items-center gap-1 text-sm font-semibold text-crimson-400 transition-transform group-hover:translate-x-1">
-                            Take the assessment
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>
-
         </div>
     </div>
 
-    {{-- Stats strip below hero --}}
-    <div class="relative bg-echo-950/40 backdrop-blur-sm border-t border-echo-800/50">
+    {{-- Right-half panel: full-bleed Signal Score sample card --}}
+    <div id="assessment-card" class="relative bg-gradient-to-br from-echo-900 via-echo-900 to-crimson-950/40 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        {{-- Decorative glow --}}
+        <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-[400px] h-[400px] bg-gradient-to-br from-crimson-700/20 to-transparent blur-3xl pointer-events-none"></div>
+        </div>
+
+        <a href="/assessment" class="group relative flex h-full items-center justify-center px-6 py-20 lg:px-12 lg:py-16">
+            <div class="w-full max-w-md transition-transform group-hover:scale-[1.01]">
+
+                {{-- Card header --}}
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse"></div>
+                        <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample</p>
+                    </div>
+                    <span class="font-mono text-xs text-echo-500">15 min &middot; free</span>
+                </div>
+
+                {{-- Big grade --}}
+                <div class="mt-8 flex items-center gap-6">
+                    <div class="flex-none inline-flex items-center justify-center w-32 h-32 rounded-3xl border-4 border-yellow-400 bg-yellow-500/5 shadow-2xl shadow-yellow-500/10">
+                        <span class="font-display text-7xl font-bold text-yellow-400">C</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="font-display text-2xl font-bold text-white">Room to Grow</p>
+                        <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
+                        <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/10 px-2 py-1 ring-1 ring-yellow-500/20">
+                            <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
+                            <span class="font-mono text-xs font-semibold text-yellow-400">$300K&ndash;$750K annual risk</span>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Score bars --}}
+                <div class="mt-8 space-y-3 border-t border-echo-800 pt-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-echo-500">Grades by area</p>
+                    @foreach([['Identity & Access', 'B', 'bg-blue-500', 78], ['Devices & Patching', 'B', 'bg-blue-500', 72], ['Email & Phishing', 'C', 'bg-yellow-500', 56], ['Backup & Recovery', 'D', 'bg-orange-500', 32], ['Network Security', 'C', 'bg-yellow-500', 50], ['Data Protection', 'C', 'bg-yellow-500', 48], ['Vendor & SaaS Risk', 'D', 'bg-orange-500', 34], ['Incident Readiness', 'F', 'bg-red-500', 14]] as $row)
+                        <div class="flex items-center justify-between gap-3 text-xs">
+                            <span class="text-echo-300 truncate">{{ $row[0] }}</span>
+                            <div class="flex items-center gap-3 flex-none">
+                                <div class="h-1.5 w-28 rounded-full bg-echo-800 overflow-hidden">
+                                    <div class="h-full {{ $row[2] }}" style="width: {{ $row[3] }}%"></div>
+                                </div>
+                                <span class="font-mono font-bold text-white w-3 text-center">{{ $row[1] }}</span>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                {{-- CTA footer --}}
+                <div class="mt-8 flex items-center justify-between border-t border-echo-800 pt-5">
+                    <div>
+                        <p class="text-sm font-semibold text-white">Find your grade</p>
+                        <p class="text-xs text-echo-500">37 questions &middot; instant results</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 rounded-lg bg-crimson-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all group-hover:bg-crimson-600 group-hover:shadow-glow">
+                        Take the assessment
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </span>
+                </div>
+
+            </div>
+        </a>
+    </div>
+
+    {{-- Stats strip below the angled split --}}
+    <div class="relative bg-echo-950 border-t border-echo-800/50">
         <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-14">
             <dl class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
                 <div class="text-center">
