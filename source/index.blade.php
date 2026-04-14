@@ -58,7 +58,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 </section>
 
 {{-- ==================== WHAT I ACTUALLY DO (bento) ==================== --}}
-<section class="bg-echo-950 py-20 sm:py-24">
+<section class="bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div class="flex items-center justify-center gap-3">
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
@@ -69,7 +69,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             Not strategy decks. The work itself.
         </p>
 
-        <div class="mt-10 grid gap-4 sm:mt-12 lg:grid-cols-3 lg:auto-rows-fr">
+        <div class="mt-12 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
 
             {{-- Cell 1: In the room (tall left) --}}
             <div class="relative lg:row-span-2">
@@ -81,8 +81,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                         <p class="mt-3 max-w-lg text-sm/6 text-echo-400 max-lg:text-center">Board prep. Vendor security calls. Cyber insurance renewals. Incident response. The conversations where someone in the room needs to speak both languages.</p>
                     </div>
                     {{-- Stylized agenda card --}}
-                    <div class="relative flex-1 flex items-end justify-center px-6 pb-6 sm:px-8 sm:pb-8">
-                        <div class="w-full rounded-xl bg-echo-950/80 p-5 ring-1 ring-echo-700/40 shadow-2xl shadow-crimson-950/50">
+                    <div class="relative flex-1 flex items-center justify-center px-8 pb-10 sm:px-10">
+                        <div class="w-full max-w-sm rounded-xl bg-echo-950/80 p-5 ring-1 ring-echo-700/40 shadow-2xl shadow-crimson-950/50">
                             <div class="flex items-center justify-between border-b border-echo-800 pb-3">
                                 <p class="text-xs font-mono uppercase tracking-wider text-echo-500">This week</p>
                                 <span class="text-xs text-crimson-400">5 sessions</span>
@@ -168,7 +168,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                         <p class="mt-3 font-display text-2xl font-semibold tracking-tight text-white max-lg:text-center">Alphabet soup, navigated.</p>
                         <p class="mt-3 max-w-lg text-sm/6 text-echo-400 max-lg:text-center">The compliance maze your customers and insurers keep asking about.</p>
                     </div>
-                    <div class="flex-1 flex items-center px-8 pb-8 sm:px-10 sm:pb-10">
+                    <div class="flex-1 flex items-end px-8 pb-8 sm:px-10 sm:pb-10">
                         <div class="flex flex-wrap gap-2">
                             @foreach(['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'NIST CSF', 'CMMC', 'GDPR', 'CCPA'] as $framework)
                                 <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono font-semibold text-echo-300 ring-1 ring-echo-700/50">{{ $framework }}</span>
