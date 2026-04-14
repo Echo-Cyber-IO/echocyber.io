@@ -327,35 +327,96 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
         </div>
 
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
             {{-- Case 1 --}}
-            <article class="rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50">
-                <p class="text-xs font-bold uppercase tracking-wider text-crimson-500">Case 01</p>
-                <h3 class="mt-3 text-lg font-semibold text-white">Fortune 500 Retailer</h3>
-                <p class="mt-1 text-sm text-echo-500">Hundreds of locations &middot; 5,000+ employees</p>
-                <div class="mt-6 space-y-4 text-sm leading-6 text-echo-300">
-                    <p>
-                        <span class="font-semibold text-echo-200">The problem:</span> Security enforcement was nonexistent at the edge&nbsp;&mdash; POS systems across hundreds of stores required manual intervention, with no centralized governance or policy control.
+            <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
+                {{-- Header band --}}
+                <header class="flex items-center gap-4 border-b border-echo-800/60 bg-echo-950/40 px-8 py-5">
+                    <div class="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
+                        <span class="font-display text-lg font-bold text-crimson-400">01</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h3 class="text-lg font-semibold text-white">Fortune 500 Retailer</h3>
+                        <p class="text-xs text-echo-500">Specialty retail &middot; brick-and-mortar</p>
+                    </div>
+                </header>
+
+                {{-- Body --}}
+                <div class="flex-1 px-8 py-7">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">5,000+ employees</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Hundreds of locations</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Edge POS</span>
+                    </div>
+
+                    <p class="mt-5 text-sm leading-6 text-echo-400">
+                        <span class="font-semibold text-echo-200">Challenge.</span> Security enforcement was nonexistent at the edge. POS systems across stores required manual intervention with no centralized governance.
                     </p>
-                    <p>
-                        <span class="font-semibold text-echo-200">What I did:</span> Designed a cloud-native device governance framework, migrated 15 legacy policies, and automated enrollment across 4 platforms. The organization had enforceable, auditable security posture for the first time.
+                    <p class="mt-3 text-sm leading-6 text-echo-300">
+                        <span class="font-semibold text-white">Outcome.</span> Cloud-native device governance framework. Enforceable, auditable security posture for the first time.
                     </p>
                 </div>
+
+                {{-- Outcome metrics strip --}}
+                <footer class="grid grid-cols-3 gap-px border-t border-echo-800/60 bg-echo-800/40">
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">15</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">policies migrated</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">4</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">platforms automated</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-crimson-400">0</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">store outages</p>
+                    </div>
+                </footer>
             </article>
 
             {{-- Case 2 --}}
-            <article class="rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50">
-                <p class="text-xs font-bold uppercase tracking-wider text-crimson-500">Case 02</p>
-                <h3 class="mt-3 text-lg font-semibold text-white">High-Growth Ecommerce Brand</h3>
-                <p class="mt-1 text-sm text-echo-500">900+ users &middot; Rapid scale</p>
-                <div class="mt-6 space-y-4 text-sm leading-6 text-echo-300">
-                    <p>
-                        <span class="font-semibold text-echo-200">The problem:</span> Outgrew their collaboration platform but couldn't afford downtime during a migration that touched every employee, 32TB of data, and 40 business-critical sites.
+            <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
+                <header class="flex items-center gap-4 border-b border-echo-800/60 bg-echo-950/40 px-8 py-5">
+                    <div class="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
+                        <span class="font-display text-lg font-bold text-crimson-400">02</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h3 class="text-lg font-semibold text-white">High-Growth Ecommerce Brand</h3>
+                        <p class="text-xs text-echo-500">DTC &middot; rapid scale</p>
+                    </div>
+                </header>
+
+                <div class="flex-1 px-8 py-7">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">900+ users</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">32TB data</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">40 sites</span>
+                    </div>
+
+                    <p class="mt-5 text-sm leading-6 text-echo-400">
+                        <span class="font-semibold text-echo-200">Challenge.</span> Outgrew their collaboration platform but couldn't afford downtime during a migration touching every employee and every business-critical site.
                     </p>
-                    <p>
-                        <span class="font-semibold text-echo-200">What I did:</span> Led a zero-disruption platform migration&nbsp;&mdash; 893 active users, 1,200+ archived accounts, identity sync, and policy-driven device reconfiguration. Eliminated legacy infrastructure and reduced administrative overhead.
+                    <p class="mt-3 text-sm leading-6 text-echo-300">
+                        <span class="font-semibold text-white">Outcome.</span> Zero-disruption platform migration. Identity sync, policy-driven device reconfiguration, legacy infrastructure eliminated.
                     </p>
                 </div>
+
+                <footer class="grid grid-cols-3 gap-px border-t border-echo-800/60 bg-echo-800/40">
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">893</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">active users moved</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">1,200+</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">accounts archived</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-crimson-400">0</p>
+                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">downtime</p>
+                    </div>
+                </footer>
             </article>
+
         </div>
     </div>
 </section>
