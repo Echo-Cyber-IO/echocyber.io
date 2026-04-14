@@ -202,159 +202,79 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 </section>
 
 {{-- ==================== HOW IT WORKS (narrative pricing) ==================== --}}
-<section id="pricing" class="bg-echo-900 py-24 sm:py-32">
+<section id="pricing" class="relative isolate bg-echo-900 py-24 sm:py-32">
+    {{-- Subtle gradient backdrop --}}
+    <div class="absolute inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-crimson-950/30 to-transparent pointer-events-none"></div>
+
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl">
-            <div class="flex items-center gap-3">
+        <div class="mx-auto max-w-4xl text-center">
+            <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
                 <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">How it works</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
-            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+            <h2 class="mt-6 font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl">
                 Three ways to work together.
             </h2>
-            <p class="mt-6 text-lg leading-8 text-echo-300">
-                No discovery calls that are really sales pitches. No "custom pricing" that means "we'll charge whatever we think you'll pay." Here's exactly what it costs.
-            </p>
         </div>
+        <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-echo-400 sm:text-xl/8">
+            No discovery calls that are really sales pitches. No "custom pricing" that means "we'll charge whatever we think you'll pay." Here's exactly what it costs.
+        </p>
 
-        <div class="mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+        <div class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+
             {{-- Tune --}}
-            <div class="flex flex-col rounded-2xl bg-echo-950 p-8 ring-1 ring-echo-700/50">
-                <div class="flex-1">
-                    <div class="flex items-baseline justify-between">
-                        <h3 class="font-display text-xl font-semibold text-white">Tune</h3>
-                        <span class="text-xs font-medium uppercase tracking-wider text-echo-500">Strategic Assessment</span>
-                    </div>
-                    <p class="mt-6 flex items-baseline gap-x-2">
-                        <span class="font-display text-4xl font-bold tracking-tight text-white">$7,500</span>
-                        <span class="text-sm text-echo-500">one-time</span>
-                    </p>
-                    <p class="mt-6 text-sm leading-6 text-echo-300">
-                        I map your technology and security landscape, interview your stakeholders, identify the highest-leverage fixes, and hand you a prioritized roadmap you can actually execute.
-                    </p>
-                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-400">
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Stakeholder interviews + current-state assessment
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Technology and security gap analysis
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Prioritized roadmap with clear next steps
-                        </li>
-                    </ul>
-                </div>
-                <div class="mt-8 pt-6 border-t border-echo-800">
-                    <a href="/contact" class="block w-full rounded-lg bg-echo-800 px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-echo-700 transition-all hover:bg-echo-700 hover:ring-echo-600">
-                        Get started
-                    </a>
-                </div>
-            </div>
+            @include('_partials.pricing-tier', [
+                'name' => 'Tune',
+                'tagline' => 'Strategic Assessment',
+                'price' => '$7,500',
+                'priceSuffix' => 'one-time',
+                'description' => 'I map your technology and security landscape, interview your stakeholders, identify the highest-leverage fixes, and hand you a prioritized roadmap you can actually execute.',
+                'features' => [
+                    'Stakeholder interviews + current-state assessment',
+                    'Technology and security gap analysis',
+                    'Prioritized roadmap with clear next steps',
+                ],
+                'cta' => 'Get started',
+                'featured' => false,
+            ])
 
             {{-- Signal (featured) --}}
-            <div class="relative flex flex-col rounded-2xl bg-echo-950 p-8 ring-2 ring-crimson-700/50 shadow-glow-sm">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span class="inline-block rounded-full bg-crimson-700 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">Most Popular</span>
-                </div>
-                <div class="flex-1">
-                    <div class="flex items-baseline justify-between">
-                        <h3 class="font-display text-xl font-semibold text-white">Signal</h3>
-                        <span class="text-xs font-medium uppercase tracking-wider text-crimson-400">Fractional CTO/CISO</span>
-                    </div>
-                    <p class="mt-6 flex items-baseline gap-x-2">
-                        <span class="font-display text-4xl font-bold tracking-tight text-white">$10,000</span>
-                        <span class="text-sm text-echo-500">/month &middot; 3-month min</span>
-                    </p>
-                    <p class="mt-6 text-sm leading-6 text-echo-300">
-                        I join your leadership team part-time. Strategy sessions, vendor calls, team building, incident response, board prep&nbsp;&mdash; whatever the role requires that week.
-                    </p>
-                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-300">
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            10 hours/week embedded with your team
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Staff meetings, vendor calls, board prep
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Governance design + security program buildout
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Roadmap execution and vendor negotiation
-                        </li>
-                    </ul>
-                </div>
-                <div class="mt-8 pt-6 border-t border-echo-800">
-                    <a href="/contact" class="block w-full rounded-lg bg-crimson-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow">
-                        Get started
-                    </a>
-                </div>
-            </div>
+            @include('_partials.pricing-tier', [
+                'name' => 'Signal',
+                'tagline' => 'Fractional CTO/CISO',
+                'price' => '$10,000',
+                'priceSuffix' => '/month · 3-month min',
+                'description' => 'I join your leadership team part-time. Strategy sessions, vendor calls, team building, incident response, board prep — whatever the role requires that week.',
+                'features' => [
+                    '10 hours/week embedded with your team',
+                    'Staff meetings, vendor calls, board prep',
+                    'Governance design + security program buildout',
+                    'Roadmap execution and vendor negotiation',
+                ],
+                'cta' => 'Get started',
+                'featured' => true,
+            ])
 
             {{-- Echo --}}
-            <div class="flex flex-col rounded-2xl bg-echo-950 p-8 ring-1 ring-echo-700/50">
-                <div class="flex-1">
-                    <div class="flex items-baseline justify-between">
-                        <h3 class="font-display text-xl font-semibold text-white">Echo</h3>
-                        <span class="text-xs font-medium uppercase tracking-wider text-echo-500">Ongoing Advisory</span>
-                    </div>
-                    <p class="mt-6 flex items-baseline gap-x-2">
-                        <span class="font-display text-4xl font-bold tracking-tight text-white">$3,000</span>
-                        <span class="text-sm text-echo-500">/month &middot; 6-month commitment</span>
-                    </p>
-                    <p class="mt-6 text-sm leading-6 text-echo-300">
-                        For clients who've finished a Signal engagement. Monthly counsel, quarterly strategic reviews, and on-call support for the decisions that matter.
-                    </p>
-                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-echo-400">
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Monthly check-ins + quarterly strategic reviews
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            On-call for key decisions and vendor evaluations
-                        </li>
-                        <li class="flex gap-x-3">
-                            <svg class="h-5 w-5 flex-none text-crimson-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                            </svg>
-                            Governance oversight and course corrections
-                        </li>
-                    </ul>
-                </div>
-                <div class="mt-8 pt-6 border-t border-echo-800">
-                    <a href="/contact" class="block w-full rounded-lg bg-echo-800 px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-echo-700 transition-all hover:bg-echo-700 hover:ring-echo-600">
-                        Get started
-                    </a>
-                </div>
-            </div>
+            @include('_partials.pricing-tier', [
+                'name' => 'Echo',
+                'tagline' => 'Ongoing Advisory',
+                'price' => '$3,000',
+                'priceSuffix' => '/month · 6-month commitment',
+                'description' => "For clients who've finished a Signal engagement. Monthly counsel, quarterly strategic reviews, and on-call support for the decisions that matter.",
+                'features' => [
+                    'Monthly check-ins + quarterly strategic reviews',
+                    'On-call for key decisions and vendor evaluations',
+                    'Governance oversight and course corrections',
+                ],
+                'cta' => 'Get started',
+                'featured' => false,
+            ])
+
         </div>
 
-        <p class="mx-auto mt-10 max-w-2xl text-center text-sm text-echo-500">
+        <p class="mx-auto mt-12 max-w-2xl text-center text-sm text-echo-500">
             Most clients start with Tune. No pressure, no lock-in beyond what's listed above.
         </p>
     </div>
