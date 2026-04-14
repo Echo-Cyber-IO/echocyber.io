@@ -76,7 +76,10 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section class="bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-3xl">
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">The real problem</p>
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">The real problem</span>
+            </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 You don't have a security problem. You have a leadership gap.
             </h2>
@@ -111,7 +114,10 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
             {{-- Bio --}}
             <div class="lg:col-span-3">
-                <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Who you're working with</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                    <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Who you're working with</span>
+                </div>
                 <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     I'm Mike Faas.
                 </h2>
@@ -134,7 +140,11 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 {{-- ==================== WHAT PEOPLE SAY ==================== --}}
 <section class="bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <p class="text-center font-mono text-xs uppercase tracking-widest text-crimson-500">What people say</p>
+        <div class="flex items-center justify-center gap-3">
+            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What people say</span>
+            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+        </div>
 
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {{-- Jackson --}}
@@ -192,7 +202,10 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section id="pricing" class="bg-echo-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-3xl">
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">How it works</p>
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">How it works</span>
+            </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 Three ways to work together.
             </h2>
@@ -348,7 +361,10 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section class="bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-3xl">
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Track record</p>
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Track record</span>
+            </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Real engagements. Real results.
             </h2>
@@ -393,7 +409,11 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section id="assessment" class="bg-echo-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free assessment</p>
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free assessment</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Not ready for a call? Start here.
             </h2>
@@ -413,7 +433,11 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section class="border-t border-echo-800 bg-echo-950 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-500">Weekly newsletter</p>
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Weekly newsletter</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white">
                 Signal vs. Noise
             </h2>
@@ -443,7 +467,12 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 <section id="contact" class="bg-echo-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Let's talk</span>
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            </div>
+            <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 Ready to have a real conversation?
             </h2>
             <p class="mt-6 text-lg leading-8 text-echo-300">
