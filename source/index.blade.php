@@ -81,8 +81,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                         <p class="mt-3 max-w-lg text-sm/6 text-echo-400 max-lg:text-center">Board prep. Vendor security calls. Cyber insurance renewals. Incident response. The conversations where someone in the room needs to speak both languages.</p>
                     </div>
                     {{-- Stylized agenda card --}}
-                    <div class="relative flex-1 flex items-end justify-center px-6 pb-6 sm:px-8 sm:pb-8">
-                        <div class="w-full rounded-xl bg-echo-950/80 p-5 ring-1 ring-echo-700/40 shadow-2xl shadow-crimson-950/50">
+                    <div class="relative flex-1 flex px-6 pb-6 sm:px-8 sm:pb-8">
+                        <div class="flex w-full flex-col rounded-xl bg-echo-950/80 p-5 ring-1 ring-echo-700/40 shadow-2xl shadow-crimson-950/50">
                             <div class="flex items-center justify-between border-b border-echo-800 pb-3">
                                 <p class="text-xs font-mono uppercase tracking-wider text-echo-500">This week</p>
                                 <span class="text-xs text-crimson-400">5 sessions</span>
