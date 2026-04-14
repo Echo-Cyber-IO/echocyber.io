@@ -15,46 +15,66 @@ description: Get in touch to discuss your technology and security leadership nee
         <div class="grid lg:grid-cols-2 gap-16">
             {{-- Content --}}
             <div>
-                <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center gap-3">
                     <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                    <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Get In Touch</span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Get in touch</span>
                 </div>
-                <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
-                    Let's talk.
+                <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance text-white">
+                    Let's <span class="text-crimson-500">talk.</span>
                 </h1>
-                <p class="text-xl text-echo-300 leading-relaxed mb-8">
+                <p class="mt-6 text-lg text-pretty text-echo-300 sm:text-xl/8">
                     Whether you have a specific challenge in mind or just want to explore how fractional leadership might work for your business, I'm happy to have a conversation.
                 </p>
 
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="font-display text-lg font-bold text-white mb-2">What to expect</h3>
-                        <p class="text-echo-400">
-                            A straightforward, no-pressure conversation. We'll talk about where you are, where you want to go, and whether I can help get you there. If it's not a fit, I'll tell you.
+                <div class="mt-10 space-y-4">
+
+                    {{-- What to expect --}}
+                    <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
+                        <div class="border-b border-echo-800/60 bg-echo-950/40 px-6 py-4">
+                            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">The conversation</p>
+                            <h3 class="mt-1.5 font-display text-xl font-bold tracking-tight text-white">
+                                What to <span class="text-crimson-400">expect</span>
+                            </h3>
+                        </div>
+                        <p class="px-6 py-5 text-sm leading-6 text-echo-300">
+                            Straightforward and no-pressure. We'll talk about where you are, where you want to go, and whether I can help get you there. If it's not a fit, I'll tell you.
                         </p>
                     </div>
 
-                    <div>
-                        <h3 class="font-display text-lg font-bold text-white mb-2">Response time</h3>
-                        <p class="text-echo-400">
-                            I typically respond within 24 hours on business days. For urgent matters, mention it in your message.
+                    {{-- Response time --}}
+                    <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
+                        <div class="border-b border-echo-800/60 bg-echo-950/40 px-6 py-4">
+                            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
+                            <h3 class="mt-1.5 font-display text-xl font-bold tracking-tight text-white">
+                                Within <span class="text-crimson-400">24 hours.</span>
+                            </h3>
+                        </div>
+                        <p class="px-6 py-5 text-sm leading-6 text-echo-300">
+                            On business days. For urgent matters, mention it in your message.
                         </p>
                     </div>
 
-                    {{-- Book directly --}}
-                    <div class="bg-crimson-900/20 border border-crimson-800/40 rounded-xl p-6">
-                        <h3 class="font-display text-lg font-bold text-white mb-2">Prefer to just book?</h3>
-                        <p class="text-echo-400 mb-4">Skip the form and grab a 30-minute strategy session directly on my calendar.</p>
-                        <a href="/schedule" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-crimson-600 hover:bg-crimson-500 text-white font-semibold rounded-lg transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            Schedule a Strategy Session
-                        </a>
+                    {{-- Book directly (featured CTA panel) --}}
+                    <div class="relative isolate overflow-hidden rounded-2xl bg-echo-900 p-6 ring-1 ring-crimson-700/40 shadow-xl shadow-crimson-950/30">
+                        <div aria-hidden="true" class="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-crimson-700/30 to-transparent blur-3xl pointer-events-none"></div>
+                        <div class="relative">
+                            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-400">Skip the form</p>
+                            <h3 class="mt-1.5 font-display text-xl font-bold tracking-tight text-white">
+                                Prefer to just <span class="text-crimson-400">book?</span>
+                            </h3>
+                            <p class="mt-3 text-sm leading-6 text-echo-300">
+                                Grab a 30-minute strategy session directly on my calendar.
+                            </p>
+                            <a href="/schedule" class="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg transition-all hover:shadow-glow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                Schedule a Strategy Session
+                            </a>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
 
             {{-- Contact Form --}}
@@ -238,36 +258,32 @@ description: Get in touch to discuss your technology and security leadership nee
         </div>
 
         {{-- Direct contact — full width, three columns --}}
-        <div class="mt-12 bg-echo-800/30 border border-echo-700 rounded-xl p-6 lg:p-8">
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="flex flex-col items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Email</span>
-                    <a href="mailto:info@echocyber.io" class="text-crimson-500 hover:text-crimson-400 transition-colors">
-                        info@echocyber.io
-                    </a>
+        <div class="mt-16 grid md:grid-cols-3 gap-4">
+            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-crimson-700/40">
+                <div class="border-b border-echo-800/60 bg-echo-950/40 px-6 py-4">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Email</p>
                 </div>
+                <a href="mailto:info@echocyber.io" class="block px-6 py-5 font-display text-lg font-semibold text-white hover:text-crimson-400 transition-colors">
+                    info@echocyber.io
+                </a>
+            </div>
 
-                <div class="flex flex-col items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Phone</span>
-                    <a href="tel:+19194300720" class="text-echo-300 hover:text-white transition-colors">
-                        (919) 430-0720
-                    </a>
+            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-crimson-700/40">
+                <div class="border-b border-echo-800/60 bg-echo-950/40 px-6 py-4">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Phone</p>
                 </div>
+                <a href="tel:+19194300720" class="block px-6 py-5 font-display text-lg font-semibold text-white hover:text-crimson-400 transition-colors">
+                    (919) 430-0720
+                </a>
+            </div>
 
-                <div class="flex flex-col items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-echo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span class="text-xs font-mono text-echo-500 uppercase tracking-wider">Location</span>
-                    <span class="text-echo-400">Wake Forest, NC</span>
+            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40">
+                <div class="border-b border-echo-800/60 bg-echo-950/40 px-6 py-4">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Location</p>
                 </div>
+                <p class="px-6 py-5 font-display text-lg font-semibold text-white">
+                    Wake Forest, <span class="text-crimson-400">NC</span>
+                </p>
             </div>
         </div>
     </div>
