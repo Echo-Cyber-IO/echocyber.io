@@ -8,8 +8,12 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 {{-- ==================== HERO ==================== --}}
 {{-- Full dark. Statement, not a sales pitch. --}}
-<section class="relative overflow-hidden bg-echo-950">
-    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+<section class="relative overflow-hidden">
+    {{-- Decorative crimson gradient blurs (hex-grid comes from the layout) --}}
+    <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-crimson-900/50 to-transparent blur-3xl -skew-x-12 pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-crimson-900/40 to-transparent blur-3xl -skew-x-12 pointer-events-none"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8 lg:py-32">
         <div class="mx-auto max-w-3xl text-center">
             <h1 class="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
                 Translating <span class="text-crimson-500">geek</span> into human.
@@ -39,8 +43,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     <dd class="mt-2 font-display text-4xl font-bold text-white">40+</dd>
                 </div>
                 <div class="text-center">
-                    <dt class="text-sm text-echo-500">Client industries served</dt>
-                    <dd class="mt-2 font-display text-4xl font-bold text-white">12+</dd>
+                    <dt class="text-sm text-echo-500">Regulatory frameworks navigated</dt>
+                    <dd class="mt-2 font-display text-4xl font-bold text-white">8+</dd>
                 </div>
                 <div class="text-center">
                     <dt class="text-sm text-echo-500">Buzzwords on this page</dt>
