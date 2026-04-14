@@ -70,7 +70,7 @@ h1 {
     @apply text-5xl;
     @apply font-bold;
 
-    @screen lg {
+    @media (min-width: 1024px) {
         @apply text-6xl;
     }
 }
@@ -79,7 +79,7 @@ h2 {
     @apply text-4xl;
     @apply font-bold;
 
-    @screen lg {
+    @media (min-width: 1024px) {
         @apply text-5xl;
     }
 }
@@ -135,7 +135,7 @@ p {
     @apply my-4;
     @apply leading-relaxed;
 
-    @screen md {
+    @media (min-width: 768px) {
         @apply my-6;
     }
 }
