@@ -153,18 +153,18 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                 </figcaption>
             </figure>
 
-            {{-- Helms --}}
+            {{-- Vosburgh --}}
             <figure class="flex flex-col justify-between rounded-2xl bg-echo-900 p-8 ring-1 ring-echo-700/50 h-full">
                 <blockquote class="text-base leading-7 text-echo-200">
-                    <p>&ldquo;Mike has the ability to communicate technical concepts to a non-technical audience. When assigned a task, you can trust it will be done with the same level of attention to detail as if you had done it yourself.&rdquo;</p>
+                    <p>&ldquo;Mike is a natural problem-solver who remains cool under pressure. He is a born leader who continuously takes on more projects and responsibility to further his expertise.&rdquo;</p>
                 </blockquote>
                 <figcaption class="mt-8 flex items-center gap-x-4 border-t border-echo-700/50 pt-6">
                     <div class="h-10 w-10 flex-none rounded-full bg-crimson-900/50 flex items-center justify-center ring-1 ring-crimson-700/30">
-                        <span class="text-crimson-400 font-bold text-sm">JH</span>
+                        <span class="text-crimson-400 font-bold text-sm">JV</span>
                     </div>
                     <div>
-                        <div class="font-semibold text-white text-sm">JD Helms</div>
-                        <div class="text-echo-500 text-sm">COO @ SoftwareOne &middot; Co-Founder @ PsychReport.ai</div>
+                        <div class="font-semibold text-white text-sm">Jennifer Vosburgh</div>
+                        <div class="text-echo-500 text-sm">B2B Marketing Executive, Tego &middot; Former Client</div>
                     </div>
                 </figcaption>
             </figure>
