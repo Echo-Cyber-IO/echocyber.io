@@ -18,8 +18,8 @@
 
             {{-- Navigation links --}}
             <nav class="flex flex-wrap gap-x-8 gap-y-4" aria-label="Footer navigation">
-                <a href="/about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
-                <a href="/services" class="text-echo-300 hover:text-white text-sm transition-colors">Services</a>
+                <a href="/#about" class="text-echo-300 hover:text-white text-sm transition-colors">About</a>
+                <a href="/#pricing" class="text-echo-300 hover:text-white text-sm transition-colors">Pricing</a>
                 <a href="/assessment" class="text-echo-300 hover:text-white text-sm transition-colors">Assessment</a>
                 <a href="/contact" class="text-echo-300 hover:text-white text-sm transition-colors">Contact</a>
                 <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="text-echo-300 hover:text-white text-sm transition-colors">Newsletter</a>
