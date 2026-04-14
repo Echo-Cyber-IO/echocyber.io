@@ -56,7 +56,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
             15 minutes &middot; 37 questions &middot; Instant results
           </p>
 
-          <button @click="step = 'capture'" class="inline-flex items-center gap-2 px-8 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98]">
+          <button @click="step = 'quiz'" class="inline-flex items-center gap-2 px-8 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98]">
             Start Your Assessment
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
           </button>
@@ -97,71 +97,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
         </div>
       </div>
     </section>
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- EMAIL CAPTURE                                -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div x-show="step === 'capture'" x-transition class="min-h-screen flex items-center justify-center px-6 py-12">
-    <div class="max-w-lg w-full">
-      <button @click="step = 'landing'" class="text-sm text-echo-400 hover:text-white mb-8 flex items-center gap-1">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        Back
-      </button>
-
-      <h2 class="text-3xl font-bold mb-2 font-display">Before we start</h2>
-      <p class="text-echo-400 mb-8">We'll send your results to your email when you're done.</p>
-
-      <form @submit.prevent="startQuiz()" class="space-y-5">
-        <div>
-          <label class="block text-sm font-medium text-echo-300 mb-1.5">Full Name *</label>
-          <input x-model="lead.name" required type="text" placeholder="Jane Smith" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-echo-300 mb-1.5">Work Email *</label>
-          <input x-model="lead.email" required type="email" placeholder="jane@company.com" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Name *</label>
-          <input x-model="lead.company" required type="text" placeholder="Acme Corp" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-echo-300 mb-1.5">Your Role *</label>
-          <select x-model="lead.role" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
-            <option value="" disabled selected>Select your role</option>
-            <option>Founder / CEO</option>
-            <option>CTO / CIO</option>
-            <option>VP / Director of IT</option>
-            <option>COO / Operations</option>
-            <option>CFO / Finance</option>
-            <option>Other Executive</option>
-            <option>IT Manager</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Size *</label>
-          <select x-model="lead.size" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
-            <option value="" disabled selected>Number of employees</option>
-            <option>1&ndash;10</option>
-            <option>11&ndash;25</option>
-            <option>26&ndash;50</option>
-            <option>51&ndash;100</option>
-            <option>101&ndash;250</option>
-            <option>251&ndash;500</option>
-            <option>500+</option>
-          </select>
-        </div>
-        <div class="flex items-start gap-2 pt-2">
-          <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
-          <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a biweekly newsletter that cuts through cybersecurity hype</label>
-        </div>
-        <button type="submit" class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] mt-4">
-          Start Assessment &rarr;
-        </button>
-      </form>
-      <p class="text-xs text-echo-500 mt-6 text-center">Your information is private. We don't share or sell your data. Ever.</p>
-    </div>
   </div>
 
   <!-- ═══════════════════════════════════════════ -->
@@ -235,26 +170,14 @@ description: Find out where your company stands in 15 minutes. Free security ass
   </div>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- PROCESSING                                   -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div x-show="step === 'processing'" x-transition class="min-h-screen flex items-center justify-center px-6">
-    <div class="text-center">
-      <div class="w-16 h-16 border-4 border-echo-700 border-t-crimson rounded-full animate-spin mx-auto mb-6"></div>
-      <h2 class="text-2xl font-bold mb-2 font-display">Analyzing your responses...</h2>
-      <p class="text-echo-400">Grading 8 security areas against industry benchmarks</p>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
   <!-- RESULTS                                      -->
   <!-- ═══════════════════════════════════════════ -->
   <div x-show="step === 'results'" x-transition class="min-h-screen">
-    <!-- Results Header -->
+    <!-- Teaser Header (always visible) -->
     <div class="bg-gradient-to-b from-echo-900 to-echo-950 border-b border-echo-800">
       <div class="max-w-4xl mx-auto px-6 py-12 text-center">
-        <p class="text-echo-400 text-sm uppercase tracking-wider mb-4 font-mono">Your Security Assessment Results</p>
+        <p class="text-echo-400 text-sm uppercase tracking-wider mb-4 font-mono">Your Signal Score</p>
 
-        <!-- Overall Grade -->
         <div class="grade-pulse inline-flex items-center justify-center w-32 h-32 rounded-2xl border-4 mb-6"
           :class="gradeColor(overallGrade, 'border')">
           <span class="text-6xl font-bold font-display" :class="gradeColor(overallGrade, 'text')" x-text="overallGrade"></span>
@@ -272,8 +195,106 @@ description: Find out where your company stands in 15 minutes. Free security ass
       </div>
     </div>
 
-    <!-- Category Grades -->
-    <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- ─── UNLOCK GATE (shown when !unlocked) ─── -->
+    <div x-show="!unlocked" x-transition class="max-w-4xl mx-auto px-6 py-12">
+      <div class="relative">
+        <!-- Inline unlock form -->
+        <div class="mb-8 p-8 rounded-xl bg-gradient-to-br from-echo-900 to-echo-800 border border-crimson-800/50 relative z-10">
+          <div class="text-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-400 text-xs font-medium mb-4 font-mono uppercase tracking-wider">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              One step to unlock
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3 font-display">Your full report is ready</h2>
+            <p class="text-echo-300 max-w-lg mx-auto">
+              Per-category grades, your top 3 risks, and estimated dollar exposure for each &mdash; just below.
+            </p>
+          </div>
+
+          <form @submit.prevent="unlockResults()" class="max-w-md mx-auto space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-echo-300 mb-1.5">Full Name *</label>
+                <input x-model="lead.name" required type="text" placeholder="Jane Smith" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-echo-300 mb-1.5">Work Email *</label>
+                <input x-model="lead.email" required type="email" placeholder="jane@company.com" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Name *</label>
+              <input x-model="lead.company" required type="text" placeholder="Acme Corp" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-echo-300 mb-1.5">Your Role *</label>
+                <select x-model="lead.role" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                  <option value="" disabled selected>Select your role</option>
+                  <option>Founder / CEO</option>
+                  <option>CTO / CIO</option>
+                  <option>VP / Director of IT</option>
+                  <option>COO / Operations</option>
+                  <option>CFO / Finance</option>
+                  <option>Other Executive</option>
+                  <option>IT Manager</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Size *</label>
+                <select x-model="lead.size" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                  <option value="" disabled selected>Number of employees</option>
+                  <option>1&ndash;10</option>
+                  <option>11&ndash;25</option>
+                  <option>26&ndash;50</option>
+                  <option>51&ndash;100</option>
+                  <option>101&ndash;250</option>
+                  <option>251&ndash;500</option>
+                  <option>500+</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 pt-1">
+              <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
+              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a biweekly newsletter that cuts through cybersecurity hype</label>
+            </div>
+            <button type="submit" :disabled="submitting"
+              class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] flex items-center justify-center gap-2">
+              <template x-if="submitting">
+                <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/></svg>
+              </template>
+              <span x-text="submitting ? 'Unlocking...' : 'Unlock My Full Report'"></span>
+              <svg x-show="!submitting" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+            </button>
+            <p class="text-xs text-echo-500 text-center">Private. We don't share or sell your data. Ever.</p>
+          </form>
+        </div>
+
+        <!-- Blurred preview -->
+        <div class="pointer-events-none select-none" style="filter: blur(10px); opacity: 0.5;">
+          <h2 class="text-2xl font-bold mb-8 font-display">Your grades by area</h2>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <template x-for="(cat, i) in categoryResults" :key="i">
+              <div class="p-5 rounded-xl bg-echo-900/50 border border-echo-800">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 class="font-semibold text-lg" x-text="cat.name"></h3>
+                    <p class="text-sm text-echo-400 font-mono">&mdash; / &mdash;</p>
+                  </div>
+                  <div class="w-12 h-12 rounded-lg bg-echo-800"></div>
+                </div>
+                <div class="h-2 bg-echo-800 rounded-full mb-3"></div>
+                <p class="text-sm text-echo-400">Estimated risk: &mdash;</p>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── UNLOCKED FULL RESULTS ─── -->
+    <div x-show="unlocked" x-transition class="max-w-4xl mx-auto px-6 py-12">
       <h2 class="text-2xl font-bold mb-8 font-display">Your grades by area</h2>
 
       <div class="grid gap-4 sm:grid-cols-2">
@@ -289,7 +310,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
                 <span x-text="cat.grade"></span>
               </div>
             </div>
-            <!-- Score bar -->
             <div class="h-2 bg-echo-800 rounded-full overflow-hidden mb-3">
               <div class="h-full rounded-full bar-fill" :class="gradeColor(cat.grade, 'bar')" :style="`width: ${(cat.score / cat.maxPoints) * 100}%`"></div>
             </div>
@@ -298,7 +318,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
         </template>
       </div>
 
-      <!-- Top Risks -->
       <div class="mt-12 p-6 rounded-xl bg-crimson/5 border border-crimson/20">
         <h2 class="text-xl font-bold mb-4 text-crimson-400 font-display">Your Top Risks</h2>
         <div class="space-y-3">
@@ -317,7 +336,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
         </div>
       </div>
 
-      <!-- What to Do Next -->
       <div class="mt-12 p-8 rounded-xl bg-gradient-to-br from-echo-900 to-echo-800 border border-echo-700 text-center">
         <h2 class="text-2xl font-bold mb-3 font-display">Grades show you where. Dollars show you why.</h2>
         <p class="text-echo-300 max-w-lg mx-auto mb-6">
@@ -330,7 +348,6 @@ description: Find out where your company stands in 15 minutes. Free security ass
         <p class="text-sm text-echo-500 mt-4">No obligation. No pitch. Just clarity.</p>
       </div>
 
-      <!-- Retake -->
       <div class="mt-8 text-center">
         <button @click="reset()" class="text-sm text-echo-400 hover:text-white transition">&larr; Take the assessment again</button>
       </div>
@@ -348,6 +365,8 @@ function quiz() {
     step: 'landing',
     currentQ: 0,
     answers: {},
+    unlocked: false,
+    submitting: false,
     lead: { name: '', email: '', company: '', role: '', size: '', newsletter: true },
     _formLoadedAt: Date.now(),
 
@@ -857,18 +876,20 @@ function quiz() {
     },
 
     // ── Methods ──
-    startQuiz() { this.step = 'quiz'; },
     selectAnswer(i) { this.answers[this.currentQ] = i; },
     nextQuestion() {
       if (this.currentQ < this.questions.length - 1) {
         this.currentQ++;
       } else {
-        this.showResults();
+        // Quiz complete → show teaser results (gated). Full detail unlocks after form submit.
+        this.step = 'results';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     },
     prevQuestion() { if (this.currentQ > 0) this.currentQ--; },
-    async showResults() {
-      this.step = 'processing';
+    async unlockResults() {
+      if (this.submitting) return;
+      this.submitting = true;
 
       // Build answers array (point values in question order)
       const answerValues = [];
@@ -904,22 +925,25 @@ function quiz() {
         if (res.ok) {
           const data = await res.json();
           if (data.ok && data.results) {
-            // Server returned cascade hints — store them for display
             this._serverTopRisks = data.results.topRisks || null;
           }
         }
       } catch (err) {
-        // Silently fall back to client-side scoring — results still show
-        console.warn('[Signal Score] Server submission failed, using client-side results:', err.message);
+        console.warn('[Signal Score] Server submission failed, showing client-side results:', err.message);
       }
 
-      // Show results (client-side scoring always works as fallback)
-      this.step = 'results';
+      this.submitting = false;
+      this.unlocked = true;
+      // Scroll the newly-revealed detail into view
+      this.$nextTick(() => window.scrollTo({ top: window.innerHeight * 0.4, behavior: 'smooth' }));
     },
     reset() {
       this.step = 'landing';
       this.currentQ = 0;
       this.answers = {};
+      this.unlocked = false;
+      this.submitting = false;
+      this._serverTopRisks = null;
       this.lead = { name: '', email: '', company: '', role: '', size: '', newsletter: true };
     },
 
