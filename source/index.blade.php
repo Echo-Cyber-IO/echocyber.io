@@ -91,7 +91,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     Every vendor in your inbox is selling urgency. Firewalls, endpoint protection, zero trust, AI-powered threat detection&nbsp;&mdash; the list never stops and nobody's translating it into decisions you can actually make.
                 </p>
                 <p>
-                    Meanwhile, you've got a client sending you a security questionnaire and your team is scrambling. Your cyber insurance premium just doubled. Someone mentioned SOC 2 and the room went quiet.
+                    A client sent you a security questionnaire and your team is scrambling. Your cyber insurance premium just doubled. Someone mentioned SOC 2 and the room went quiet.
                 </p>
                 <p class="text-white font-medium">
                     Sound familiar?
@@ -129,7 +129,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                         25+ years building security and technology programs&nbsp;&mdash; Fortune 500 to high-growth startups. I've sat in the CISO chair. I've built the governance programs. I've had the vendor calls where nobody in the room knew what questions to ask.
                     </p>
                     <p>
-                        I started Echo Cyber because too many smart founders are making million-dollar technology decisions with vendor slide decks and gut instinct. They don't need another consultant who talks in acronyms. They need someone who can walk into a board meeting and explain what's actually going on&nbsp;&mdash; in plain English.
+                        I started Echo Cyber because smart founders are making million-dollar technology decisions with vendor slide decks and gut instinct. Not another consultant talking in acronyms. Someone who can walk into a board meeting and explain what's actually going on&nbsp;&mdash; in plain English.
                     </p>
                     <p class="text-sm italic text-echo-500">
                         Based in Raleigh, NC. Dad. Blue belt. Reluctant morning person.
