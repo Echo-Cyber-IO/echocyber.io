@@ -453,8 +453,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
                     data-test-id="beehiiv-embed"
                     frameborder="0"
                     scrolling="no"
-                    style="width: 100%; height: 50px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"></iframe>
-            <p class="mt-4 text-center text-sm text-echo-500">
+                    style="width: 100%; height: 50px !important; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%; display: block;"></iframe>
+            <p class="mt-2 text-center text-sm text-echo-500">
                 <a href="https://signal.echocyber.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-1 text-echo-400 transition-colors hover:text-white">
                     Browse past issues <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -469,7 +469,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
         <div class="mx-auto max-w-2xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Let's talk</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Next step</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
