@@ -332,8 +332,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
                 {{-- Header band --}}
                 <header class="flex items-center gap-4 border-b border-echo-800/60 bg-echo-950/40 px-8 py-5">
-                    <div class="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
-                        <span class="font-display text-lg font-bold leading-none tabular-nums text-crimson-400">01</span>
+                    <div class="h-12 w-12 flex-none rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40 text-center">
+                        <span class="block font-display text-lg font-bold tabular-nums text-crimson-400" style="line-height: 3rem;">01</span>
                     </div>
                     <div class="min-w-0">
                         <h3 class="text-lg font-semibold text-white">Fortune 500 Retailer</h3>
@@ -377,8 +377,8 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
             {{-- Case 2 --}}
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
                 <header class="flex items-center gap-4 border-b border-echo-800/60 bg-echo-950/40 px-8 py-5">
-                    <div class="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
-                        <span class="font-display text-lg font-bold leading-none tabular-nums text-crimson-400">02</span>
+                    <div class="h-12 w-12 flex-none rounded-xl bg-crimson-900/40 ring-1 ring-crimson-700/40 text-center">
+                        <span class="block font-display text-lg font-bold tabular-nums text-crimson-400" style="line-height: 3rem;">02</span>
                     </div>
                     <div class="min-w-0">
                         <h3 class="text-lg font-semibold text-white">High-Growth Ecommerce Brand</h3>
