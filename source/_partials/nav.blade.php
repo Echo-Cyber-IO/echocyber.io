@@ -19,21 +19,17 @@
 
             {{-- Desktop Navigation --}}
             <div class="hidden lg:flex lg:items-center lg:gap-x-10">
-                <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors relative
+                <a href="/#about"
+                   class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative
                           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
-                          after:transition-all after:duration-300 hover:after:w-full
-                          {{ $page->isActive('/about') ? 'after:w-full' : '' }}">
+                          after:transition-all after:duration-300 hover:after:w-full">
                     About
                 </a>
-                <a href="/services"
-                   class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors relative
+                <a href="/#pricing"
+                   class="text-echo-200 font-medium hover:text-crimson-500 transition-colors relative
                           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
-                          after:transition-all after:duration-300 hover:after:w-full
-                          {{ $page->isActive('/services') ? 'after:w-full' : '' }}">
-                    Services
+                          after:transition-all after:duration-300 hover:after:w-full">
+                    Pricing
                 </a>
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
@@ -95,15 +91,13 @@
              x-transition:leave-end="opacity-0 -translate-y-4"
              class="lg:hidden py-4 border-t border-echo-800">
             <div class="flex flex-col gap-4">
-                <a href="/about"
-                   class="{{ $page->isActive('/about') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors py-2">
+                <a href="/#about"
+                   class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">
                     About
                 </a>
-                <a href="/services"
-                   class="{{ $page->isActive('/services') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors py-2">
-                    Services
+                <a href="/#pricing"
+                   class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">
+                    Pricing
                 </a>
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
