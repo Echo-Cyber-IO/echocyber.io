@@ -162,8 +162,8 @@ async function findOrCreateContact(lead) {
       source: 'Signal Score Assessment',
       tags: ['signal-score'],
       customFields: [
-        { key: 'contact.role_title', value: lead.role || '' },
-        { key: 'contact.company_size', value: lead.companySize || '' },
+        { key: 'contact.role_title', field_value: lead.role || '' },
+        { key: 'contact.company_size', field_value: lead.companySize || '' },
       ],
     });
     contactId = created?.contact?.id;
@@ -178,12 +178,12 @@ async function updateContactScores(contactId, results) {
   await ghlRequest('PUT', `/contacts/${contactId}`, {
     tags: ['signal-score', `signal-grade-${results.overallGrade.toLowerCase()}`],
     customFields: [
-      { key: 'contact.signal_score_overall', value: results.totalScore },
-      { key: 'contact.signal_score_grade', value: results.overallGrade },
-      { key: 'contact.signal_score_date', value: now },
+      { key: 'contact.signal_score_overall', field_value: results.totalScore },
+      { key: 'contact.signal_score_grade', field_value: results.overallGrade },
+      { key: 'contact.signal_score_date', field_value: now },
       ...results.categories.map(c => ({
         key: `contact.signal_score_${c.key}`,
-        value: `${c.grade} (${c.score}/${c.maxPoints})`,
+        field_value: `${c.grade} (${c.score}/${c.maxPoints})`,
       })),
     ],
   });
