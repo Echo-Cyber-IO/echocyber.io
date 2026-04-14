@@ -1,11 +1,24 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import 'tailwindcss';
 
 /* Code syntax highlighting, powered by https://highlightjs.org */
-@import 'highlight.js/styles/a11y-light.css';
+@import 'highlight.js/styles/a11y-light.css' layer(components);
 
-@import 'base';
-@import 'mailchimp';
-@import 'blog';
+@import './base.css' layer(components);
+@import './mailchimp.css' layer(components);
+@import './blog.css' layer(components);
 
-@import 'tailwindcss/utilities';
+@config '../../../tailwind.config.js';
+
+/*
+  The default border color changed to `currentcolor` in Tailwind v4.
+  Restore v3 default so existing markup keeps its borders.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

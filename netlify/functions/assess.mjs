@@ -10,6 +10,7 @@ const GHL_PIPELINE_STAGE_ID = process.env.GHL_SIGNAL_SCORE_STAGE_ID; // "Assessm
 const BEEHIIV_API_KEY = process.env.BEEHIIV_API_KEY;
 const BEEHIIV_PUB_ID = process.env.BEEHIIV_PUB_ID || 'pub_4aa9e626-adfb-44d3-991a-ba8cbdd146fa';
 
+
 // ── Scoring Engine ──────────────────────────────────────────────────────────
 
 const CATEGORIES = [
@@ -122,6 +123,31 @@ function scoreAssessment(answers) {
 
 // ── GHL Integration ─────────────────────────────────────────────────────────
 
+// Lazy-loaded map of GHL custom field fieldKey → id for the location.
+// GHL v2 PUT /contacts/{id} requires field IDs (not keys); we fetch the map
+// once per cold start and cache for the lambda's lifetime.
+let fieldIdCache = null;
+async function getFieldId(fieldKey) {
+  if (!fieldIdCache) {
+    const res = await ghlRequest('GET', `/locations/${GHL_LOCATION_ID}/customFields`);
+    const fields = res?.customFields || [];
+    fieldIdCache = Object.fromEntries(fields.map(f => [f.fieldKey, f.id]));
+    console.log(`[assess] Cached ${fields.length} GHL custom field IDs`);
+  }
+  const id = fieldIdCache[fieldKey];
+  if (!id) console.warn(`[assess] Unknown GHL field key: ${fieldKey}`);
+  return id;
+}
+
+async function buildCustomFields(entries) {
+  // entries: [[fieldKey, field_value], ...]
+  const resolved = await Promise.all(entries.map(async ([key, value]) => {
+    const id = await getFieldId(key);
+    return id ? { id, field_value: value } : null;
+  }));
+  return resolved.filter(Boolean);
+}
+
 async function ghlRequest(method, path, body = null) {
   const opts = {
     method,
@@ -153,6 +179,10 @@ async function findOrCreateContact(lead) {
     contactId = search.contacts[0].id;
   } else {
     // Create new contact
+    const customFields = await buildCustomFields([
+      ['contact.role_title', lead.role || ''],
+      ['contact.company_size', lead.companySize || ''],
+    ]);
     const created = await ghlRequest('POST', '/contacts/', {
       locationId: GHL_LOCATION_ID,
       firstName: lead.firstName,
@@ -161,10 +191,7 @@ async function findOrCreateContact(lead) {
       companyName: lead.company || '',
       source: 'Signal Score Assessment',
       tags: ['signal-score'],
-      customFields: [
-        { key: 'contact.role_title', value: lead.role || '' },
-        { key: 'contact.company_size', value: lead.companySize || '' },
-      ],
+      customFields,
     });
     contactId = created?.contact?.id;
   }
@@ -175,17 +202,19 @@ async function findOrCreateContact(lead) {
 async function updateContactScores(contactId, results) {
   const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
+  const customFields = await buildCustomFields([
+    ['contact.signal_score_overall', String(results.totalScore)],
+    ['contact.signal_score_grade', results.overallGrade],
+    ['contact.signal_score_date', now],
+    ...results.categories.map(c => [
+      `contact.signal_score_${c.key}`,
+      `${c.grade} (${c.score}/${c.maxPoints})`,
+    ]),
+  ]);
+
   await ghlRequest('PUT', `/contacts/${contactId}`, {
     tags: ['signal-score', `signal-grade-${results.overallGrade.toLowerCase()}`],
-    customFields: [
-      { key: 'contact.signal_score_overall', value: results.totalScore },
-      { key: 'contact.signal_score_grade', value: results.overallGrade },
-      { key: 'contact.signal_score_date', value: now },
-      ...results.categories.map(c => ({
-        key: `contact.signal_score_${c.key}`,
-        value: `${c.grade} (${c.score}/${c.maxPoints})`,
-      })),
-    ],
+    customFields,
   });
 }
 
