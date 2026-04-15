@@ -294,7 +294,7 @@ description: Get in touch to discuss your technology and security leadership nee
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
                 <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
-                <div class="mt-6 space-y-3 text-sm leading-7 text-echo-300">
+                <div class="mt-6 space-y-1 text-sm leading-7 text-echo-300">
                     <p>Within <span class="text-white font-medium">24 hours</span> on business days.</p>
                     <p>For urgent matters, mention it in your message.</p>
                 </div>
@@ -302,7 +302,7 @@ description: Get in touch to discuss your technology and security leadership nee
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
                 <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
-                <div class="mt-6 space-y-3 text-sm leading-7 text-echo-300">
+                <div class="mt-6 space-y-1 text-sm leading-7 text-echo-300">
                     <p>
                         Email
                         <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a>
