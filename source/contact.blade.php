@@ -261,8 +261,8 @@ description: Get in touch to discuss your technology and security leadership nee
 
         </div>
 
-        {{-- ==================== INFO STRIP (4 tiles) ==================== --}}
-        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {{-- ==================== INFO STRIP (3 tiles) ==================== --}}
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
             <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
                 <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
@@ -282,7 +282,7 @@ description: Get in touch to discuss your technology and security leadership nee
                 </p>
             </div>
 
-            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-crimson-700/40">
+            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
                 <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
                     <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
                 </div>
@@ -290,21 +290,12 @@ description: Get in touch to discuss your technology and security leadership nee
                     <a href="mailto:info@echocyber.io" class="block font-display text-base font-semibold text-white hover:text-crimson-400 transition-colors">
                         info@echocyber.io
                     </a>
-                    <a href="tel:+19194300720" class="block text-sm text-echo-400 hover:text-crimson-400 transition-colors">
+                    <a href="tel:+19194300720" class="block text-sm text-echo-300 hover:text-crimson-400 transition-colors">
                         (919) 430-0720
                     </a>
-                </div>
-            </div>
-
-            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
-                <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Location</p>
-                </div>
-                <div class="px-5 py-4">
-                    <p class="font-display text-base font-semibold text-white">
-                        Wake Forest, <span class="text-crimson-400">NC</span>
+                    <p class="pt-1 text-xs text-echo-500">
+                        Raleigh, <span class="text-crimson-400">NC</span> &middot; EST
                     </p>
-                    <p class="mt-1 text-xs text-echo-500">Raleigh-Durham area &middot; EST</p>
                 </div>
             </div>
 
