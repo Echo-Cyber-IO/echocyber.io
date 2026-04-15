@@ -32,7 +32,7 @@
                 <div class="group relative flex flex-col items-center bg-echo-950/70 px-6 py-8 text-center transition-colors hover:bg-echo-900/70">
                     <dd class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">25+</dd>
                     <div class="mt-3 h-0.5 w-8 rounded-full bg-crimson-700 transition-all group-hover:w-12 group-hover:bg-crimson-500"></div>
-                    <dt class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-echo-400">Years in the field</dt>
+                    <dt class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-echo-400">Years of tech leadership</dt>
                 </div>
 
                 <div class="group relative flex flex-col items-center bg-echo-950/70 px-6 py-8 text-center transition-colors hover:bg-echo-900/70">
