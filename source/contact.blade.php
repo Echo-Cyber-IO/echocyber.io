@@ -294,27 +294,19 @@ description: Get in touch to discuss your technology and security leadership nee
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
                 <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
-                <div class="mt-6 space-y-1 text-sm leading-7 text-echo-300">
-                    <p>Within <span class="text-white font-medium">24 hours</span> on business days.</p>
-                    <p>For urgent matters, mention it in your message.</p>
-                </div>
+                <p class="mt-6 text-sm leading-6 text-echo-300">
+                    Within <span class="text-white font-medium">24 hours</span> on business days.<br>
+                    For urgent matters, mention it in your message.
+                </p>
             </div>
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
                 <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
-                <div class="mt-6 space-y-1 text-sm leading-7 text-echo-300">
-                    <p>
-                        Email
-                        <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a>
-                    </p>
-                    <p>
-                        Call
-                        <a href="tel:+19194300720" class="font-medium text-white hover:text-crimson-400 transition-colors">(919) 430-0720</a>
-                    </p>
-                    <p>
-                        Based in Raleigh, <span class="text-white font-medium">NC</span> &middot; EST
-                    </p>
-                </div>
+                <p class="mt-6 text-sm leading-6 text-echo-300">
+                    Email <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a><br>
+                    Call <a href="tel:+19194300720" class="font-medium text-white hover:text-crimson-400 transition-colors">(919) 430-0720</a><br>
+                    Based in Raleigh, <span class="text-white font-medium">NC</span> &middot; EST
+                </p>
             </div>
 
         </div>
