@@ -7,7 +7,7 @@
                 <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Track record</span>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Real engagements. Real results.
+                Proof beats <span class="text-crimson-400">prose.</span>
             </h2>
             <p class="mt-4 text-echo-400 text-sm">Names withheld&nbsp;&mdash; NDAs are a feature, not a limitation.</p>
         </div>
