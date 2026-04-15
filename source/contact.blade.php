@@ -22,7 +22,7 @@ description: Get in touch to discuss your technology and security leadership nee
         </h1>
 
         <p class="mx-auto mt-6 max-w-xl text-lg text-pretty text-echo-300 sm:text-xl/8">
-            Whether you have a specific challenge in mind or just want to explore how fractional leadership might work for your business, I'm happy to have a conversation.
+            A specific challenge? An exploratory conversation? Either path works.
         </p>
     </div>
 </section>
