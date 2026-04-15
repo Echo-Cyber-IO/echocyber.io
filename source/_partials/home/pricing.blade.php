@@ -59,7 +59,7 @@
                 'tagline' => 'Ongoing Advisory',
                 'price' => '$3,000',
                 'priceSuffix' => '/month · 6-month commitment',
-                'description' => "For clients who've finished a Signal engagement. Monthly counsel, quarterly strategic reviews, and on-call support for the decisions that matter.",
+                'description' => "I stay in the picture for clients who've finished a Signal engagement &mdash; monthly counsel, quarterly strategic reviews, and on-call support for the decisions that matter.",
                 'features' => [
                     'Monthly check-ins + quarterly strategic reviews',
                     'On-call for key decisions and vendor evaluations',
