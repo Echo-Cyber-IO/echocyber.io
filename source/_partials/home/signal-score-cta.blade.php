@@ -15,7 +15,7 @@
             </h2>
 
             <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-echo-300">
-                The Signal Score is a 15-minute self-assessment across 8 categories. You get an instant A&ndash;F grade. No email required to take it. Just clarity.
+                15 minutes. 8 categories. Your A&ndash;F grade up front&nbsp;&mdash; full report one click from there. Just clarity.
             </p>
 
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
