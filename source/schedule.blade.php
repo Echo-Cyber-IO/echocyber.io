@@ -7,7 +7,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
 @section('body')
 
     {{-- Hero / intro --}}
-    <section class="relative pt-16 pb-12 lg:pt-20 lg:pb-16 overflow-hidden">
+    <section class="relative pt-16 pb-4 lg:pt-20 lg:pb-6 overflow-hidden">
         <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-crimson-900/40 to-transparent blur-3xl -skew-x-12 pointer-events-none"></div>
 
         <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
@@ -35,7 +35,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
     </section>
 
     {{-- Calendar widget --}}
-    <section class="pb-16 lg:pb-24">
+    <section class="pt-0 pb-16 lg:pb-24">
         <div class="mx-auto max-w-7xl px-4">
             <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
                 style="width: 100%; min-height: 800px; border: none; overflow: hidden;" scrolling="no"
