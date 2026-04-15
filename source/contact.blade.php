@@ -305,17 +305,13 @@ description: Get in touch to discuss your technology and security leadership nee
                 <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
                     <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
                 </div>
-                <div class="px-5 py-4 space-y-1.5">
-                    <a href="mailto:info@echocyber.io" class="block font-display text-base font-semibold text-white hover:text-crimson-400 transition-colors">
-                        info@echocyber.io
-                    </a>
-                    <a href="tel:+19194300720" class="block text-sm text-echo-300 hover:text-crimson-400 transition-colors">
-                        (919) 430-0720
-                    </a>
-                    <p class="pt-1 text-xs text-echo-500">
-                        Raleigh, <span class="text-crimson-400">NC</span> &middot; EST
-                    </p>
-                </div>
+                <p class="px-5 py-4 text-sm leading-6 text-echo-300">
+                    Email
+                    <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a>
+                    or call
+                    <a href="tel:+19194300720" class="font-medium text-white hover:text-crimson-400 transition-colors">(919) 430-0720</a>.
+                    Based in Raleigh, <span class="text-white font-medium">NC</span> &middot; EST.
+                </p>
             </div>
 
         </div>
