@@ -18,7 +18,7 @@
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
                 {{-- Header band --}}
                 <header class="border-b border-echo-800/60 bg-echo-950/40 px-8 py-6">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Specialty retail &middot; brick-and-mortar</p>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">National retail chain &middot; brick-and-mortar</p>
                     <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">
                         Fortune 500 <span class="text-crimson-400">Retailer</span>
                     </h3>

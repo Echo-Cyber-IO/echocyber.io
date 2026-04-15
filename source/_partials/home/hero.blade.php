@@ -52,7 +52,7 @@
                     <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-crimson-700/10 to-transparent opacity-60 pointer-events-none"></div>
                     <dd class="relative font-display text-5xl font-bold tracking-tight text-crimson-500 sm:text-6xl drop-shadow-[0_0_12px_rgba(204,51,51,0.35)]">0</dd>
                     <div class="relative mt-3 h-0.5 w-8 rounded-full bg-crimson-500 transition-all group-hover:w-12"></div>
-                    <dt class="relative mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-400">Buzzwords on this page</dt>
+                    <dt class="relative mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-400">Fear-mongering</dt>
                 </div>
 
             </dl>

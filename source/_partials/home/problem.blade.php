@@ -4,7 +4,7 @@
         <div class="mx-auto max-w-3xl">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">The real problem</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What's actually happening</span>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 You don't have a security problem. You have a leadership gap.
