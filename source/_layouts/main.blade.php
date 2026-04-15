@@ -118,11 +118,9 @@
 </head>
 
 <body class="bg-echo-950 text-echo-200 min-h-screen flex flex-col">
-    {{-- Fixed hex-grid background for homepage --}}
-    @if($page->getPath() === '/' || $page->getPath() === '')
+    {{-- Fixed hex-grid background + crimson blur (site-wide) --}}
     <div class="fixed inset-0 bg-hex-grid opacity-30 pointer-events-none z-0"></div>
     <div class="fixed top-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-crimson-900/40 to-transparent transform -skew-x-12 blur-2xl pointer-events-none z-0"></div>
-    @endif
 
     {{-- Navigation --}}
     @include('_partials.nav')

@@ -32,71 +32,170 @@ description: Find out where your company stands in 15 minutes. Free security ass
   <!-- HERO / LANDING                              -->
   <!-- ═══════════════════════════════════════════ -->
   <div x-show="step === 'landing'" x-transition>
-    <!-- Hero -->
-    <section class="relative py-24 lg:py-32">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-crimson-900/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            <span class="text-xs font-mono text-crimson-500 uppercase tracking-wider">Free Security Assessment</span>
-          </div>
+    <!-- Hero: split layout with sample card -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl">
+        <!-- Left: copy + CTA -->
+        <div class="relative z-10 lg:w-full lg:max-w-2xl">
+          <!-- Diagonal cut SVG -->
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"
+               class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-echo-950 lg:block">
+            <polygon points="0,0 90,0 50,100 0,100" />
+          </svg>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            How secure is your<br>
-            <span class="text-crimson-500">business, really?</span>
-          </h1>
+          <div class="relative px-6 py-20 sm:py-28 lg:px-8 lg:py-32 lg:pr-0">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
 
-          <p class="text-xl text-echo-300 leading-relaxed mb-4">
-            The Signal Score grades your security across 8 areas that matter most. No jargon. No sales pitch. Just a clear picture of where you stand.
-          </p>
-
-          <p class="text-echo-400 mb-10">
-            15 minutes &middot; 37 questions &middot; Instant results
-          </p>
-
-          <button @click="step = 'quiz'" class="inline-flex items-center gap-2 px-8 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98]">
-            Start Your Assessment
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-          </button>
-        </div>
-
-        <!-- What You Get -->
-        <div class="mt-20 max-w-5xl">
-          <h2 class="text-2xl font-bold mb-10 font-display">In 15 minutes you'll know:</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-echo-800/50 border border-echo-700 rounded-xl p-6 hover:border-crimson-800/50 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg mb-4">
-                <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free security assessment</span>
               </div>
-              <h3 class="font-semibold text-white mb-2">Where you're exposed</h3>
-              <p class="text-sm text-echo-400">A&ndash;F grades across 8 areas that actually matter &mdash; from identity to incident readiness.</p>
-            </div>
-            <div class="bg-echo-800/50 border border-echo-700 rounded-xl p-6 hover:border-crimson-800/50 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg mb-4">
-                <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+
+              <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance text-white">
+                How secure is your business, <span class="text-crimson-500">really?</span>
+              </h1>
+
+              <p class="mt-8 text-lg text-pretty text-echo-300 sm:text-xl/8">
+                The Signal Score grades your security across 8 areas that matter most. No jargon. No sales pitch. Just a clear picture of where you stand.
+              </p>
+
+              <!-- Scope chips -->
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">15 minutes</span>
+                <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">37 questions</span>
+                <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">A&ndash;F grade</span>
+                <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Instant results</span>
               </div>
-              <h3 class="font-semibold text-white mb-2">What it costs you</h3>
-              <p class="text-sm text-echo-400">Every gap translated to dollars. The language your board and your CFO actually speak.</p>
-            </div>
-            <div class="bg-echo-800/50 border border-echo-700 rounded-xl p-6 hover:border-crimson-800/50 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center bg-crimson-900/50 rounded-lg mb-4">
-                <svg class="w-5 h-5 text-crimson-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                </svg>
+
+              <div class="mt-10">
+                <button @click="step = 'quiz'"
+                        class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 hover:bg-crimson-600 text-white font-semibold text-lg px-8 py-4 shadow-sm transition-all hover:shadow-glow active:scale-[0.98]">
+                  Start your assessment
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                </button>
+                <p class="mt-3 text-xs text-echo-500">No email required to take it. No sales follow-up.</p>
               </div>
-              <h3 class="font-semibold text-white mb-2">What to fix first</h3>
-              <p class="text-sm text-echo-400">A prioritized plan &mdash; not a 90-page report that sits in a drawer.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Right: Sample Signal Score card -->
+      <div class="relative bg-gradient-to-br from-echo-900 via-echo-900 to-crimson-950/60 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        {{-- Stronger ambient glows --}}
+        <div aria-hidden="true" class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-crimson-600/30 to-transparent blur-3xl"></div>
+          <div class="absolute -bottom-40 -left-20 w-[400px] h-[400px] bg-gradient-to-tr from-crimson-800/20 to-transparent blur-3xl"></div>
+        </div>
+
+        <div class="relative flex h-full items-center justify-center px-6 py-20 lg:px-12 lg:py-16">
+          <div class="relative w-full max-w-md">
+            {{-- Card halo glow behind --}}
+            <div aria-hidden="true" class="absolute -inset-6 rounded-3xl bg-gradient-to-br from-crimson-700/20 via-crimson-900/10 to-yellow-500/10 blur-2xl"></div>
+
+            {{-- The card itself --}}
+            <div class="relative rounded-2xl bg-echo-950/90 p-7 ring-1 ring-crimson-700/40 shadow-2xl shadow-crimson-950/60 backdrop-blur-sm">
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse shadow-lg shadow-crimson-500/50"></div>
+                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample</p>
+                </div>
+                <span class="font-mono text-xs text-echo-500">Yours in 15 min</span>
+              </div>
+
+              <div class="mt-8 flex items-center gap-6">
+                {{-- Grade circle with glow ring --}}
+                <div class="relative flex-none">
+                  <div aria-hidden="true" class="absolute -inset-2 rounded-3xl bg-yellow-400/20 blur-xl"></div>
+                  <div class="relative inline-flex items-center justify-center w-32 h-32 rounded-3xl border-4 border-yellow-400 bg-gradient-to-br from-yellow-500/15 to-yellow-700/5 shadow-2xl shadow-yellow-400/30">
+                    <span class="font-display text-7xl font-bold text-yellow-400 drop-shadow-[0_0_12px_rgba(250,204,21,0.4)]">C</span>
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-display text-2xl font-bold text-white">Room to Grow</p>
+                  <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
+                  <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/15 px-2 py-1 ring-1 ring-yellow-500/30 shadow-sm shadow-yellow-500/10">
+                    <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
+                    <span class="font-mono text-xs font-semibold text-yellow-400">$300K&ndash;$750K annual risk</span>
+                  </div>
+                </div>
+              </div>
+
+            <div class="mt-8 space-y-3 border-t border-echo-800 pt-6">
+              <p class="text-xs font-mono uppercase tracking-widest text-echo-500">Grades by area</p>
+              @foreach([['Identity & Access', 'B', 'bg-blue-500', 78], ['Devices & Patching', 'B', 'bg-blue-500', 72], ['Email & Phishing', 'C', 'bg-yellow-500', 56], ['Backup & Recovery', 'D', 'bg-orange-500', 32], ['Network Security', 'C', 'bg-yellow-500', 50], ['Data Protection', 'C', 'bg-yellow-500', 48], ['Vendor & SaaS Risk', 'D', 'bg-orange-500', 34], ['Incident Readiness', 'F', 'bg-red-500', 14]] as $row)
+                <div class="flex items-center justify-between gap-3 text-xs">
+                  <span class="text-echo-300 truncate">{{ $row[0] }}</span>
+                  <div class="flex items-center gap-3 flex-none">
+                    <div class="h-1.5 w-28 rounded-full bg-echo-800 overflow-hidden">
+                      <div class="h-full {{ $row[2] }}" style="width: {{ $row[3] }}%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-white w-3 text-center">{{ $row[1] }}</span>
+                  </div>
+                </div>
+              @endforeach
+            </div>
+
+              <p class="mt-6 text-center text-xs italic text-echo-500">Sample result. Yours will be specific to your business.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- What You'll Get (track-record-style header band cards) -->
+    <section class="relative py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">In 15 minutes you'll know</span>
+            <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
+          </div>
+          <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
+            Three things, plainly.
+          </h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+
+          <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
+            <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Diagnostic</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">Where you're <span class="text-crimson-400">exposed</span></h3>
+            </header>
+            <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
+              A&ndash;F grades across 8 areas that actually matter &mdash; from identity to incident readiness.
+            </div>
+          </article>
+
+          <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
+            <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Translation</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What it <span class="text-crimson-400">costs</span> you</h3>
+            </header>
+            <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
+              Every gap translated to dollars. The language your board and your CFO actually speak.
+            </div>
+          </article>
+
+          <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
+            <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Action</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What to <span class="text-crimson-400">fix first</span></h3>
+            </header>
+            <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
+              A prioritized plan &mdash; not a 90-page report that sits in a drawer.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- ═══════════════════════════════════════════ -->
@@ -257,7 +356,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
             </div>
             <div class="flex items-start gap-2 pt-1">
               <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
-              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a biweekly newsletter that cuts through cybersecurity hype</label>
+              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
             </div>
             <button type="submit" :disabled="submitting"
               class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] flex items-center justify-center gap-2">
