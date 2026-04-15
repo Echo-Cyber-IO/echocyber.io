@@ -283,29 +283,23 @@ description: Get in touch to discuss your technology and security leadership nee
         {{-- ==================== INFO STRIP (3 tiles) ==================== --}}
         <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
-                <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Expect</p>
-                </div>
-                <p class="px-5 py-4 text-sm leading-6 text-echo-300">
+            <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Expect</p>
+                <p class="mt-3 text-sm leading-6 text-echo-300">
                     No-pressure conversation &mdash; we figure out fit. If it's not, <span class="text-white font-medium">I'll tell you.</span>
                 </p>
             </div>
 
-            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
-                <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
-                </div>
-                <p class="px-5 py-4 text-sm leading-6 text-echo-300">
-                    Within <span class="text-white font-semibold">24 hours</span> on business days. For urgent matters, mention it in your message.
+            <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
+                <p class="mt-3 text-sm leading-6 text-echo-300">
+                    Within <span class="text-white font-medium">24 hours</span> on business days. For urgent matters, mention it in your message.
                 </p>
             </div>
 
-            <div class="overflow-hidden rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
-                <div class="border-b border-echo-800/60 bg-echo-950/40 px-5 py-3">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
-                </div>
-                <p class="px-5 py-4 text-sm leading-6 text-echo-300">
+            <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
+                <p class="mt-3 text-sm leading-6 text-echo-300">
                     Email
                     <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a>
                     or call
