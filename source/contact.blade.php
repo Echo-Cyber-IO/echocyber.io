@@ -229,30 +229,49 @@ description: Get in touch to discuss your technology and security leadership nee
                     </h2>
                 </div>
 
-                <div class="relative flex flex-1 flex-col justify-between p-8 lg:p-10">
-                    <div>
-                        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-
-                        <p class="mt-6 font-display text-xl font-semibold text-white">
-                            Grab 30 minutes on my calendar.
-                        </p>
-                        <p class="mt-3 text-base leading-7 text-echo-300">
-                            Direct with me &mdash; no pitch, no prep required. Honest questions, straight answers. If it's not a fit, I'll tell you.
-                        </p>
-
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">30 min</span>
-                            <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No cost</span>
-                            <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No prep</span>
-                            <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No pitch</span>
-                        </div>
+                <div class="relative flex flex-1 flex-col p-8 lg:p-10">
+                    <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
                     </div>
 
-                    <a href="/schedule" class="mt-10 w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg transition-all hover:shadow-glow">
+                    <p class="mt-6 font-display text-xl font-semibold text-white">
+                        Grab 30 minutes on my calendar.
+                    </p>
+                    <p class="mt-3 text-base leading-7 text-echo-300">
+                        Direct with me &mdash; no pitch, no prep required. Honest questions, straight answers. If it's not a fit, I'll tell you.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">30 min</span>
+                        <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No cost</span>
+                        <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No prep</span>
+                        <span class="rounded-md bg-echo-950/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">No pitch</span>
+                    </div>
+
+                    {{-- What we'll cover (fills card to match form density) --}}
+                    <div class="mt-8 rounded-2xl bg-echo-950/40 p-5 ring-1 ring-echo-800/60">
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">What we'll cover</p>
+                        <ul class="mt-4 space-y-3 text-sm text-echo-300">
+                            <li class="flex gap-x-3">
+                                <svg class="h-5 w-5 flex-none text-crimson-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>
+                                Where your business is today &mdash; team, tech, what's keeping you up at night
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="h-5 w-5 flex-none text-crimson-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>
+                                Whether there's a fit &mdash; and how that might look
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="h-5 w-5 flex-none text-crimson-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>
+                                One or two things you can act on either way
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex-1"></div>
+
+                    <a href="/schedule" class="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg transition-all hover:shadow-glow">
                         Book a Strategy Session
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                     </a>
