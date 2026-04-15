@@ -22,7 +22,8 @@ description: Get in touch to discuss your technology and security leadership nee
         </h1>
 
         <p class="mx-auto mt-6 max-w-xl text-lg text-pretty text-echo-300 sm:text-xl/8">
-            A specific challenge? An exploratory conversation? Either path works.
+            A specific challenge? An exploratory conversation?
+            <span class="block mt-2 font-semibold text-white">Either path works.</span>
         </p>
     </div>
 </section>
