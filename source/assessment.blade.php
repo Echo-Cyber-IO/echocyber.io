@@ -356,7 +356,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
             </div>
             <div class="flex items-start gap-2 pt-1">
               <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
-              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a biweekly newsletter that cuts through cybersecurity hype</label>
+              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
             </div>
             <button type="submit" :disabled="submitting"
               class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] flex items-center justify-center gap-2">
