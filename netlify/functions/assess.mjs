@@ -510,44 +510,27 @@ async function generatePdf(payload) {
       return null;
     }
     const data = await res.json();
-    return data.pdf || null;
+    if (!data.downloadUrl) {
+      console.error('[assess] PDF service response missing downloadUrl');
+      return null;
+    }
+    console.log(`[assess] PDF generated: ${data.downloadUrl}`);
+    return data.downloadUrl;
   } catch (err) {
     console.error(`[assess] PDF service error: ${err.message}`);
     return null;
   }
 }
 
-async function uploadPdfToGhl(pdfBase64, filename) {
-  try {
-    const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-    const formData = new FormData();
-    formData.append('file', new Blob([pdfBuffer], { type: 'application/pdf' }), filename);
-    formData.append('hosted', 'true');
-    formData.append('name', filename);
-    formData.append('locationId', GHL_LOCATION_ID);
-
-    const res = await fetch('https://services.leadconnectorhq.com/medias/upload-file', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GHL_API_KEY}`,
-        'Version': '2021-07-28',
-        // Content-Type auto-set by fetch for multipart/form-data boundary
-      },
-      body: formData,
-    });
-    if (!res.ok) {
-      const text = await res.text();
-      console.error(`[assess] GHL media upload ${res.status}: ${text}`);
-      return null;
-    }
-    const data = await res.json();
-    const url = data.url || data.fileUrl || data.secureUrl;
-    console.log(`[assess] PDF uploaded to GHL: ${url ? url.substring(0, 80) : 'no URL returned'}`);
-    return url;
-  } catch (err) {
-    console.error(`[assess] GHL media upload error: ${err.message}`);
-    return null;
+async function updateContactReportUrl(contactId, downloadUrl) {
+  const customFields = await buildCustomFields([
+    ['contact.signal_score_report_url', downloadUrl],
+  ]);
+  if (customFields.length === 0) {
+    console.warn('[assess] signal_score_report_url field not found in GHL');
+    return;
   }
+  await ghlRequest('PUT', `/contacts/${contactId}`, { customFields });
 }
 
 function escapeHtml(str) {
@@ -560,15 +543,21 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-function buildEmailHtml(lead, results) {
+function buildEmailHtml(lead, results, downloadUrl) {
   const firstName = escapeHtml(lead.firstName);
   const grade = escapeHtml(results.overallGrade);
+  const url = escapeHtml(downloadUrl);
   return `<!DOCTYPE html>
 <html>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a;line-height:1.55;max-width:600px;margin:0 auto;padding:16px;">
   <p>Hi ${firstName},</p>
-  <p>Your full Signal Score cascade report (Grade ${grade}) is attached.</p>
-  <p><strong>Quick version of what's in it:</strong></p>
+  <p>Your full Signal Score cascade report is ready — Grade ${grade}.</p>
+
+  <p style="text-align:center;margin:32px 0;">
+    <a href="${url}" style="display:inline-block;background:#8B0000;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:6px;font-weight:600;font-size:16px;">Download Your Full Report</a>
+  </p>
+
+  <p><strong>What's in it:</strong></p>
   <ul>
     <li>Your 8-domain breakdown with specific risk dollar ranges</li>
     <li>The cascade hints that were blurred on your results page — how each weak domain pulls down its neighbors</li>
@@ -582,25 +571,25 @@ function buildEmailHtml(lead, results) {
   </ul>
   <p>If any of it sparks a conversation — reply to this email or grab time on my calendar: <a href="https://echocyber.io/schedule">echocyber.io/schedule</a></p>
   <p style="margin-top:32px;">— Mike<br>Fractional CTO / CISO<br>Echo Cyber</p>
+
+  <p style="margin-top:32px;font-size:12px;color:#888;">
+    Having trouble with the button? Paste this into your browser:<br>
+    <a href="${url}" style="color:#888;word-break:break-all;">${url}</a>
+  </p>
 </body>
 </html>`;
 }
 
-async function sendReportEmail(contactId, lead, pdfUrl, results) {
+async function sendReportEmail(contactId, lead, downloadUrl, results) {
   if (!contactId) {
     console.warn('[assess] No contactId — skipping email send');
     return false;
   }
+  if (!downloadUrl) {
+    console.warn('[assess] No downloadUrl — skipping email send');
+    return false;
+  }
   try {
-    const body = {
-      type: 'Email',
-      contactId,
-      subject: `Your Signal Score cascade report — Grade ${results.overallGrade}`,
-      html: buildEmailHtml(lead, results),
-    };
-    if (pdfUrl) {
-      body.attachments = [pdfUrl];
-    }
     const res = await fetch('https://services.leadconnectorhq.com/conversations/messages', {
       method: 'POST',
       headers: {
@@ -608,7 +597,12 @@ async function sendReportEmail(contactId, lead, pdfUrl, results) {
         'Version': '2021-04-15',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({
+        type: 'Email',
+        contactId,
+        subject: `Your Signal Score cascade report — Grade ${results.overallGrade}`,
+        html: buildEmailHtml(lead, results, downloadUrl),
+      }),
     });
     if (!res.ok) {
       const text = await res.text();
@@ -713,16 +707,15 @@ export default async (req, context) => {
     }
   }
 
-  // PDF generation → GHL media upload → email with attachment.
+  // PDF generation → write URL to contact custom field → email with download button.
   // Any step failing is logged but does not break the teaser response.
   try {
     const pdfPayload = buildPdfPayload(results, lead);
-    const pdfBase64 = await generatePdf(pdfPayload);
-    if (pdfBase64 && contactId) {
-      const filename = `signal-score-${results.overallGrade}-${Date.now()}.pdf`;
-      const pdfUrl = await uploadPdfToGhl(pdfBase64, filename);
-      await sendReportEmail(contactId, lead, pdfUrl, results);
-    } else if (!pdfBase64) {
+    const downloadUrl = await generatePdf(pdfPayload);
+    if (downloadUrl && contactId) {
+      await updateContactReportUrl(contactId, downloadUrl);
+      await sendReportEmail(contactId, lead, downloadUrl, results);
+    } else if (!downloadUrl) {
       console.warn('[assess] PDF generation returned null — email not sent');
     } else if (!contactId) {
       console.warn('[assess] No contactId — PDF generated but not delivered');
