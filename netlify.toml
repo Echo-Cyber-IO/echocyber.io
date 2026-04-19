@@ -5,3 +5,6 @@ publish = "build_production"
 [build.environment]
 PHP_VERSION = "8.3"
 NODE_VERSION = "20"
+
+[functions."assess"]
+timeout = 26
