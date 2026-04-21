@@ -8,3 +8,9 @@ NODE_VERSION = "20"
 
 [functions."assess"]
 timeout = 26
+
+[[redirects]]
+  from = "/listen"
+  to = "https://pod.link/1894903133"
+  status = 301
+  force = true
