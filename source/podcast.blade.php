@@ -1,6 +1,6 @@
 ---
 title: Signal vs. Noise — The Pulse Podcast
-description: Weekly cybersecurity podcast for founder-led businesses. One signal worth your attention, the noise worth ignoring. 20 minutes a week.
+description: Weekly cybersecurity podcast for founder-led businesses. One signal worth your attention, the noise worth ignoring. Five minutes a week.
 ---
 @extends('_layouts.main')
 
@@ -46,12 +46,12 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
             </h1>
 
             <p class="mt-8 text-lg text-pretty text-echo-300 sm:text-xl/8">
-              Weekly cybersecurity for founder-led businesses. One signal worth your attention, the noise worth ignoring. Twenty minutes a week.
+              Weekly cybersecurity for founder-led businesses. One signal worth your attention, the noise worth ignoring. Five minutes a week.
             </p>
 
             {{-- Scope chips --}}
             <div class="mt-6 flex flex-wrap gap-2">
-              <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">~20 min episodes</span>
+              <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">~5 min episodes</span>
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">New every Monday</span>
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Free forever</span>
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Every major player</span>

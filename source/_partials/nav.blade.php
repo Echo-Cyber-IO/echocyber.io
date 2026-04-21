@@ -39,14 +39,6 @@
                           {{ $page->isActive('/assessment') ? 'after:w-full' : '' }}">
                     Assessment
                 </a>
-                <a href="/podcast"
-                   class="{{ $page->isActive('/podcast') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors relative
-                          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-crimson-500
-                          after:transition-all after:duration-300 hover:after:w-full
-                          {{ $page->isActive('/podcast') ? 'after:w-full' : '' }}">
-                    Podcast
-                </a>
                 <a href="/contact"
                    class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors relative
@@ -111,11 +103,6 @@
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors py-2">
                     Assessment
-                </a>
-                <a href="/podcast"
-                   class="{{ $page->isActive('/podcast') ? 'text-crimson-500' : 'text-echo-200' }}
-                          font-medium hover:text-crimson-500 transition-colors py-2">
-                    Podcast
                 </a>
                 <a href="/contact"
                    class="{{ $page->isActive('/contact') ? 'text-crimson-500' : 'text-echo-200' }}
