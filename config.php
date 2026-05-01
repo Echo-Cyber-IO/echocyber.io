@@ -5,6 +5,7 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => '',
     'production' => false,
+    'turnstileSiteKey' => getenv('TURNSTILE_SITE_KEY') ?: '',
     'siteName' => 'Echo Cyber',
     'siteDescription' => 'Fractional CTO & CISO services for growing businesses.',
     'siteAuthor' => 'Michael Faas',

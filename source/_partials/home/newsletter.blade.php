@@ -15,7 +15,7 @@
             </p>
         </div>
 
-        <div x-data="newsletterSignup()" class="mx-auto mt-10 max-w-lg">
+        <div x-data="newsletterSignup()" x-init="init()" class="mx-auto mt-10 max-w-lg">
             <form @submit.prevent="submit()" x-show="!success" class="flex flex-col gap-3 sm:flex-row">
                 <label for="newsletter-email" class="sr-only">Email address</label>
                 <input id="newsletter-email" type="email" x-model="email" required
@@ -26,7 +26,25 @@
                         class="px-6 py-3 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all hover:shadow-glow whitespace-nowrap">
                     <span x-text="submitting ? 'Subscribing...' : 'Subscribe'"></span>
                 </button>
+
+                {{-- Honeypot: invisible to humans, irresistible to lazy bots. --}}
+                <input type="text" name="company_website" x-model="hp" tabindex="-1" autocomplete="off"
+                       aria-hidden="true"
+                       style="position:absolute;left:-5000px;width:1px;height:1px;opacity:0">
             </form>
+
+            {{-- Cloudflare Turnstile widget. Renders nothing when site key is unset. --}}
+            @if (!empty($page->turnstileSiteKey))
+            <div x-show="!success" class="mt-3 flex justify-center">
+                <div class="cf-turnstile"
+                     data-sitekey="{{ $page->turnstileSiteKey }}"
+                     data-callback="onTurnstileSuccess"
+                     data-error-callback="onTurnstileError"
+                     data-expired-callback="onTurnstileExpired"
+                     data-theme="dark"
+                     data-size="flexible"></div>
+            </div>
+            @endif
 
             <div x-show="success" x-cloak x-transition class="rounded-lg border border-crimson-800/50 bg-crimson-950/30 p-4 text-center">
                 <p class="font-semibold text-white">You're in. 💎</p>
@@ -44,14 +62,30 @@
     </div>
 </section>
 
+@if (!empty($page->turnstileSiteKey))
+@push('scripts')
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+@endpush
+@endif
+
 @push('scripts')
 <script>
 function newsletterSignup() {
     return {
         email: '',
+        hp: '',
+        ts: 0,
+        turnstileToken: '',
         submitting: false,
         success: false,
         error: '',
+        init() {
+            this.ts = Date.now();
+            // Expose token-setter callbacks for Turnstile.
+            window.onTurnstileSuccess = (token) => { this.turnstileToken = token; };
+            window.onTurnstileError = () => { this.turnstileToken = ''; };
+            window.onTurnstileExpired = () => { this.turnstileToken = ''; };
+        },
         async submit() {
             if (this.submitting) return;
             this.submitting = true;
@@ -60,13 +94,23 @@ function newsletterSignup() {
                 const res = await fetch('/.netlify/functions/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: this.email, source: 'homepage' }),
+                    body: JSON.stringify({
+                        email: this.email,
+                        source: 'homepage',
+                        hp: this.hp,
+                        ts: this.ts,
+                        turnstileToken: this.turnstileToken,
+                    }),
                 });
                 const data = await res.json().catch(() => ({}));
                 if (res.ok && data.ok) {
                     this.success = true;
                 } else {
                     this.error = data.error || 'Something went wrong. Try again?';
+                    // Reset Turnstile so user can retry.
+                    if (window.turnstile && typeof window.turnstile.reset === 'function') {
+                        window.turnstile.reset();
+                    }
                 }
             } catch (err) {
                 this.error = 'Network error. Try again?';
