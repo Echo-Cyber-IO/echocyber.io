@@ -33,18 +33,16 @@
                        style="position:absolute;left:-5000px;width:1px;height:1px;opacity:0">
             </form>
 
-            {{-- Cloudflare Turnstile widget. Renders nothing when site key is unset. --}}
-            @if (!empty($page->turnstileSiteKey))
+            {{-- Cloudflare Turnstile widget. Site key is public; matching secret stays in Netlify env. --}}
             <div x-show="!success" class="mt-3 flex justify-center">
                 <div class="cf-turnstile"
-                     data-sitekey="{{ $page->turnstileSiteKey }}"
+                     data-sitekey="0x4AAAAAADG_poOR76T-jTV5"
                      data-callback="onTurnstileSuccess"
                      data-error-callback="onTurnstileError"
                      data-expired-callback="onTurnstileExpired"
                      data-theme="dark"
                      data-size="flexible"></div>
             </div>
-            @endif
 
             <div x-show="success" x-cloak x-transition class="rounded-lg border border-crimson-800/50 bg-crimson-950/30 p-4 text-center">
                 <p class="font-semibold text-white">You're in. 💎</p>
@@ -62,11 +60,9 @@
     </div>
 </section>
 
-@if (!empty($page->turnstileSiteKey))
 @push('scripts')
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 @endpush
-@endif
 
 @push('scripts')
 <script>
