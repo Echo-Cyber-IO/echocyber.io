@@ -15,7 +15,7 @@
         "fast-glob": "^3.2.12",
         "fuse.js": "^6.4.6",
         "highlight.js": "^10.5.0",
-        "postcss": "^8.4.21",
+        "postcss": "^8.5.15",
         "postcss-import": "^14.0.2",
         "tailwindcss": "^4.2.2",
         "vite": "^6.0.0"
