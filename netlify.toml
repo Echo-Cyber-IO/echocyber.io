@@ -14,3 +14,8 @@ timeout = 26
   to = "https://pod.link/1894903133"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/measure"
+  to = "/sprint/measure"
+  status = 301
