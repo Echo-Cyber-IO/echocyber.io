@@ -31,6 +31,39 @@
                           after:transition-all after:duration-300 hover:after:w-full">
                     Pricing
                 </a>
+
+                {{-- Sprints dropdown --}}
+                <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                    <button type="button" @click="open = !open"
+                            :aria-expanded="open.toString()"
+                            class="{{ $page->isActive('/sprint/measure') ? 'text-crimson-500' : 'text-echo-200' }}
+                                   flex items-center gap-1 font-medium hover:text-crimson-500 transition-colors">
+                        Sprints
+                        <svg class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': open }"
+                             fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </button>
+
+                    <div x-show="open" x-cloak
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 translate-y-1"
+                         class="absolute left-0 top-full pt-3 w-72">
+                        <div class="rounded-xl bg-echo-900 ring-1 ring-echo-700/60 shadow-xl shadow-echo-950/50 p-2">
+                            <a href="/sprint/measure"
+                               class="block rounded-lg px-4 py-3 transition-colors hover:bg-echo-800
+                                      {{ $page->isActive('/sprint/measure') ? 'bg-echo-800/60' : '' }}">
+                                <span class="block font-display font-semibold {{ $page->isActive('/sprint/measure') ? 'text-crimson-400' : 'text-white' }}">Measure</span>
+                                <span class="mt-0.5 block text-xs text-echo-400">Calibrated vulnerability triage</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors relative
@@ -99,6 +132,18 @@
                    class="text-echo-200 font-medium hover:text-crimson-500 transition-colors py-2">
                     Pricing
                 </a>
+
+                {{-- Sprints section --}}
+                <div class="py-2">
+                    <span class="block font-mono text-xs uppercase tracking-widest text-echo-500">Sprints</span>
+                    <a href="/sprint/measure"
+                       class="mt-3 block border-l-2 border-echo-700 pl-4 {{ $page->isActive('/sprint/measure') ? 'border-crimson-500 text-crimson-500' : 'text-echo-200' }}
+                              font-medium hover:text-crimson-500 hover:border-crimson-500 transition-colors">
+                        Measure
+                        <span class="block text-xs font-normal text-echo-400">Calibrated vulnerability triage</span>
+                    </a>
+                </div>
+
                 <a href="/assessment"
                    class="{{ $page->isActive('/assessment') ? 'text-crimson-500' : 'text-echo-200' }}
                           font-medium hover:text-crimson-500 transition-colors py-2">
