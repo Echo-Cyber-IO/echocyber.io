@@ -6,11 +6,14 @@
 
     <div class="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8 lg:py-32">
         <div class="mx-auto max-w-3xl text-center">
-            <h1 class="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl">
-                Translating <span class="text-crimson-500">geek</span> into human.
+            <h1 class="font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
+                Security doesn't fail in silos. It fails in <span class="text-crimson-500">cascades.</span>
             </h1>
-            <p class="mx-auto mt-8 max-w-2xl text-xl leading-8 text-echo-300">
-                Fractional CTO &amp; CISO for founders who know they need a technology and security strategy&nbsp;&mdash; but aren't ready to hire a $250K executive to get one.
+            <p class="mx-auto mt-6 font-display text-2xl font-semibold text-echo-100 sm:text-3xl">
+                Translating <span class="text-crimson-500">geek</span> into human.
+            </p>
+            <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-echo-300">
+                Fractional CTO &amp; CISO for founder-led companies. Strategy without the $250K hire.
             </p>
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-5">
                 <a href="/schedule" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">

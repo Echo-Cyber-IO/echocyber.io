@@ -20,7 +20,7 @@
                     </div>
                     <div>
                         <div class="font-semibold text-white">JD Helms</div>
-                        <div class="mt-0.5 text-sm text-echo-400">COO @ SoftwareOne &middot; Co-Founder @ PsychReport.ai</div>
+                        <div class="mt-0.5 text-sm text-echo-400">Technology Executive</div>
                     </div>
                 </figcaption>
             </figure>
