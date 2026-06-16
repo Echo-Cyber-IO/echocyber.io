@@ -17,7 +17,7 @@
             </p>
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-5">
                 <a href="/schedule" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500">
-                    Schedule a Clarity Call
+                    Grab 30 Minutes
                 </a>
                 <a href="/assessment" class="group inline-flex items-center gap-2 rounded-lg border border-crimson-700 bg-crimson-900/20 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-crimson-500 hover:bg-crimson-900/40 hover:shadow-glow">
                     Discover your Signal Score

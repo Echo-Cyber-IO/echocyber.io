@@ -15,7 +15,7 @@
             </p>
             <div class="mt-10">
                 <a href="/schedule" class="inline-block rounded-lg bg-crimson-700 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-crimson-600 hover:shadow-glow">
-                    Schedule a Clarity Call
+                    Grab 30 Minutes
                 </a>
             </div>
             <p class="mt-6 text-sm italic text-echo-600">

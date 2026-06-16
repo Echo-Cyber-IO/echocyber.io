@@ -274,7 +274,7 @@ description: Get in touch to discuss your technology and security leadership nee
                     <div class="flex-1"></div>
 
                     <a href="/schedule" class="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg transition-all hover:shadow-glow">
-                        Book a Strategy Session
+                        Grab 30 Minutes
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                     </a>
                 </div>
