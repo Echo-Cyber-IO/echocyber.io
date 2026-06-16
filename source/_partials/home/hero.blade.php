@@ -7,7 +7,7 @@
     <div class="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8 lg:py-32">
         <div class="mx-auto max-w-3xl text-center">
             <h1 class="font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
-                Security doesn't fail in silos. It fails in <span class="text-crimson-500">cascades.</span>
+                Technology doesn't fail in silos. It fails in <span class="text-crimson-500">cascades.</span>
             </h1>
             <p class="mx-auto mt-6 font-display text-2xl font-semibold text-echo-100 sm:text-3xl">
                 Translating <span class="text-crimson-500">geek</span> into human.

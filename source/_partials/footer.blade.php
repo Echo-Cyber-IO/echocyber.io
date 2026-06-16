@@ -12,7 +12,7 @@
                     </span>
                 </a>
                 <p class="text-echo-400 text-sm max-w-xs italic">
-                    Security doesn't fail in silos. It fails in cascades.
+                    Technology doesn't fail in silos. It fails in cascades.
                 </p>
             </div>
 

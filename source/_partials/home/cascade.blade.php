@@ -12,7 +12,7 @@
             </div>
 
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-                Most leaders treat security like it's complicated. <span class="text-crimson-500">It's complex.</span>
+                Most leaders treat technology like it's complicated. <span class="text-crimson-500">It's complex.</span>
             </h2>
 
             <div class="mx-auto mt-10 max-w-2xl space-y-6 text-lg leading-8 text-echo-300">
