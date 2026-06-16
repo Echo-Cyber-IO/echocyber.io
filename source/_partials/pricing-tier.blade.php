@@ -1,6 +1,7 @@
 {{--
     Pricing tier card (TailwindPlus "Three tiers with emphasized tier" pattern, brand-adapted).
     Required vars: name, tagline, price, priceSuffix, description, features (array), cta, featured (bool)
+    Optional vars: metaphor (short brand-metaphor line under the name; renders empty if absent)
 --}}
 <div @if($featured) data-featured="true" @endif
      class="group/tier relative flex flex-col rounded-3xl bg-echo-950/60 p-8 ring-1 ring-echo-700/50 backdrop-blur-sm transition-all hover:ring-echo-600 data-featured:bg-echo-950 data-featured:ring-2 data-featured:ring-crimson-600 data-featured:shadow-glow xl:p-10">
@@ -19,6 +20,10 @@
             <h3 class="font-display text-xl font-semibold text-white group-data-featured/tier:text-crimson-400">{{ $name }}</h3>
             <span class="text-xs font-medium uppercase tracking-wider {{ $featured ? 'text-crimson-400' : 'text-echo-500' }}">{{ $tagline }}</span>
         </div>
+
+        @if(!empty($metaphor ?? null))
+            <p class="mt-1 font-mono text-sm text-crimson-500">{{ $metaphor }}</p>
+        @endif
 
         <p class="mt-6 flex items-baseline gap-x-2">
             <span class="font-display text-5xl font-bold tracking-tight text-white">{{ $price }}</span>

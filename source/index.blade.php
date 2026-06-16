@@ -12,7 +12,7 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 
 @include('_partials.home.cascade')
 
-@include('_partials.home.how-it-works')
+@include('_partials.home.pricing')
 
 @include('_partials.home.trust-bar')
 
@@ -21,8 +21,6 @@ description: Fractional CTO & CISO for growth-stage companies navigating technol
 @include('_partials.home.testimonials')
 
 @include('_partials.home.track-record')
-
-@include('_partials.home.pricing')
 
 @include('_partials.home.signal-score-cta')
 
