@@ -37,7 +37,7 @@
                     'Technology and security gap analysis',
                     'Prioritized roadmap with clear next steps',
                 ],
-                'cta' => 'Get started',
+                'cta' => 'Schedule a Clarity Call',
                 'featured' => false,
             ])
 
@@ -55,7 +55,7 @@
                     'Governance design + security program buildout',
                     'Roadmap execution and vendor negotiation',
                 ],
-                'cta' => 'Get started',
+                'cta' => 'Schedule a Clarity Call',
                 'featured' => true,
             ])
 
@@ -72,7 +72,7 @@
                     'On-call for key decisions and vendor evaluations',
                     'Governance oversight and course corrections',
                 ],
-                'cta' => 'Get started',
+                'cta' => 'Schedule a Clarity Call',
                 'featured' => false,
             ])
 

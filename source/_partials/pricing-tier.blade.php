@@ -47,7 +47,7 @@
     </div>
 
     <div class="mt-8 pt-6 border-t border-echo-800">
-        <a href="/contact"
+        <a href="/schedule"
            class="block w-full rounded-lg px-4 py-3 text-center text-sm font-semibold transition-all
                   {{ $featured
                       ? 'bg-crimson-700 text-white shadow-sm hover:bg-crimson-600 hover:shadow-glow'

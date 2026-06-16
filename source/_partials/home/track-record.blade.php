@@ -9,7 +9,7 @@
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Proof beats <span class="text-crimson-400">prose.</span>
             </h2>
-            <p class="mt-4 text-echo-400 text-sm">Names withheld&nbsp;&mdash; NDAs are a feature, not a limitation.</p>
+            <p class="mt-4 text-echo-400 text-sm">Names withheld. NDAs are a feature, not a limitation.</p>
         </div>
 
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">

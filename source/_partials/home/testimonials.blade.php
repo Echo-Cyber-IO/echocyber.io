@@ -34,7 +34,7 @@
                 </figcaption>
             </figure>
 
-            {{-- Vosburgh (client — subtly distinguished by crimson tint + badge) --}}
+            {{-- Vosburgh (client, subtly distinguished by crimson tint + badge) --}}
             <figure class="relative isolate flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-crimson-950/30 via-echo-900/80 to-echo-900/80 p-8 ring-1 ring-crimson-700/30 transition-all hover:ring-crimson-600/50">
                 <svg viewBox="0 0 162 128" fill="none" aria-hidden="true"
                      class="absolute -top-2 -left-2 -z-10 h-20 stroke-crimson-700/30">
