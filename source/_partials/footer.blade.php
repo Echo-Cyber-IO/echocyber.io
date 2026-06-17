@@ -12,7 +12,7 @@
                     </span>
                 </a>
                 <p class="text-echo-400 text-sm max-w-xs italic">
-                    Navigating complexity. Translating tech.
+                    Technology doesn't fail in silos. It fails in cascades.
                 </p>
             </div>
 

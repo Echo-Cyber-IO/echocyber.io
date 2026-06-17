@@ -1,6 +1,6 @@
 ---
-title: Strategy Session
-description: Book a free strategy session with Mike Faas to discuss your business, technology, and security.
+title: Book a Free 30-Minute Call
+description: Book a free 30-minute call with Mike Faas to talk through your technology and security. No pitch.
 ---
 @extends('_layouts.main')
 
@@ -13,7 +13,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
         <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free strategy session</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free 30-minute call</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
 
@@ -22,7 +22,7 @@ description: Book a free strategy session with Mike Faas to discuss your busines
             </h1>
 
             <p class="mx-auto mt-6 max-w-xl text-lg text-pretty text-echo-300 sm:text-xl/8">
-                Honest questions, straight answers. Pick a time that works &mdash; we'll figure out if there's a fit, and you'll walk away with something useful either way.
+                Honest questions, straight answers. Pick a time that works. We'll figure out if there's a fit, and you'll walk away with something useful either way.
             </p>
 
             <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -55,6 +55,13 @@ description: Book a free strategy session with Mike Faas to discuss your busines
                     id="KjGTZUQdoqLZpU5NtmNL_1774582373290"
                     allow="payment"></iframe>
             </div>
+
+            {{-- Escape hatch for visitors not ready to commit to a time --}}
+            <p class="mt-8 text-center text-sm text-echo-400">
+                Not ready to pick a time?
+                <a href="/contact" class="font-semibold text-crimson-500 transition-colors hover:text-crimson-400">Send a message instead</a>.
+            </p>
+
             <script src="https://apicrm.ctox.com/js/form_embed.js" type="text/javascript"></script>
         </div>
     </section>
@@ -81,16 +88,16 @@ description: Book a free strategy session with Mike Faas to discuss your busines
                     <dl class="space-y-4">
                         @foreach([
                             [
-                                'q' => 'What will we cover in the strategy session?',
-                                'a' => "You'll talk directly with me about where your business is today &mdash; your team size, how you use technology, and what's keeping you up at night. This isn't a deep-dive audit. It's a conversation to figure out if there's a fit. If there is, we'll talk about what comes next. If there isn't, you'll still walk away with something useful.",
+                                'q' => 'What will we cover on the call?',
+                                'a' => "You'll talk directly with me about where your business is today: your team size, how you use technology, and what's keeping you up at night. This isn't a deep-dive audit. It's a conversation to figure out if there's a fit. If there is, we'll talk about what comes next. If there isn't, you'll still walk away with something useful.",
                             ],
                             [
-                                'q' => 'Is there a cost for this initial session?',
+                                'q' => 'Is there a cost for the call?',
                                 'a' => 'No. Zero. This is a conversation, not a sales pitch.',
                             ],
                             [
                                 'q' => "Who will I be meeting with?",
-                                'a' => "Me &mdash; Mike Faas. I'm a fractional CTO and CISO who helps founder-led businesses make sense of technology and security without the overhead of a full-time executive.",
+                                'a' => "Me, Mike Faas. I'm a fractional CTO and CISO who helps founder-led businesses make sense of technology and security without the overhead of a full-time executive.",
                             ],
                             [
                                 'q' => 'What should I prepare for the meeting?',

@@ -52,7 +52,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
             {{-- Scope chips --}}
             <div class="mt-6 flex flex-wrap gap-2">
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">~5 min episodes</span>
-              <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">New every Monday</span>
+              <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">New every Sunday</span>
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Free forever</span>
               <span class="rounded-md bg-echo-900/60 px-2.5 py-1 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Every major player</span>
             </div>
@@ -207,13 +207,13 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
           </div>
           <h2 class="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">Michael Faas</h2>
           <p class="mt-6 text-base text-echo-300">
-            Twenty years building security programs for global enterprises — from founder-led teams to global brands like Carhartt, Bose, and Black Rifle Coffee. Now a fractional CTO/CISO through Echo Cyber, making the secure path the easy path for founder-led businesses in the $2.5M&ndash;$25M range.
+            25+ years building security programs across the size spectrum, from Fortune 500 enterprises to founder-led teams. Names withheld; NDAs are a feature, not a limitation. Now a fractional CTO/CISO through Echo Cyber, making the secure path the easy path for founder-led businesses in the $2.5M&ndash;$25M range.
           </p>
           <p class="mt-4 text-base text-echo-300">
-            Known for translating complex systems without dumbing them down &mdash; what he calls <em class="text-white">"translating geek into human."</em>
+            Known for translating complex systems without dumbing them down. What he calls <em class="text-white">"translating geek into human."</em>
           </p>
           <p class="mt-6 text-sm text-echo-400 italic border-l-2 border-crimson-700/50 pl-4">
-            Voiced by Jane &mdash; an AI trained on Mike's writing. Every word, Mike's.
+            Voiced by Jane, an AI trained on Mike's writing. Every word, Mike's.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-crimson-700 hover:bg-crimson-600 text-white px-5 py-2.5 text-sm font-medium transition-all hover:shadow-glow">

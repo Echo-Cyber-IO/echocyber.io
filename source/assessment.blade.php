@@ -118,7 +118,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
                   <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
                   <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/15 px-2 py-1 ring-1 ring-yellow-500/30 shadow-sm shadow-yellow-500/10">
                     <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
-                    <span class="font-mono text-xs font-semibold text-yellow-400">$300K&ndash;$750K annual risk</span>
+                    <span class="font-mono text-xs font-semibold text-yellow-400">$200K&ndash;$650K annual risk</span>
                   </div>
                 </div>
               </div>

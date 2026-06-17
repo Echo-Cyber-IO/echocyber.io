@@ -20,10 +20,10 @@
                 </h2>
                 <div class="mt-8 space-y-6 text-lg leading-8 text-echo-300">
                     <p>
-                        25+ years and 40+ security and technology programs&nbsp;&mdash; Fortune 500 to high-growth startups. I've sat in the CISO chair. I've built the governance programs. I've had the vendor calls where nobody in the room knew what questions to ask.
+                        25+ years and 40+ security and technology programs. Fortune 500 to high-growth startups. I've sat in the CISO chair. I've built the governance programs. I've had the vendor calls where nobody in the room knew what questions to ask.
                     </p>
                     <p>
-                        I started Echo Cyber because smart founders are making million-dollar technology decisions with vendor slide decks and gut instinct. Not another consultant talking in acronyms. Someone who can walk into a board meeting and explain what's actually going on&nbsp;&mdash; in plain English.
+                        I started Echo Cyber because smart founders are making million-dollar technology decisions with vendor slide decks and gut instinct. Not another consultant talking in acronyms. Someone who can walk into a board meeting and explain what's actually going on, in plain English.
                     </p>
                     <p class="text-sm italic text-echo-500">
                         Based in Raleigh, NC. Dad. Blue belt. Reluctant morning person.

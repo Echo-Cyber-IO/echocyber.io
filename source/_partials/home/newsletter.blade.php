@@ -11,7 +11,7 @@
                 Signal vs. Noise
             </h2>
             <p class="mt-6 text-lg leading-8 text-echo-300">
-                Cutting through the chaos of cybersecurity and technology&nbsp;&mdash; so you can lead with clarity. One email every Sunday. No fluff, no vendor hype, no fear-mongering.
+                Cutting through the chaos of cybersecurity and technology, so you can lead with clarity. One email every Sunday. No fluff, no vendor hype, no fear-mongering.
             </p>
         </div>
 
