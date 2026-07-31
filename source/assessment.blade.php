@@ -74,7 +74,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
                   Start your assessment
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </button>
-                <p class="mt-3 text-xs text-echo-500">No email required to take it. No sales follow-up.</p>
+                <p class="mt-3 text-xs text-echo-500">No email to take it. Your grade is instant. The full report needs a work email.</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
                 </div>
                 <div class="flex-1 min-w-0">
                   <p class="font-display text-2xl font-bold text-white">Room to Grow</p>
-                  <p class="mt-2 text-sm text-echo-400">Significant exposure &mdash; one bad day could be very expensive.</p>
+                  <p class="mt-2 text-sm text-echo-400">Significant exposure. One bad day could be very expensive.</p>
                   <div class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/15 px-2 py-1 ring-1 ring-yellow-500/30 shadow-sm shadow-yellow-500/10">
                     <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" clip-rule="evenodd"/></svg>
                     <span class="font-mono text-xs font-semibold text-yellow-400">$200K&ndash;$650K annual risk</span>
@@ -168,7 +168,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">Where you're <span class="text-crimson-400">exposed</span></h3>
             </header>
             <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
-              A&ndash;F grades across 8 areas that actually matter &mdash; from identity to incident readiness.
+              A&ndash;F grades across 8 areas that actually matter, from identity to incident readiness.
             </div>
           </article>
 
@@ -188,7 +188,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What to <span class="text-crimson-400">fix first</span></h3>
             </header>
             <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
-              A prioritized plan &mdash; not a 90-page report that sits in a drawer.
+              A prioritized plan, not a 90-page report that sits in a drawer.
             </div>
           </article>
 
@@ -306,7 +306,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
             </div>
             <h2 class="text-2xl sm:text-3xl font-bold mb-3 font-display">Your full report is ready</h2>
             <p class="text-echo-300 max-w-lg mx-auto">
-              Per-category grades, your top 3 risks, and estimated dollar exposure for each &mdash; just below.
+              Per-category grades, your top 3 risks, and estimated dollar exposure for each, just below.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
             </div>
             <div class="flex items-start gap-2 pt-1">
               <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
-              <label class="text-sm text-echo-400">Send me Signal vs. Noise &mdash; a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
+              <label class="text-sm text-echo-400">Send me Signal vs. Noise, a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
             </div>
             <button type="submit" :disabled="submitting"
               class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] flex items-center justify-center gap-2">
@@ -425,7 +425,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               <span class="text-crimson-500 font-bold shrink-0" x-text="`${i + 1}.`"></span>
               <div>
                 <span class="font-semibold" x-text="risk.name"></span>
-                <span class="text-echo-400" x-text="` — Grade ${risk.grade}. ${risk.description}`"></span>
+                <span class="text-echo-400" x-text="`: Grade ${risk.grade}. ${risk.description}`"></span>
                 <template x-if="risk.cascadeHint">
                   <p class="text-xs text-crimson-400/70 mt-1 italic" x-text="risk.cascadeHint"></p>
                 </template>
@@ -466,7 +466,7 @@ function quiz() {
     answers: {},
     unlocked: false,
     submitting: false,
-    lead: { name: '', email: '', company: '', role: '', size: '', newsletter: true },
+    lead: { name: '', email: '', company: '', role: '', size: '', newsletter: false },
     _formLoadedAt: Date.now(),
 
     categoryNames: [
@@ -1043,7 +1043,7 @@ function quiz() {
       this.unlocked = false;
       this.submitting = false;
       this._serverTopRisks = null;
-      this.lead = { name: '', email: '', company: '', role: '', size: '', newsletter: true };
+      this.lead = { name: '', email: '', company: '', role: '', size: '', newsletter: false };
     },
 
     getGrade(score, maxPoints) {
