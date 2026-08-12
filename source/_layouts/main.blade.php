@@ -87,6 +87,55 @@
                 "publisher": {
                     "@@id": "{{ $page->baseUrl }}/#organization"
                 }
+            },
+            {
+                "@@type": "DefinedTermSet",
+                "@@id": "{{ $page->baseUrl }}/#signal-vocabulary",
+                "name": "Echo Cyber Signal Vocabulary",
+                "description": "The terminology Echo Cyber uses to describe how technology and security failures propagate through a business, and the assessments built on it. Score shows where. Map shows why. Measure shows what to do about it.",
+                "publisher": {
+                    "@@id": "{{ $page->baseUrl }}/#organization"
+                },
+                "hasDefinedTerm": [
+                    {
+                        "@@type": "DefinedTerm",
+                        "@@id": "{{ $page->baseUrl }}/#term-cascade",
+                        "name": "Cascade Failure",
+                        "alternateName": "Cascade",
+                        "description": "A failure mode in which a weakness in one technology or security domain propagates into several connected domains, producing multiple apparently separate problems that share a single root cause. A weak identity practice, for example, degrades incident response, compliance evidence, and vendor assurance at the same time, each surfacing on a different dashboard with a different owner. Echo Cyber's central thesis: technology doesn't fail in silos, it fails in cascades.",
+                        "inDefinedTermSet": {
+                            "@@id": "{{ $page->baseUrl }}/#signal-vocabulary"
+                        }
+                    },
+                    {
+                        "@@type": "DefinedTerm",
+                        "@@id": "{{ $page->baseUrl }}/#term-signal-score",
+                        "name": "Signal Score",
+                        "url": "{{ $page->baseUrl }}/assessment",
+                        "description": "A free security assessment that grades a business A through F across the eight categories that matter most for small and growing companies: Identity and Access, Devices and Patching, Email and Phishing Defense, Backup and Recovery, Network Security, Data Protection, Vendor and SaaS Risk, and Incident Readiness. Thirty-seven questions, about fifteen minutes, results are immediate. The Signal Score shows a business where it stands.",
+                        "inDefinedTermSet": {
+                            "@@id": "{{ $page->baseUrl }}/#signal-vocabulary"
+                        }
+                    },
+                    {
+                        "@@type": "DefinedTerm",
+                        "@@id": "{{ $page->baseUrl }}/#term-signal-map",
+                        "name": "Signal Map",
+                        "description": "A visualization of how one business's Signal Score results cascade: which weak categories are pulling down which connected categories, and along what path. A graph, not a spreadsheet and not a maturity model. Where the Signal Score shows where a business stands, the Signal Map shows why it stands there.",
+                        "inDefinedTermSet": {
+                            "@@id": "{{ $page->baseUrl }}/#signal-vocabulary"
+                        }
+                    },
+                    {
+                        "@@type": "DefinedTerm",
+                        "@@id": "{{ $page->baseUrl }}/#term-signal-measure",
+                        "name": "Signal Measure",
+                        "description": "A paid engagement that applies calibrated estimation and decision-discipline methods to one specific decision surfaced by a Signal Map, translating a security gap into a defensible number a founder, board, or CFO can act on. Where the Signal Map shows why, Signal Measure shows what to do about it.",
+                        "inDefinedTermSet": {
+                            "@@id": "{{ $page->baseUrl }}/#signal-vocabulary"
+                        }
+                    }
+                ]
             }
         ]
     }
