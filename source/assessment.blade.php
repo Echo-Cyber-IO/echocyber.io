@@ -49,7 +49,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
               <div class="flex items-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Free security assessment</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Free security assessment</span>
               </div>
 
               <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance text-white">
@@ -74,7 +74,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
                   Start your assessment
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </button>
-                <p class="mt-3 text-xs text-echo-500">No email to take it. Your grade is instant. The full report needs a work email.</p>
+                <p class="mt-3 text-xs text-echo-300">No email to take it. Your grade is instant. The full report needs a work email.</p>
               </div>
             </div>
           </div>
@@ -100,9 +100,9 @@ description: Find out where your company stands in 15 minutes. Free security ass
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse shadow-lg shadow-crimson-500/50"></div>
-                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Score &middot; sample</p>
+                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-450">Signal Score &middot; sample</p>
                 </div>
-                <span class="font-mono text-xs text-echo-500">Yours in 15 min</span>
+                <span class="font-mono text-xs text-echo-300">Yours in 15 min</span>
               </div>
 
               <div class="mt-8 flex items-center gap-6">
@@ -124,7 +124,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               </div>
 
             <div class="mt-8 space-y-3 border-t border-echo-800 pt-6">
-              <p class="text-xs font-mono uppercase tracking-widest text-echo-500">Grades by area</p>
+              <p class="text-xs font-mono uppercase tracking-widest text-echo-300">Grades by area</p>
               @foreach([['Identity & Access', 'B', 'bg-blue-500', 78], ['Devices & Patching', 'B', 'bg-blue-500', 72], ['Email & Phishing', 'C', 'bg-yellow-500', 56], ['Backup & Recovery', 'D', 'bg-orange-500', 32], ['Network Security', 'C', 'bg-yellow-500', 50], ['Data Protection', 'C', 'bg-yellow-500', 48], ['Vendor & SaaS Risk', 'D', 'bg-orange-500', 34], ['Incident Readiness', 'F', 'bg-red-500', 14]] as $row)
                 <div class="flex items-center justify-between gap-3 text-xs">
                   <span class="text-echo-300 truncate">{{ $row[0] }}</span>
@@ -138,7 +138,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               @endforeach
             </div>
 
-              <p class="mt-6 text-center text-xs italic text-echo-500">Sample result. Yours will be specific to your business.</p>
+              <p class="mt-6 text-center text-xs italic text-echo-300">Sample result. Yours will be specific to your business.</p>
             </div>
 
           </div>
@@ -152,7 +152,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
         <div class="mx-auto max-w-3xl text-center">
           <div class="flex items-center justify-center gap-3">
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">In 15 minutes you'll know</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">In 15 minutes you'll know</span>
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
           </div>
           <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -164,8 +164,8 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
           <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
             <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
-              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Diagnostic</p>
-              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">Where you're <span class="text-crimson-400">exposed</span></h3>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Diagnostic</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">Where you're <span class="text-crimson-500">exposed</span></h3>
             </header>
             <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
               A&ndash;F grades across 8 areas that actually matter, from identity to incident readiness.
@@ -174,8 +174,8 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
           <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
             <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
-              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Translation</p>
-              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What it <span class="text-crimson-400">costs</span> you</h3>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Translation</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What it <span class="text-crimson-500">costs</span> you</h3>
             </header>
             <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
               Every gap translated to dollars. The language your board and your CFO actually speak.
@@ -184,8 +184,8 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
           <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900/80 ring-1 ring-echo-700/50 transition-all hover:ring-echo-600">
             <header class="border-b border-echo-800/60 bg-echo-950/40 px-7 py-6">
-              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Action</p>
-              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What to <span class="text-crimson-400">fix first</span></h3>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Action</p>
+              <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">What to <span class="text-crimson-500">fix first</span></h3>
             </header>
             <div class="flex-1 px-7 py-6 text-sm leading-6 text-echo-300">
               A prioritized plan, not a 90-page report that sits in a drawer.
@@ -207,7 +207,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
       <div class="max-w-3xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between mb-2">
           <span class="text-sm font-medium text-echo-300" x-text="currentCategory"></span>
-          <span class="text-sm text-echo-500" x-text="`Question ${currentQ + 1} of ${questions.length}`"></span>
+          <span class="text-sm text-echo-300" x-text="`Question ${currentQ + 1} of ${questions.length}`"></span>
         </div>
         <div class="h-1.5 bg-echo-800 rounded-full overflow-hidden">
           <div class="h-full bg-crimson-700 rounded-full bar-fill" :style="`width: ${((currentQ) / questions.length) * 100}%`"></div>
@@ -227,7 +227,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
     <div class="flex-1 flex items-center justify-center px-6 py-12">
       <div class="max-w-3xl w-full fade-in" :key="currentQ">
         <!-- Category change indicator -->
-        <div x-show="isNewCategory" class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-400 text-sm font-medium">
+        <div x-show="isNewCategory" class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-450 text-sm font-medium">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           <span x-text="currentCategory"></span>
         </div>
@@ -288,7 +288,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
         <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-echo-800/50 border border-echo-700">
           <span class="text-echo-400 text-sm">Overall Score:</span>
           <span class="font-bold font-mono" x-text="`${totalScore} / 185`"></span>
-          <span class="text-echo-500 text-sm">&middot;</span>
+          <span class="text-echo-300 text-sm">&middot;</span>
           <span class="text-sm" :class="gradeColor(overallGrade, 'text')" x-text="`Estimated Annual Risk: ${overallRisk}`"></span>
         </div>
       </div>
@@ -300,7 +300,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
         <!-- Inline unlock form -->
         <div class="mb-8 p-8 rounded-xl bg-gradient-to-br from-echo-900 to-echo-800 border border-crimson-800/50 relative z-10">
           <div class="text-center mb-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-400 text-xs font-medium mb-4 font-mono uppercase tracking-wider">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-450 text-xs font-medium mb-4 font-mono uppercase tracking-wider">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
               One step to unlock
             </div>
@@ -366,7 +366,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
               <span x-text="submitting ? 'Unlocking...' : 'Unlock My Full Report'"></span>
               <svg x-show="!submitting" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
             </button>
-            <p class="text-xs text-echo-500 text-center">Private. We don't share or sell your data. Ever.</p>
+            <p class="text-xs text-echo-300 text-center">Private. We don't share or sell your data. Ever.</p>
           </form>
         </div>
 
@@ -418,7 +418,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
       </div>
 
       <div class="mt-12 p-6 rounded-xl bg-crimson/5 border border-crimson/20">
-        <h2 class="text-xl font-bold mb-4 text-crimson-400 font-display">Your Top Risks</h2>
+        <h2 class="text-xl font-bold mb-4 text-crimson-500 font-display">Your Top Risks</h2>
         <div class="space-y-3">
           <template x-for="(risk, i) in topRisks" :key="i">
             <div class="flex gap-3 items-start">
@@ -427,7 +427,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
                 <span class="font-semibold" x-text="risk.name"></span>
                 <span class="text-echo-400" x-text="`: Grade ${risk.grade}. ${risk.description}`"></span>
                 <template x-if="risk.cascadeHint">
-                  <p class="text-xs text-crimson-400/70 mt-1 italic" x-text="risk.cascadeHint"></p>
+                  <p class="text-xs text-crimson-450/70 mt-1 italic" x-text="risk.cascadeHint"></p>
                 </template>
               </div>
             </div>
@@ -444,7 +444,7 @@ description: Find out where your company stands in 15 minutes. Free security ass
           Book a Free 30-Minute Review
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
         </a>
-        <p class="text-sm text-echo-500 mt-4">No obligation. No pitch. Just clarity.</p>
+        <p class="text-sm text-echo-300 mt-4">No obligation. No pitch. Just clarity.</p>
       </div>
 
       <div class="mt-8 text-center">

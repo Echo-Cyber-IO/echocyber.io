@@ -17,7 +17,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         <div class="mx-auto max-w-4xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Founding cohort &middot; three pilot slots</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Founding cohort &middot; three pilot slots</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
 
@@ -42,7 +42,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
                     Book a fit call
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
-                <p class="mt-3 text-xs text-echo-500">30 minutes. Free. We confirm the fit, or point you somewhere better.</p>
+                <p class="mt-3 text-xs text-echo-300">30 minutes. Free. We confirm the fit, or point you somewhere better.</p>
             </div>
         </div>
     </div>
@@ -57,7 +57,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
             <div class="lg:col-span-5">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                    <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">The problem</span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">The problem</span>
                 </div>
                 <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
                     Your scanner sorts by the one thing it can measure.
@@ -86,7 +86,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         <div class="mx-auto max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What it is</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">What it is</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -104,8 +104,8 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
                 ['03', 'Cost', 'What a breach of each affected system would actually cost your business, calibrated with the people who run it.'],
             ] as $lens)
                 <div class="relative flex flex-col rounded-2xl bg-echo-900/60 p-7 ring-1 ring-echo-700/40 transition-all hover:ring-echo-600">
-                    <span class="font-mono text-sm text-crimson-500/70">{{ $lens[0] }}</span>
-                    <h3 class="mt-3 font-display text-xl font-semibold text-crimson-400">{{ $lens[1] }}</h3>
+                    <span class="font-mono text-sm text-crimson-450">{{ $lens[0] }}</span>
+                    <h3 class="mt-3 font-display text-xl font-semibold text-crimson-450">{{ $lens[1] }}</h3>
                     <p class="mt-3 text-base leading-7 text-echo-300">{{ $lens[2] }}</p>
                 </div>
             @endforeach
@@ -126,7 +126,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         <div class="mx-auto max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What you get</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">What you get</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -165,7 +165,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         <div class="mx-auto max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">The pilot</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">The pilot</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
@@ -190,7 +190,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
                         <span class="font-display text-6xl font-bold tracking-tight text-white">$5,000</span>
                         <span class="text-base text-echo-400">flat</span>
                     </p>
-                    <p class="mt-2 text-sm font-mono uppercase tracking-widest text-crimson-400">One-time founding rate</p>
+                    <p class="mt-2 text-sm font-mono uppercase tracking-widest text-crimson-450">One-time founding rate</p>
                 </div>
 
                 <div class="mt-8 space-y-4 border-t border-echo-800 pt-8 text-base leading-7 text-echo-300">
@@ -235,7 +235,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         <div class="mx-auto max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Who this is for</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Who this is for</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -258,7 +258,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
         </ul>
 
         <p class="mx-auto mt-10 max-w-2xl text-center text-base leading-7 text-echo-400">
-            If that is not you yet, start with the free <a href="/assessment" class="font-semibold text-crimson-500 hover:text-crimson-400 transition-colors">Signal Score</a>. It tells you in fifteen minutes whether severity-only prioritization is quietly dragging your program down.
+            If that is not you yet, start with the free <a href="/assessment" class="font-semibold text-crimson-500 hover:text-crimson-450 transition-colors">Signal Score</a>. It tells you in fifteen minutes whether severity-only prioritization is quietly dragging your program down.
         </p>
     </div>
 </section>
@@ -285,7 +285,7 @@ description: A fixed-scope engagement that rebuilds how your team prioritizes vu
             </div>
 
             <p class="mt-6 text-base text-echo-400">
-                Not ready to talk yet? Start with the free <a href="/assessment" class="font-semibold text-crimson-500 hover:text-crimson-400 transition-colors">Signal Score</a>.
+                Not ready to talk yet? Start with the free <a href="/assessment" class="font-semibold text-crimson-500 hover:text-crimson-450 transition-colors">Signal Score</a>.
             </p>
         </div>
     </div>

@@ -6,12 +6,12 @@
             {{-- Eyebrow --}}
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-500 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-400">Free assessment</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Free assessment</span>
                 <div class="w-8 h-1 bg-crimson-500 rounded-full"></div>
             </div>
 
             <h2 class="mt-6 font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-                Not ready for a call? <span class="text-crimson-400">Start here.</span>
+                Not ready for a call? <span class="text-crimson-500">Start here.</span>
             </h2>
 
             <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-echo-300">

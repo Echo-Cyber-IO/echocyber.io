@@ -9,10 +9,10 @@ body {
 a {
     @apply font-medium;
     @apply no-underline;
-    @apply text-crimson-500;
+    @apply text-crimson-450;
     @apply transition-colors;
     @apply duration-200;
-    @apply hover:text-crimson-400;
+    @apply hover:text-crimson-425;
 }
 
 blockquote {

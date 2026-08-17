@@ -13,7 +13,7 @@ description: Get in touch to discuss your technology and security leadership nee
     <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
         <div class="flex items-center justify-center gap-3">
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Get in touch</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Get in touch</span>
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
         </div>
 
@@ -36,9 +36,9 @@ description: Get in touch to discuss your technology and security leadership nee
             {{-- Path 1: Send a message (form tile) --}}
             <div class="flex flex-col overflow-hidden rounded-3xl bg-echo-900/60 ring-1 ring-echo-700/40">
                 <div class="border-b border-echo-800/60 bg-echo-950/40 px-8 py-6">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Path 1 &middot; Write it out</p>
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Path 1 &middot; Write it out</p>
                     <h2 class="mt-1.5 font-display text-2xl font-bold tracking-tight text-white">
-                        Send a <span class="text-crimson-400">message</span>
+                        Send a <span class="text-crimson-500">message</span>
                     </h2>
                 </div>
 
@@ -224,16 +224,16 @@ description: Get in touch to discuss your technology and security leadership nee
                 <div aria-hidden="true" class="absolute -bottom-40 -left-20 w-[350px] h-[350px] bg-gradient-to-tr from-crimson-900/20 to-transparent blur-3xl pointer-events-none"></div>
 
                 <div class="relative border-b border-crimson-800/40 bg-echo-950/40 px-8 py-6">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-400">Path 2 &middot; Skip the form</p>
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Path 2 &middot; Skip the form</p>
                     <h2 class="mt-1.5 font-display text-2xl font-bold tracking-tight text-white">
-                        Book a <span class="text-crimson-400">session</span>
+                        Book a <span class="text-crimson-500">session</span>
                     </h2>
                 </div>
 
                 <div class="relative flex flex-1 flex-col p-8 lg:p-10">
                     <div class="flex items-center gap-4">
                         <div class="flex-none inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-crimson-900/40 ring-1 ring-crimson-700/40">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-crimson-450" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
@@ -254,7 +254,7 @@ description: Get in touch to discuss your technology and security leadership nee
 
                     {{-- What we'll cover (fills card to match form density) --}}
                     <div class="mt-8 rounded-2xl bg-echo-950/40 p-5 ring-1 ring-echo-800/60">
-                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">What we'll cover</p>
+                        <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">What we'll cover</p>
                         <ul class="mt-4 space-y-3 text-sm text-echo-300">
                             <li class="flex gap-x-3">
                                 <svg class="h-5 w-5 flex-none text-crimson-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>
@@ -286,14 +286,14 @@ description: Get in touch to discuss your technology and security leadership nee
         <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
-                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Expect</p>
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Expect</p>
                 <p class="mt-6 text-sm leading-7 text-echo-300">
                     No-pressure conversation &mdash; we figure out fit. If it's not, <span class="text-white font-medium">I'll tell you.</span>
                 </p>
             </div>
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-echo-600">
-                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Response</p>
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Response</p>
                 <p class="mt-6 text-sm leading-6 text-echo-300">
                     Within <span class="text-white font-medium">24 hours</span> on business days.<br>
                     For urgent matters, mention it in your message.
@@ -301,10 +301,10 @@ description: Get in touch to discuss your technology and security leadership nee
             </div>
 
             <div class="rounded-2xl bg-echo-900/60 ring-1 ring-echo-700/40 px-6 py-5 transition-all hover:ring-crimson-700/40 sm:col-span-2 lg:col-span-1">
-                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">Direct contact</p>
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Direct contact</p>
                 <p class="mt-6 text-sm leading-6 text-echo-300">
-                    Email &mdash; <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-400 transition-colors">info@echocyber.io</a><br>
-                    Call &mdash; <a href="tel:+19194300720" class="font-medium text-white hover:text-crimson-400 transition-colors">(919) 430-0720</a><br>
+                    Email &mdash; <a href="mailto:info@echocyber.io" class="font-medium text-white hover:text-crimson-450 transition-colors">info@echocyber.io</a><br>
+                    Call &mdash; <a href="tel:+19194300720" class="font-medium text-white hover:text-crimson-450 transition-colors">(919) 430-0720</a><br>
                     Based in Raleigh, <span class="text-white font-medium">NC</span> &middot; EST
                 </p>
             </div>

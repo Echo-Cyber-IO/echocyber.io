@@ -41,6 +41,12 @@ module.exports = {
           700: "#990000",
           600: "#B31919",
           500: "#CC3333",
+          // 450/425: accessible accents for small text on dark. Same 0deg hue as
+          // 500, but G/B pushed DOWN (42 vs 51) so they gain saturation instead
+          // of washing toward pink the way 400 does. 450 clears AA on echo-950
+          // and echo-900; 425 is its hover state.
+          450: "#F02A2A",
+          425: "#FF3333",
           400: "#E06666",
           300: "#F09999",
           200: "#F5CCCC",
