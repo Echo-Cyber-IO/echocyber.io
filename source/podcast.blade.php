@@ -38,7 +38,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
 
             <div class="flex items-center gap-3">
               <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-              <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Podcast &middot; Weekly</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Podcast &middot; Weekly</span>
             </div>
 
             <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance text-white">
@@ -63,7 +63,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
                 Listen on your player
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
               </a>
-              <p class="mt-3 text-xs text-echo-500">Spotify &middot; Apple &middot; iHeart &middot; Amazon Music &middot; YouTube &middot; Overcast &middot; Pocket Casts</p>
+              <p class="mt-3 text-xs text-echo-300">Spotify &middot; Apple &middot; iHeart &middot; Amazon Music &middot; YouTube &middot; Overcast &middot; Pocket Casts</p>
             </div>
 
           </div>
@@ -87,9 +87,9 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <div class="h-2 w-2 rounded-full bg-crimson-500 animate-pulse shadow-lg shadow-crimson-500/50"></div>
-                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Live on all platforms</p>
+                  <p class="font-mono text-xs uppercase tracking-widest text-crimson-450">Live on all platforms</p>
                 </div>
-                <span class="font-mono text-xs text-echo-500">Free</span>
+                <span class="font-mono text-xs text-echo-300">Free</span>
               </div>
 
               {{-- Spotify embed (latest episode) --}}
@@ -138,7 +138,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
       <div class="mx-auto max-w-3xl text-center">
         <div class="flex items-center justify-center gap-3">
           <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-          <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What you'll hear</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">What you'll hear</span>
           <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
         </div>
         <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -155,7 +155,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
         <div class="relative rounded-2xl bg-echo-950/60 p-6 ring-1 ring-echo-800 backdrop-blur-sm">
           <div class="flex items-center gap-2">
             <div class="h-1.5 w-6 rounded-full bg-crimson-600"></div>
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Echo</p>
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-450">Echo</p>
           </div>
           <h3 class="mt-4 font-display text-xl font-bold text-white">The thesis</h3>
           <p class="mt-3 text-sm text-echo-400">One argument worth bringing to your team this week. The pattern underneath the headlines &mdash; and why it matters for a growth-stage business.</p>
@@ -164,7 +164,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
         <div class="relative rounded-2xl bg-echo-950/60 p-6 ring-1 ring-echo-800 backdrop-blur-sm">
           <div class="flex items-center gap-2">
             <div class="h-1.5 w-6 rounded-full bg-crimson-600"></div>
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">Signal Check</p>
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-450">Signal Check</p>
           </div>
           <h3 class="mt-4 font-display text-xl font-bold text-white">The reframe</h3>
           <p class="mt-3 text-sm text-echo-400">One story from this week's news cycle that actually matters &mdash; what happened, why it cascaded, and who should care.</p>
@@ -173,7 +173,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
         <div class="relative rounded-2xl bg-echo-950/60 p-6 ring-1 ring-echo-800 backdrop-blur-sm">
           <div class="flex items-center gap-2">
             <div class="h-1.5 w-6 rounded-full bg-crimson-600"></div>
-            <p class="font-mono text-xs uppercase tracking-widest text-crimson-400">The Noise</p>
+            <p class="font-mono text-xs uppercase tracking-widest text-crimson-450">The Noise</p>
           </div>
           <h3 class="mt-4 font-display text-xl font-bold text-white">The skip list</h3>
           <p class="mt-3 text-sm text-echo-400">What everyone else is writing about that probably doesn't matter for your business &mdash; and why you can safely ignore it.</p>
@@ -203,7 +203,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
         <div class="flex-1">
           <div class="flex items-center gap-3">
             <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Who's behind the show</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Who's behind the show</span>
           </div>
           <h2 class="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">Michael Faas</h2>
           <p class="mt-6 text-base text-echo-300">
@@ -242,7 +242,7 @@ description: Weekly cybersecurity podcast for founder-led businesses. One signal
           <div class="flex-1">
             <div class="flex items-center gap-3">
               <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-              <span class="font-mono text-xs uppercase tracking-widest text-crimson-400">Prefer reading?</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Prefer reading?</span>
             </div>
             <h2 class="mt-4 font-display text-2xl font-bold text-white sm:text-3xl">The newsletter version</h2>
             <p class="mt-3 text-base text-echo-300">

@@ -4,7 +4,7 @@
         <div class="mx-auto max-w-2xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Next step</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Next step</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
@@ -18,7 +18,7 @@
                     Grab 30 Minutes
                 </a>
             </div>
-            <p class="mt-6 text-sm italic text-echo-600">
+            <p class="mt-6 text-sm italic text-echo-300">
                 Translating geek into human.
             </p>
         </div>

@@ -4,10 +4,10 @@
         <div class="mx-auto max-w-3xl">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Track record</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Track record</span>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Proof beats <span class="text-crimson-400">prose.</span>
+                Proof beats <span class="text-crimson-500">prose.</span>
             </h2>
             <p class="mt-4 text-echo-400 text-sm">Names withheld. NDAs are a feature, not a limitation.</p>
         </div>
@@ -18,9 +18,9 @@
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
                 {{-- Header band --}}
                 <header class="border-b border-echo-800/60 bg-echo-950/40 px-8 py-6">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">National retail chain &middot; brick-and-mortar</p>
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">National retail chain &middot; brick-and-mortar</p>
                     <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">
-                        Fortune 500 <span class="text-crimson-400">Retailer</span>
+                        Fortune 500 <span class="text-crimson-500">Retailer</span>
                     </h3>
                 </header>
 
@@ -44,15 +44,15 @@
                 <footer class="grid grid-cols-3 gap-px border-t border-echo-800/60 bg-echo-800/40">
                     <div class="bg-echo-900 px-4 py-4 text-center">
                         <p class="font-display text-2xl font-bold text-white">15</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">policies migrated</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">policies migrated</p>
                     </div>
                     <div class="bg-echo-900 px-4 py-4 text-center">
                         <p class="font-display text-2xl font-bold text-white">4</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">platforms automated</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">platforms automated</p>
                     </div>
                     <div class="bg-echo-900 px-4 py-4 text-center">
-                        <p class="font-display text-2xl font-bold text-crimson-400">0</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">store outages</p>
+                        <p class="font-display text-2xl font-bold text-crimson-500">0</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">store outages</p>
                     </div>
                 </footer>
             </article>
@@ -60,9 +60,9 @@
             {{-- Case 2 --}}
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
                 <header class="border-b border-echo-800/60 bg-echo-950/40 px-8 py-6">
-                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-500">DTC ecommerce &middot; rapid scale</p>
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">DTC ecommerce &middot; rapid scale</p>
                     <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">
-                        High-Growth <span class="text-crimson-400">Ecommerce Brand</span>
+                        High-Growth <span class="text-crimson-500">Ecommerce Brand</span>
                     </h3>
                 </header>
 
@@ -84,15 +84,15 @@
                 <footer class="grid grid-cols-3 gap-px border-t border-echo-800/60 bg-echo-800/40">
                     <div class="bg-echo-900 px-4 py-4 text-center">
                         <p class="font-display text-2xl font-bold text-white">893</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">active users moved</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">active users moved</p>
                     </div>
                     <div class="bg-echo-900 px-4 py-4 text-center">
                         <p class="font-display text-2xl font-bold text-white">1,200+</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">accounts archived</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">accounts archived</p>
                     </div>
                     <div class="bg-echo-900 px-4 py-4 text-center">
-                        <p class="font-display text-2xl font-bold text-crimson-400">0</p>
-                        <p class="mt-0.5 text-[10px] font-mono uppercase tracking-wider text-echo-500">downtime</p>
+                        <p class="font-display text-2xl font-bold text-crimson-500">0</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">downtime</p>
                     </div>
                 </footer>
             </article>

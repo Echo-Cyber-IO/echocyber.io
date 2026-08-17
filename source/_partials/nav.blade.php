@@ -57,7 +57,7 @@
                             <a href="/sprint/measure"
                                class="block rounded-lg px-4 py-3 transition-colors hover:bg-echo-800
                                       {{ $page->isActive('/sprint/measure') ? 'bg-echo-800/60' : '' }}">
-                                <span class="block font-display font-semibold {{ $page->isActive('/sprint/measure') ? 'text-crimson-400' : 'text-white' }}">Measure</span>
+                                <span class="block font-display font-semibold {{ $page->isActive('/sprint/measure') ? 'text-crimson-450' : 'text-white' }}">Measure</span>
                                 <span class="mt-0.5 block text-xs text-echo-400">Calibrated vulnerability triage</span>
                             </a>
                         </div>
@@ -135,7 +135,7 @@
 
                 {{-- Sprints section --}}
                 <div class="py-2">
-                    <span class="block font-mono text-xs uppercase tracking-widest text-echo-500">Sprints</span>
+                    <span class="block font-mono text-xs uppercase tracking-widest text-echo-300">Sprints</span>
                     <a href="/sprint/measure"
                        class="mt-3 block border-l-2 border-echo-700 pl-4 {{ $page->isActive('/sprint/measure') ? 'border-crimson-500 text-crimson-500' : 'text-echo-200' }}
                               font-medium hover:text-crimson-500 hover:border-crimson-500 transition-colors">

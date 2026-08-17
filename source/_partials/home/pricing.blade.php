@@ -7,7 +7,7 @@
         <div class="mx-auto max-w-4xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">How it works</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">How it works</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl">
@@ -82,7 +82,7 @@
         <div class="mx-auto mt-24 max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">What you walk away with</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">What you walk away with</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
@@ -108,7 +108,7 @@
             @endforeach
         </dl>
 
-        <p class="mx-auto mt-16 max-w-2xl text-center text-sm text-echo-500">
+        <p class="mx-auto mt-16 max-w-2xl text-center text-sm text-echo-300">
             Most clients start with Tune. No pressure, no lock-in beyond what's listed above.
         </p>
     </div>

@@ -17,17 +17,17 @@
 
     <div class="flex-1">
         <div class="flex items-baseline justify-between">
-            <h3 class="font-display text-xl font-semibold text-white group-data-featured/tier:text-crimson-400">{{ $name }}</h3>
-            <span class="text-xs font-medium uppercase tracking-wider {{ $featured ? 'text-crimson-400' : 'text-echo-500' }}">{{ $tagline }}</span>
+            <h3 class="font-display text-xl font-semibold text-white group-data-featured/tier:text-crimson-450">{{ $name }}</h3>
+            <span class="text-xs font-medium uppercase tracking-wider {{ $featured ? 'text-crimson-450' : 'text-echo-300' }}">{{ $tagline }}</span>
         </div>
 
         @if(!empty($metaphor ?? null))
-            <p class="mt-1 font-mono text-sm text-crimson-500">{{ $metaphor }}</p>
+            <p class="mt-1 font-mono text-sm text-crimson-450">{{ $metaphor }}</p>
         @endif
 
         <p class="mt-6 flex items-baseline gap-x-2">
             <span class="font-display text-5xl font-bold tracking-tight text-white">{{ $price }}</span>
-            <span class="text-sm text-echo-500">{{ $priceSuffix }}</span>
+            <span class="text-sm text-echo-300">{{ $priceSuffix }}</span>
         </p>
 
         <p class="mt-6 text-sm leading-6 text-echo-300">

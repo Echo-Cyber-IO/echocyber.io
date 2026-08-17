@@ -4,7 +4,7 @@
         <div class="mx-auto max-w-3xl">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">A week in your inbox</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">A week in your inbox</span>
             </div>
             <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 Any of this land on your desk this month?

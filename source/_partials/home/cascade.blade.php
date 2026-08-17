@@ -7,7 +7,7 @@
         <div class="mx-auto max-w-3xl text-center">
             <div class="flex items-center justify-center gap-3">
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
-                <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">Why it cascades</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-crimson-450">Why it cascades</span>
                 <div class="w-8 h-1 bg-crimson-600 rounded-full"></div>
             </div>
 
@@ -23,7 +23,7 @@
                     Complicated gets optimized. Complex must be governed. The tidy per-domain checklist is exactly what lets the cascade through.
                 </p>
                 <p>
-                    I prove it by measuring what most frameworks skip: <a href="/sprint/measure" class="font-medium text-crimson-500 hover:text-crimson-400 transition-colors">the cascade paths themselves</a>.
+                    I prove it by measuring what most frameworks skip: <a href="/sprint/measure" class="font-medium text-crimson-500 hover:text-crimson-450 transition-colors">the cascade paths themselves</a>.
                 </p>
             </div>
 

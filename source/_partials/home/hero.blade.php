@@ -35,19 +35,19 @@
                 <div class="group relative flex flex-col items-center bg-echo-950/70 px-6 py-8 text-center transition-colors hover:bg-echo-900/70">
                     <dd class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">25+</dd>
                     <div class="mt-3 h-0.5 w-8 rounded-full bg-crimson-700 transition-all group-hover:w-12 group-hover:bg-crimson-500"></div>
-                    <dt class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-echo-400">Years of tech leadership</dt>
+                    <dt class="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-echo-400">Years of tech leadership</dt>
                 </div>
 
                 <div class="group relative flex flex-col items-center bg-echo-950/70 px-6 py-8 text-center transition-colors hover:bg-echo-900/70">
                     <dd class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">40+</dd>
                     <div class="mt-3 h-0.5 w-8 rounded-full bg-crimson-700 transition-all group-hover:w-12 group-hover:bg-crimson-500"></div>
-                    <dt class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-echo-400">Security programs built</dt>
+                    <dt class="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-echo-400">Security programs built</dt>
                 </div>
 
                 <div class="group relative flex flex-col items-center bg-echo-950/70 px-6 py-8 text-center transition-colors hover:bg-echo-900/70">
                     <dd class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">8+</dd>
                     <div class="mt-3 h-0.5 w-8 rounded-full bg-crimson-700 transition-all group-hover:w-12 group-hover:bg-crimson-500"></div>
-                    <dt class="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-echo-400">Frameworks navigated</dt>
+                    <dt class="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-echo-400">Frameworks navigated</dt>
                 </div>
 
                 {{-- Punchline tile (crimson-tinted + glow) --}}
@@ -55,7 +55,7 @@
                     <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-crimson-700/10 to-transparent opacity-60 pointer-events-none"></div>
                     <dd class="relative font-display text-5xl font-bold tracking-tight text-crimson-500 sm:text-6xl drop-shadow-[0_0_12px_rgba(204,51,51,0.35)]">0</dd>
                     <div class="relative mt-3 h-0.5 w-8 rounded-full bg-crimson-500 transition-all group-hover:w-12"></div>
-                    <dt class="relative mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-crimson-400">Fear-mongering</dt>
+                    <dt class="relative mt-3 font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Fear-mongering</dt>
                 </div>
 
             </dl>
