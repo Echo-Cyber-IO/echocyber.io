@@ -201,22 +201,41 @@ description: Find out where your company stands in 15 minutes. Free security ass
   <!-- ═══════════════════════════════════════════ -->
   <!-- QUIZ                                         -->
   <!-- ═══════════════════════════════════════════ -->
-  <div x-show="step === 'quiz'" x-transition class="min-h-screen flex flex-col">
+  {{--
+      LIGHT SURFACE. The quiz is the only place on the site with a genuine
+      sustained reading load: 37 questions over roughly 15 minutes. Dark text on
+      light is the better polarity for that, and the effect is age-linked, which
+      matters because the ICP is founder-led owners at 40-55.
+
+      `text-echo-800` on the container is load-bearing. The layout sets
+      `<body class="bg-echo-950 text-echo-200">`, so anything here without an
+      explicit colour inherits near-white and renders at 1.36:1 on this ground.
+      The question <h2> below is one such element - it carries no colour of its
+      own and would be invisible without this.
+
+      The accent also flips: crimson-450 is tuned for dark and drops to 3.87:1
+      here, so this surface uses crimson-700 (8.34:1).
+  --}}
+  <div x-show="step === 'quiz'" x-transition class="relative z-10 min-h-screen flex flex-col bg-echo-50 text-echo-800">
     <!-- Progress Bar -->
-    <div class="sticky top-0 z-50 bg-echo-950/70 backdrop-blur-md border-b border-echo-800">
+    <div class="sticky top-0 z-50 bg-echo-50/80 backdrop-blur-md border-b border-echo-200">
       <div class="max-w-3xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-sm font-medium text-echo-300" x-text="currentCategory"></span>
-          <span class="text-sm text-echo-300" x-text="`Question ${currentQ + 1} of ${questions.length}`"></span>
+          <span class="text-sm font-medium text-echo-700" x-text="currentCategory"></span>
+          <span class="text-sm text-echo-600" x-text="`Question ${currentQ + 1} of ${questions.length}`"></span>
         </div>
-        <div class="h-1.5 bg-echo-800 rounded-full overflow-hidden">
+        <div class="h-1.5 bg-echo-200 rounded-full overflow-hidden">
           <div class="h-full bg-crimson-700 rounded-full bar-fill" :style="`width: ${((currentQ) / questions.length) * 100}%`"></div>
         </div>
         <!-- Category dots -->
         <div class="flex gap-1 mt-2">
           <template x-for="(cat, i) in categoryNames" :key="i">
             <div class="flex-1 h-1 rounded-full transition-colors duration-300"
-              :class="getCategoryProgress(cat) === 'done' ? 'bg-crimson-700' : getCategoryProgress(cat) === 'active' ? 'bg-crimson/40' : 'bg-echo-800'">
+              {{-- done/active/todo. Active is crimson-500, not crimson-300: the
+                   300 reads as salmon on a light ground, which is the exact pink
+                   cast the accent work removed. 500 stays a true red and is
+                   still clearly lighter than the 700 used for completed. --}}
+              :class="getCategoryProgress(cat) === 'done' ? 'bg-crimson-700' : getCategoryProgress(cat) === 'active' ? 'bg-crimson-500' : 'bg-echo-200'">
             </div>
           </template>
         </div>
@@ -227,23 +246,23 @@ description: Find out where your company stands in 15 minutes. Free security ass
     <div class="flex-1 flex items-center justify-center px-6 py-12">
       <div class="max-w-3xl w-full fade-in" :key="currentQ">
         <!-- Category change indicator -->
-        <div x-show="isNewCategory" class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-450 text-sm font-medium">
+        <div x-show="isNewCategory" class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson-50 border border-crimson-200 text-crimson-700 text-sm font-medium">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           <span x-text="currentCategory"></span>
         </div>
 
-        <h2 class="text-2xl sm:text-3xl font-bold leading-snug mb-8 font-display" x-text="questions[currentQ]?.question"></h2>
+        <h2 class="text-2xl sm:text-3xl font-bold leading-snug mb-8 font-display text-echo-950" x-text="questions[currentQ]?.question"></h2>
 
         <div class="space-y-3">
           <template x-for="(option, i) in questions[currentQ]?.options" :key="i">
             <button @click="selectAnswer(i)"
               class="option-hover w-full text-left px-5 py-4 rounded-lg border transition-all"
               :class="answers[currentQ] === i
-                ? 'border-crimson bg-crimson/10 text-white'
-                : 'border-echo-700 bg-echo-900/50 text-echo-200 hover:border-echo-500 hover:bg-echo-900'">
+                ? 'border-crimson-700 bg-crimson-50 text-echo-950'
+                : 'border-echo-200 bg-white text-echo-800 hover:border-echo-400 hover:bg-echo-100'">
               <div class="flex items-center gap-3">
                 <div class="w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors"
-                  :class="answers[currentQ] === i ? 'border-crimson bg-crimson' : 'border-echo-600'">
+                  :class="answers[currentQ] === i ? 'border-crimson-700 bg-crimson-700' : 'border-echo-400'">
                   <svg x-show="answers[currentQ] === i" class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <span x-text="option" class="text-base"></span>
@@ -254,13 +273,13 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
         <!-- Navigation -->
         <div class="flex items-center justify-between mt-10">
-          <button @click="prevQuestion()" x-show="currentQ > 0" class="flex items-center gap-1 text-echo-400 hover:text-white transition text-sm">
+          <button @click="prevQuestion()" x-show="currentQ > 0" class="flex items-center gap-1 text-echo-600 hover:text-echo-950 transition text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
             Previous
           </button>
           <div x-show="currentQ === 0"></div>
           <button @click="nextQuestion()" x-show="answers[currentQ] !== undefined"
-            class="flex items-center gap-2 px-6 py-3 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg transition-all hover:shadow-glow active:scale-[0.98]"
+            class="flex items-center gap-2 px-6 py-3 bg-crimson-700 hover:bg-crimson-800 text-white font-semibold rounded-lg transition-all active:scale-[0.98]"
             x-text="currentQ === questions.length - 1 ? 'See My Results' : 'Next'">
           </button>
         </div>
@@ -271,24 +290,31 @@ description: Find out where your company stands in 15 minutes. Free security ass
   <!-- ═══════════════════════════════════════════ -->
   <!-- RESULTS                                      -->
   <!-- ═══════════════════════════════════════════ -->
-  <div x-show="step === 'results'" x-transition class="min-h-screen">
+  {{--
+      LIGHT SURFACE. Same reasoning as the quiz block above: the report is read,
+      not skimmed. `text-echo-800` is again load-bearing against the layout's
+      `text-echo-200` body default - several headings here carry no colour of
+      their own (the overall title, "Your grades by area", the per-category
+      <h3>s) and would render at 1.36:1 without it.
+  --}}
+  <div x-show="step === 'results'" x-transition class="relative z-10 min-h-screen bg-echo-50 text-echo-800">
     <!-- Teaser Header (always visible) -->
-    <div class="bg-gradient-to-b from-echo-900 to-echo-950 border-b border-echo-800">
+    <div class="bg-gradient-to-b from-echo-100 to-echo-50 border-b border-echo-200">
       <div class="max-w-4xl mx-auto px-6 py-12 text-center">
-        <p class="text-echo-400 text-sm uppercase tracking-wider mb-4 font-mono">Your Signal Score</p>
+        <p class="text-echo-600 text-sm uppercase tracking-wider mb-4 font-mono">Your Signal Score</p>
 
         <div class="grade-pulse inline-flex items-center justify-center w-32 h-32 rounded-2xl border-4 mb-6"
           :class="gradeColor(overallGrade, 'border')">
           <span class="text-6xl font-bold font-display" :class="gradeColor(overallGrade, 'text')" x-text="overallGrade"></span>
         </div>
 
-        <h1 class="text-3xl sm:text-4xl font-bold mb-3 font-display" x-text="overallTitle"></h1>
-        <p class="text-echo-300 max-w-xl mx-auto text-lg" x-text="overallDescription"></p>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3 font-display text-echo-950" x-text="overallTitle"></h1>
+        <p class="text-echo-700 max-w-xl mx-auto text-lg" x-text="overallDescription"></p>
 
-        <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-echo-800/50 border border-echo-700">
-          <span class="text-echo-400 text-sm">Overall Score:</span>
+        <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-echo-100 border border-echo-300">
+          <span class="text-echo-600 text-sm">Overall Score:</span>
           <span class="font-bold font-mono" x-text="`${totalScore} / 185`"></span>
-          <span class="text-echo-300 text-sm">&middot;</span>
+          <span class="text-echo-700 text-sm">&middot;</span>
           <span class="text-sm" :class="gradeColor(overallGrade, 'text')" x-text="`Estimated Annual Risk: ${overallRisk}`"></span>
         </div>
       </div>
@@ -298,14 +324,14 @@ description: Find out where your company stands in 15 minutes. Free security ass
     <div x-show="!unlocked" x-transition class="max-w-4xl mx-auto px-6 py-12">
       <div class="relative">
         <!-- Inline unlock form -->
-        <div class="mb-8 p-8 rounded-xl bg-gradient-to-br from-echo-900 to-echo-800 border border-crimson-800/50 relative z-10">
+        <div class="mb-8 p-8 rounded-xl bg-gradient-to-br from-white to-echo-100 border border-crimson-200 relative z-10">
           <div class="text-center mb-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson/10 border border-crimson/20 text-crimson-450 text-xs font-medium mb-4 font-mono uppercase tracking-wider">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-crimson-50 border border-crimson-200 text-crimson-700 text-xs font-medium mb-4 font-mono uppercase tracking-wider">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
               One step to unlock
             </div>
-            <h2 class="text-2xl sm:text-3xl font-bold mb-3 font-display">Your full report is ready</h2>
-            <p class="text-echo-300 max-w-lg mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3 font-display text-echo-950">Your full report is ready</h2>
+            <p class="text-echo-700 max-w-lg mx-auto">
               Per-category grades, your top 3 risks, and estimated dollar exposure for each, just below.
             </p>
           </div>
@@ -313,22 +339,22 @@ description: Find out where your company stands in 15 minutes. Free security ass
           <form @submit.prevent="unlockResults()" class="max-w-md mx-auto space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm font-medium text-echo-300 mb-1.5">Full Name *</label>
-                <input x-model="lead.name" required type="text" placeholder="Jane Smith" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                <label class="block text-sm font-medium text-echo-700 mb-1.5">Full Name *</label>
+                <input x-model="lead.name" required type="text" placeholder="Jane Smith" class="w-full px-4 py-3 bg-white border border-echo-300 rounded-lg text-echo-950 placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
               </div>
               <div>
-                <label class="block text-sm font-medium text-echo-300 mb-1.5">Work Email *</label>
-                <input x-model="lead.email" required type="email" placeholder="jane@company.com" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                <label class="block text-sm font-medium text-echo-700 mb-1.5">Work Email *</label>
+                <input x-model="lead.email" required type="email" placeholder="jane@company.com" class="w-full px-4 py-3 bg-white border border-echo-300 rounded-lg text-echo-950 placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
               </div>
             </div>
             <div>
-              <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Name *</label>
-              <input x-model="lead.company" required type="text" placeholder="Acme Corp" class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+              <label class="block text-sm font-medium text-echo-700 mb-1.5">Company Name *</label>
+              <input x-model="lead.company" required type="text" placeholder="Acme Corp" class="w-full px-4 py-3 bg-white border border-echo-300 rounded-lg text-echo-950 placeholder-echo-500 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm font-medium text-echo-300 mb-1.5">Your Role *</label>
-                <select x-model="lead.role" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                <label class="block text-sm font-medium text-echo-700 mb-1.5">Your Role *</label>
+                <select x-model="lead.role" required class="w-full px-4 py-3 bg-white border border-echo-300 rounded-lg text-echo-950 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
                   <option value="" disabled selected>Select your role</option>
                   <option>Founder / CEO</option>
                   <option>CTO / CIO</option>
@@ -341,8 +367,8 @@ description: Find out where your company stands in 15 minutes. Free security ass
                 </select>
               </div>
               <div>
-                <label class="block text-sm font-medium text-echo-300 mb-1.5">Company Size *</label>
-                <select x-model="lead.size" required class="w-full px-4 py-3 bg-echo-900 border border-echo-700 rounded-lg text-white focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
+                <label class="block text-sm font-medium text-echo-700 mb-1.5">Company Size *</label>
+                <select x-model="lead.size" required class="w-full px-4 py-3 bg-white border border-echo-300 rounded-lg text-echo-950 focus:outline-none focus:border-crimson focus:ring-1 focus:ring-crimson transition">
                   <option value="" disabled selected>Number of employees</option>
                   <option>1&ndash;10</option>
                   <option>11&ndash;25</option>
@@ -355,36 +381,36 @@ description: Find out where your company stands in 15 minutes. Free security ass
               </div>
             </div>
             <div class="flex items-start gap-2 pt-1">
-              <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-echo-900 border-echo-700 text-crimson focus:ring-crimson">
-              <label class="text-sm text-echo-400">Send me Signal vs. Noise, a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
+              <input x-model="lead.newsletter" type="checkbox" class="mt-1 rounded bg-white border-echo-300 text-crimson focus:ring-crimson">
+              <label class="text-sm text-echo-600">Send me Signal vs. Noise, a weekly newsletter (every Sunday) that cuts through cybersecurity hype</label>
             </div>
             <button type="submit" :disabled="submitting"
-              class="w-full py-4 bg-crimson-700 hover:bg-crimson-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98] flex items-center justify-center gap-2">
+              class="w-full py-4 bg-crimson-700 hover:bg-crimson-800 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
               <template x-if="submitting">
                 <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/></svg>
               </template>
               <span x-text="submitting ? 'Unlocking...' : 'Unlock My Full Report'"></span>
               <svg x-show="!submitting" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
             </button>
-            <p class="text-xs text-echo-300 text-center">Private. We don't share or sell your data. Ever.</p>
+            <p class="text-xs text-echo-700 text-center">Private. We don't share or sell your data. Ever.</p>
           </form>
         </div>
 
         <!-- Blurred preview -->
         <div class="pointer-events-none select-none" style="filter: blur(10px); opacity: 0.5;">
-          <h2 class="text-2xl font-bold mb-8 font-display">Your grades by area</h2>
+          <h2 class="text-2xl font-bold mb-8 font-display text-echo-950">Your grades by area</h2>
           <div class="grid gap-4 sm:grid-cols-2">
             <template x-for="(cat, i) in categoryResults" :key="i">
-              <div class="p-5 rounded-xl bg-echo-900/50 border border-echo-800">
+              <div class="p-5 rounded-xl bg-white border border-echo-200">
                 <div class="flex items-start justify-between mb-3">
                   <div>
-                    <h3 class="font-semibold text-lg" x-text="cat.name"></h3>
-                    <p class="text-sm text-echo-400 font-mono">&mdash; / &mdash;</p>
+                    <h3 class="font-semibold text-lg text-echo-950" x-text="cat.name"></h3>
+                    <p class="text-sm text-echo-600 font-mono">&mdash; / &mdash;</p>
                   </div>
-                  <div class="w-12 h-12 rounded-lg bg-echo-800"></div>
+                  <div class="w-12 h-12 rounded-lg bg-echo-200"></div>
                 </div>
-                <div class="h-2 bg-echo-800 rounded-full mb-3"></div>
-                <p class="text-sm text-echo-400">Estimated risk: &mdash;</p>
+                <div class="h-2 bg-echo-200 rounded-full mb-3"></div>
+                <p class="text-sm text-echo-600">Estimated risk: &mdash;</p>
               </div>
             </template>
           </div>
@@ -394,40 +420,40 @@ description: Find out where your company stands in 15 minutes. Free security ass
 
     <!-- ─── UNLOCKED FULL RESULTS ─── -->
     <div x-show="unlocked" x-transition class="max-w-4xl mx-auto px-6 py-12">
-      <h2 class="text-2xl font-bold mb-8 font-display">Your grades by area</h2>
+      <h2 class="text-2xl font-bold mb-8 font-display text-echo-950">Your grades by area</h2>
 
       <div class="grid gap-4 sm:grid-cols-2">
         <template x-for="(cat, i) in categoryResults" :key="i">
-          <div class="p-5 rounded-xl bg-echo-900/50 border border-echo-800 hover:border-echo-700 transition">
+          <div class="p-5 rounded-xl bg-white border border-echo-200 hover:border-echo-400 transition">
             <div class="flex items-start justify-between mb-3">
               <div>
-                <h3 class="font-semibold text-lg" x-text="cat.name"></h3>
-                <p class="text-sm text-echo-400 font-mono" x-text="`${cat.score} / ${cat.maxPoints} points`"></p>
+                <h3 class="font-semibold text-lg text-echo-950" x-text="cat.name"></h3>
+                <p class="text-sm text-echo-600 font-mono" x-text="`${cat.score} / ${cat.maxPoints} points`"></p>
               </div>
               <div class="w-12 h-12 rounded-lg flex items-center justify-center text-2xl font-bold font-display"
                 :class="gradeColor(cat.grade, 'bg')">
                 <span x-text="cat.grade"></span>
               </div>
             </div>
-            <div class="h-2 bg-echo-800 rounded-full overflow-hidden mb-3">
+            <div class="h-2 bg-echo-200 rounded-full overflow-hidden mb-3">
               <div class="h-full rounded-full bar-fill" :class="gradeColor(cat.grade, 'bar')" :style="`width: ${(cat.score / cat.maxPoints) * 100}%`"></div>
             </div>
-            <p class="text-sm text-echo-400" x-text="cat.risk"></p>
+            <p class="text-sm text-echo-600" x-text="cat.risk"></p>
           </div>
         </template>
       </div>
 
-      <div class="mt-12 p-6 rounded-xl bg-crimson/5 border border-crimson/20">
-        <h2 class="text-xl font-bold mb-4 text-crimson-500 font-display">Your Top Risks</h2>
+      <div class="mt-12 p-6 rounded-xl bg-crimson-50 border border-crimson-200">
+        <h2 class="text-xl font-bold mb-4 text-crimson-700 font-display">Your Top Risks</h2>
         <div class="space-y-3">
           <template x-for="(risk, i) in topRisks" :key="i">
             <div class="flex gap-3 items-start">
-              <span class="text-crimson-500 font-bold shrink-0" x-text="`${i + 1}.`"></span>
+              <span class="text-crimson-700 font-bold shrink-0" x-text="`${i + 1}.`"></span>
               <div>
                 <span class="font-semibold" x-text="risk.name"></span>
-                <span class="text-echo-400" x-text="`: Grade ${risk.grade}. ${risk.description}`"></span>
+                <span class="text-echo-600" x-text="`: Grade ${risk.grade}. ${risk.description}`"></span>
                 <template x-if="risk.cascadeHint">
-                  <p class="text-xs text-crimson-450/70 mt-1 italic" x-text="risk.cascadeHint"></p>
+                  <p class="text-xs text-crimson-800 mt-1 italic" x-text="risk.cascadeHint"></p>
                 </template>
               </div>
             </div>
@@ -435,20 +461,20 @@ description: Find out where your company stands in 15 minutes. Free security ass
         </div>
       </div>
 
-      <div class="mt-12 p-8 rounded-xl bg-gradient-to-br from-echo-900 to-echo-800 border border-echo-700 text-center">
-        <h2 class="text-2xl font-bold mb-3 font-display">Grades show you where. Dollars show you why.</h2>
-        <p class="text-echo-300 max-w-lg mx-auto mb-6">
+      <div class="mt-12 p-8 rounded-xl bg-gradient-to-br from-white to-echo-100 border border-echo-300 text-center">
+        <h2 class="text-2xl font-bold mb-3 font-display text-echo-950">Grades show you where. Dollars show you why.</h2>
+        <p class="text-echo-700 max-w-lg mx-auto mb-6">
           This assessment identified your gaps. A 30-minute conversation turns those letter grades into a prioritized action plan with real numbers behind it.
         </p>
-        <a href="https://echocyber.io/#contact" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold rounded-lg text-lg transition-all hover:shadow-glow active:scale-[0.98]">
+        <a href="https://echocyber.io/#contact" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-crimson-700 hover:bg-crimson-800 text-white font-semibold rounded-lg text-lg transition-all active:scale-[0.98]">
           Book a Free 30-Minute Review
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
         </a>
-        <p class="text-sm text-echo-300 mt-4">No obligation. No pitch. Just clarity.</p>
+        <p class="text-sm text-echo-700 mt-4">No obligation. No pitch. Just clarity.</p>
       </div>
 
       <div class="mt-8 text-center">
-        <button @click="reset()" class="text-sm text-echo-400 hover:text-white transition">&larr; Take the assessment again</button>
+        <button @click="reset()" class="text-sm text-echo-600 hover:text-echo-950 transition">&larr; Take the assessment again</button>
       </div>
     </div>
   </div>
@@ -1078,12 +1104,18 @@ function quiz() {
     },
 
     gradeColor(grade, type) {
+      // Tuned for the light results surface. The -400 shades these replaced are
+      // built for dark grounds and fail badly on echo-50: yellow-400 lands at
+      // 1.43:1, emerald-400 at 1.80:1. The -700 shades all clear AA (yellow
+      // 4.60, orange 4.84, emerald 5.13, red 6.05, blue 6.26) and still read as
+      // the same grade ramp. Bars and tint backgrounds are non-text, so they
+      // keep the more saturated -500/-100 values.
       const colors = {
-        A: { text: 'text-emerald-400', border: 'border-emerald-400', bg: 'bg-emerald-500/20 text-emerald-400', bar: 'bg-emerald-500' },
-        B: { text: 'text-blue-400', border: 'border-blue-400', bg: 'bg-blue-500/20 text-blue-400', bar: 'bg-blue-500' },
-        C: { text: 'text-yellow-400', border: 'border-yellow-400', bg: 'bg-yellow-500/20 text-yellow-400', bar: 'bg-yellow-500' },
-        D: { text: 'text-orange-400', border: 'border-orange-400', bg: 'bg-orange-500/20 text-orange-400', bar: 'bg-orange-500' },
-        F: { text: 'text-red-400', border: 'border-red-400', bg: 'bg-red-500/20 text-red-400', bar: 'bg-red-500' },
+        A: { text: 'text-emerald-700', border: 'border-emerald-600', bg: 'bg-emerald-100 text-emerald-700', bar: 'bg-emerald-500' },
+        B: { text: 'text-blue-700', border: 'border-blue-600', bg: 'bg-blue-100 text-blue-700', bar: 'bg-blue-500' },
+        C: { text: 'text-yellow-700', border: 'border-yellow-600', bg: 'bg-yellow-100 text-yellow-700', bar: 'bg-yellow-500' },
+        D: { text: 'text-orange-700', border: 'border-orange-600', bg: 'bg-orange-100 text-orange-700', bar: 'bg-orange-500' },
+        F: { text: 'text-red-700', border: 'border-red-600', bg: 'bg-red-100 text-red-700', bar: 'bg-red-500' },
       };
       return colors[grade]?.[type] || '';
     },
