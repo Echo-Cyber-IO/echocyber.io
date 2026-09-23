@@ -57,7 +57,7 @@
                 </figcaption>
             </figure>
 
-            {{-- Vosburgh (client, subtly distinguished by crimson tint + badge) --}}
+            {{-- Vosburgh (colleague, subtly distinguished by crimson tint + badge) --}}
             <figure class="relative isolate flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-crimson-50 via-white to-white p-8 shadow-sm ring-1 ring-crimson-200 transition-all hover:ring-crimson-400 hover:shadow-md">
                 <svg viewBox="0 0 162 128" fill="none" aria-hidden="true"
                      class="absolute -top-2 -left-2 -z-10 h-20 stroke-crimson-700/20">
@@ -66,7 +66,7 @@
                 <div>
                     <span class="inline-flex items-center gap-1.5 rounded-full bg-crimson-100 px-2.5 py-0.5 text-xs font-mono uppercase tracking-wider text-crimson-800 ring-1 ring-crimson-200">
                         <span class="h-1 w-1 rounded-full bg-crimson-700"></span>
-                        Client
+                        Colleague
                     </span>
                     <blockquote class="mt-4 text-lg leading-7 text-echo-800">
                         <p>&ldquo;A natural problem-solver who remains cool under pressure. A born leader who continuously takes on more responsibility.&rdquo;</p>
