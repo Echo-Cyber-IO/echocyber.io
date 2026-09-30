@@ -174,7 +174,11 @@
     <div class="fixed top-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-crimson-900/40 to-transparent transform -skew-x-12 blur-2xl pointer-events-none z-0"></div>
 
     {{-- Navigation --}}
-    @include('_partials.nav')
+    @if ($page->minimal)
+        @include('_partials.nav-minimal')
+    @else
+        @include('_partials.nav')
+    @endif
 
     {{-- Main content --}}
     <main class="flex-grow">
@@ -182,7 +186,11 @@
     </main>
 
     {{-- Footer --}}
-    @include('_partials.footer')
+    @if ($page->minimal)
+        @include('_partials.footer-minimal')
+    @else
+        @include('_partials.footer')
+    @endif
 
     {{-- Back to top button --}}
     <div x-data="{ show: false }"
