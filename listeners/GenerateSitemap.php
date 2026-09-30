@@ -11,7 +11,8 @@ class GenerateSitemap
     protected $exclude = [
         '/assets/*',
         '*/favicon.ico',
-        '*/404*'
+        '*/404*',
+        '/talk*'
     ];
 
     public function handle(Jigsaw $jigsaw)
