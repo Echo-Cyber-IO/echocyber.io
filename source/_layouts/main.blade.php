@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
+    @if ($page->noindex)
+    <meta name="robots" content="noindex, nofollow">
+    @endif
 
     <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}" />
     <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
@@ -171,7 +174,11 @@
     <div class="fixed top-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-crimson-900/40 to-transparent transform -skew-x-12 blur-2xl pointer-events-none z-0"></div>
 
     {{-- Navigation --}}
-    @include('_partials.nav')
+    @if ($page->minimal)
+        @include('_partials.nav-minimal')
+    @else
+        @include('_partials.nav')
+    @endif
 
     {{-- Main content --}}
     <main class="flex-grow">
@@ -179,7 +186,11 @@
     </main>
 
     {{-- Footer --}}
-    @include('_partials.footer')
+    @if ($page->minimal)
+        @include('_partials.footer-minimal')
+    @else
+        @include('_partials.footer')
+    @endif
 
     {{-- Back to top button --}}
     <div x-data="{ show: false }"
