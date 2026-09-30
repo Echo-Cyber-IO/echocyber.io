@@ -37,17 +37,17 @@ minimal: true
     </section>
 
     {{-- Calendar group widget (GHL "Talk with Mike": 30 and 60 minute calendars) --}}
-    {{-- GHL's resizer reports ~785px for every step, so on desktop we pin the height and let the --}}
-    {{-- details form scroll inside the frame. Mobile stacks the widget, so the resizer sizes it there. --}}
+    {{-- GHL's resizer reports ~785px for every step, so on desktop we pin it to what the calendar step needs; --}}
+    {{-- the details form scrolls inside the frame. Mobile stacks the widget, so the resizer sizes it there. --}}
     <style>
         .talk-embed { width: 100%; border: 0; min-height: 560px; }
-        @media (min-width: 1024px) { .talk-embed { height: 560px !important; } }
+        @media (min-width: 1024px) { .talk-embed { height: 700px !important; } }
     </style>
     <section class="pt-0 pb-16 lg:pb-24">
         <div class="mx-auto max-w-7xl px-4">
             <div x-data="{ loaded: false }" class="relative">
                 <div x-show="!loaded" x-transition.opacity.duration.300ms
-                     class="absolute inset-0 z-10 flex flex-col items-center justify-center min-h-[560px] rounded-2xl bg-echo-900/40 ring-1 ring-echo-700/40 backdrop-blur-sm pointer-events-none">
+                     class="absolute inset-0 z-10 flex flex-col items-center justify-center min-h-[700px] rounded-2xl bg-echo-900/40 ring-1 ring-echo-700/40 backdrop-blur-sm pointer-events-none">
                     <svg class="animate-spin h-12 w-12 text-crimson-500" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
