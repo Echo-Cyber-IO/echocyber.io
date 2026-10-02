@@ -12,7 +12,7 @@
             <p class="mt-4 text-echo-400 text-sm">Names withheld. NDAs are a feature, not a limitation.</p>
         </div>
 
-        <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
             {{-- Case 1 --}}
             <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
@@ -93,6 +93,46 @@
                     <div class="bg-echo-900 px-4 py-4 text-center">
                         <p class="font-display text-2xl font-bold text-crimson-500">0</p>
                         <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">downtime</p>
+                    </div>
+                </footer>
+            </article>
+
+            {{-- Case 3 --}}
+            <article class="relative flex flex-col overflow-hidden rounded-2xl bg-echo-900 ring-1 ring-echo-700/50">
+                <header class="border-b border-echo-800/60 bg-echo-950/40 px-8 py-6">
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Pharma sciences CRO &middot; regulated data</p>
+                    <h3 class="mt-2 font-display text-2xl font-bold tracking-tight text-white">
+                        Growing Life-Sciences <span class="text-crimson-500">CRO</span>
+                    </h3>
+                </header>
+
+                <div class="flex-1 px-8 py-7">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">GxP-validated tools</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Per-seat licensing</span>
+                        <span class="rounded-md bg-echo-950/60 px-2 py-0.5 text-xs font-mono text-echo-300 ring-1 ring-echo-700/50">Acquired</span>
+                    </div>
+
+                    <p class="mt-5 text-sm leading-6 text-echo-400">
+                        <span class="font-semibold text-echo-200">Challenge.</span> No security program, thin validation documentation, outdated servers, and a critical per-seat analysis tool whose licenses had drifted away from who actually used it.
+                    </p>
+                    <p class="mt-3 text-sm leading-6 text-echo-300">
+                        <span class="font-semibold text-white">Outcome.</span> Security program built from the ground up. An access review turned license sprawl into savings. At acquisition, the buyer called IT and security one of the easiest they'd ever done.
+                    </p>
+                </div>
+
+                <footer class="grid grid-cols-3 gap-px border-t border-echo-800/60 bg-echo-800/40">
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">0&rarr;1</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">security program</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-white">1</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">easy acquisition</p>
+                    </div>
+                    <div class="bg-echo-900 px-4 py-4 text-center">
+                        <p class="font-display text-2xl font-bold text-crimson-500">$500K</p>
+                        <p class="mt-0.5 text-xs font-mono uppercase tracking-wider text-echo-300">saved per year</p>
                     </div>
                 </footer>
             </article>
