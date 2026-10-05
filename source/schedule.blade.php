@@ -37,7 +37,7 @@ description: Book a free 30-minute call with Mike Faas to talk through your tech
     {{-- Calendar widget --}}
     <section class="pt-0 pb-16 lg:pb-24">
         <div class="mx-auto max-w-7xl px-4">
-            <div x-data="{ loaded: false }" class="relative">
+            <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 2500)" class="relative">
                 {{-- Loading state --}}
                 <div x-show="!loaded" x-transition.opacity.duration.300ms
                      class="absolute inset-0 z-10 flex flex-col items-center justify-center min-h-[800px] rounded-2xl bg-echo-900/40 ring-1 ring-echo-700/40 backdrop-blur-sm pointer-events-none">
@@ -46,7 +46,6 @@ description: Book a free 30-minute call with Mike Faas to talk through your tech
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                     <p class="mt-5 font-mono text-xs uppercase tracking-[0.2em] text-crimson-450">Loading calendar</p>
-                    <p class="mt-2 text-sm text-echo-400">Just a moment&hellip;</p>
                 </div>
 
                 <iframe src="https://apicrm.ctox.com/widget/booking/KjGTZUQdoqLZpU5NtmNL"
