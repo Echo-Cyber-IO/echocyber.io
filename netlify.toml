@@ -9,6 +9,35 @@ NODE_VERSION = "20"
 [functions."assess"]
 timeout = 26
 
+# echocyber.io retired 2026-10-20: everything 301s to Nightglass Advisory (migration plan step 6).
+# force = true on every rule: these paths exist as real files, and Netlify won't redirect over a file without it.
+# Order matters (first match wins): specific paths first, the catch-all last. Retired pages
+# (/assessment, /services/*, /sprint/*, /measure) fall through to the Nightglass home page.
+
+[[redirects]]
+  from = "/talk"
+  to = "https://nightglassadvisory.com/talk/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/schedule"
+  to = "https://nightglassadvisory.com/schedule/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "https://nightglassadvisory.com/schedule/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/infosecon2026"
+  to = "https://nightglassadvisory.com/infosecon/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/listen"
   to = "https://pod.link/1894903133"
@@ -16,6 +45,13 @@ timeout = 26
   force = true
 
 [[redirects]]
-  from = "/measure"
-  to = "/sprint/measure"
+  from = "/podcast"
+  to = "https://pod.link/1894903133"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://nightglassadvisory.com/"
+  status = 301
+  force = true
