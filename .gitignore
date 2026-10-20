@@ -11,3 +11,6 @@ hot
 
 # Local Netlify folder
 .netlify
+
+# Graphify generated artifacts
+/graphify-out/

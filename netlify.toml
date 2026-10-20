@@ -16,25 +16,25 @@ timeout = 26
 
 [[redirects]]
   from = "/talk"
-  to = "https://nightglassadvisory.com/talk"
+  to = "https://nightglassadvisory.com/talk/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/schedule"
-  to = "https://nightglassadvisory.com/schedule"
+  to = "https://nightglassadvisory.com/schedule/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/contact"
-  to = "https://nightglassadvisory.com/schedule"
+  to = "https://nightglassadvisory.com/schedule/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/infosecon2026"
-  to = "https://nightglassadvisory.com/infosecon"
+  to = "https://nightglassadvisory.com/infosecon/"
   status = 301
   force = true
 
